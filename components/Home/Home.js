@@ -1,9 +1,9 @@
-import classes from "./Home.module.css";
+import classes from "./Home.module.scss";
 import Typed from "react-typed";
 function Home(props) {
     return (
         <header className={classes.Home}>
-            <div>
+            {/* <div>
                 <h1 className={classes.type}>
                     Hi, I'm{" "}
                     <Typed
@@ -25,7 +25,7 @@ function Home(props) {
                 </h1>
 
                 <p>I'm a </p>
-            </div>
+            </div> */}
         </header>
     );
 }

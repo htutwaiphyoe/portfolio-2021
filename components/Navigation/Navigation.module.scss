@@ -1,0 +1,58 @@
+@use "abstracts/variables" as v;
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: v.$z-fixed;
+    top: 0;
+    left: 0;
+    background-color: v.$body-color;
+    box-shadow: v.$header-shadow;
+}
+
+%mouse-action {
+    &:hover {
+        color: v.$first-color;
+    }
+    &:active {
+        color: v.$first-color-lighter;
+    }
+}
+
+.nav {
+    height: 7.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        font-size: 2.3rem;
+        color: v.$title-color;
+        font-weight: v.$font-weight-medium;
+        font-family: v.$heading-font;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+        justify-items: center;
+        font-family: v.$heading-font;
+    }
+
+    &__link {
+        font-size: 1.7rem;
+        color: v.$title-color;
+        @extend %mouse-action;
+
+        &_active {
+            color: v.$first-color;
+        }
+    }
+
+    &__icon {
+        font-size: 2rem;
+        cursor: pointer;
+        @extend %mouse-action;
+    }
+}
