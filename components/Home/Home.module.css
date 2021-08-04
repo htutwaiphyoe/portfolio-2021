@@ -1,0 +1,51 @@
+.Home {
+    margin: 0;
+    padding: 0;
+    background-color: #fbfbfe;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.Home h1 {
+    font-size: 65px;
+    color: rgb(36, 35, 41);
+    line-height: 0;
+    letter-spacing: 1px;
+    font-family: "Righteous", cursive;
+}
+
+@media screen and (max-width: 767px) {
+    .Home h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .Home h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Home h1 {
+        font-size: 25px;
+    }
+}
+.Home p {
+    font-size: 20px;
+    color: #767384;
+    font-family: "Roboto", sans-serif;
+}
+
+.type {
+    font-size: 60px;
+
+    color: rgb(36, 35, 41);
+    line-height: 0;
+    font-family: "Righteous", cursive;
+}
