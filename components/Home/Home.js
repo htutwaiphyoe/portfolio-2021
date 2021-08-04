@@ -1,13 +1,33 @@
 import Link from "next/Link";
 import Typed from "react-typed";
+import { useEffect } from "react";
 
 import classes from "./Home.module.scss";
 function Home(props) {
+    useEffect(() => {
+        const sr = ScrollReveal({
+            distance: "60px",
+            duration: 2800,
+            // reset: true,
+        });
+        sr.reveal(`#home-social, #home-data`, {
+            origin: "left",
+            interval: 100,
+        });
+        sr.reveal(`#home-image`, {
+            origin: "right",
+            interval: 100,
+        });
+        sr.reveal(`#home-scroll`, {
+            origin: "bottom",
+            interval: 100,
+        });
+    }, []);
     return (
         <section className={classes.home}>
             <div className={`container ${classes.home__container}`}>
                 <div className={classes.home__content}>
-                    <div className={classes.home__social}>
+                    <div className={`${classes.home__social} load-hidden`} id="home-social">
                         <a
                             href="www.facebook.com/hwp.dev"
                             className={classes.home__social__link}
@@ -44,10 +64,10 @@ function Home(props) {
                         </a>
                     </div>
 
-                    <figure className={classes.home__image}>
+                    <figure className={`${classes.home__image} load-hidden`} id="home-image">
                         <img src="images/logo/home3.png" alt="Home" />
                     </figure>
-                    <div className={classes.home__data}>
+                    <div className={`${classes.home__data} load-hidden`} id="home-data">
                         <h1 className={classes.home__title}>Hi, I'm HWP.</h1>
                         <h2 className={classes.home__subtitle}>
                             <Typed
@@ -74,7 +94,7 @@ function Home(props) {
                     </div>
                 </div>
 
-                <div className={classes.home__scroll}>
+                <div className={`${classes.home__scroll} load-hidden`} id="home-scroll">
                     <Link href="#about">
                         <a className={classes.home__scroll__btn}>
                             <i className={`ri-mouse-line ${classes.home__scroll__mouse}`}></i>

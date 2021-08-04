@@ -74,7 +74,9 @@ img {
     max-width: 100%;
     height: auto;
 }
-
+html.sr .load-hidden {
+    visibility: hidden;
+}
 .container {
     max-width: 1024px;
     margin: 0 auto;

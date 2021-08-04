@@ -16,8 +16,12 @@ class Doc extends Document {
                     href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
                     rel="stylesheet"
                 ></link>
+
+                <script src="https://unpkg.com/scrollreveal"></script>
+
                 <body>
                     <Main />
+
                     <NextScript />
                 </body>
             </Html>
