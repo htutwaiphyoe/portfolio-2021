@@ -1,3 +1,5 @@
+@use "abstracts/variables" as v;
+
 .about {
     &__info {
         display: grid;
@@ -9,5 +11,31 @@
     &__image {
         width: 400px;
         justify-self: flex-end;
+    }
+
+    &__status {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: space-evenly;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__number {
+            font-size: 7rem;
+            color: var(--first-color);
+            font-weight: v.$font-weight-medium;
+        }
+        &__plus {
+            font-size: 3.5rem;
+            color: var(--first-color);
+        }
+
+        &__title {
+            margin-top: -0.9rem;
+        }
     }
 }
