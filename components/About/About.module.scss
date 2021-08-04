@@ -1,0 +1,13 @@
+.about {
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4.2rem;
+        align-items: center;
+    }
+
+    &__image {
+        width: 400px;
+        justify-self: flex-end;
+    }
+}

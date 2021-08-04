@@ -8,7 +8,7 @@ function Home(props) {
         const sr = ScrollReveal({
             distance: "60px",
             duration: 2800,
-            // reset: true,
+            reset: true,
         });
         sr.reveal(`#home-social, #home-data`, {
             origin: "left",
@@ -24,7 +24,7 @@ function Home(props) {
         });
     }, []);
     return (
-        <section className={classes.home}>
+        <section className={`${classes.home} section`}>
             <div className={`container ${classes.home__container}`}>
                 <div className={classes.home__content}>
                     <div className={`${classes.home__social} load-hidden`} id="home-social">
@@ -65,7 +65,7 @@ function Home(props) {
                     </div>
 
                     <figure className={`${classes.home__image} load-hidden`} id="home-image">
-                        <img src="images/logo/home3.png" alt="Home" />
+                        <img src="images/logo/home4.svg" alt="Home" />
                     </figure>
                     <div className={`${classes.home__data} load-hidden`} id="home-data">
                         <h1 className={classes.home__title}>Hi, I'm HWP.</h1>

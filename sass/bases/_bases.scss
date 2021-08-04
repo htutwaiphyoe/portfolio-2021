@@ -50,8 +50,8 @@ body {
     font-size: $font-size-normal;
 }
 
-main {
-    padding: 10rem 0 0 0;
+.main {
+    padding: 8rem 0 0 0;
 }
 
 h1,
@@ -77,6 +77,26 @@ img {
 html.sr .load-hidden {
     visibility: hidden;
 }
+
+.section {
+    padding: 7rem 0 3rem;
+
+    %center {
+        text-align: center;
+    }
+    &__title {
+        font-size: 4rem;
+        font-family: $heading-font;
+        @extend %center;
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: 1.6rem;
+        @extend %center;
+        margin-bottom: 6rem;
+    }
+}
 .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -84,4 +104,8 @@ html.sr .load-hidden {
 
 .active-link {
     color: var(--first-color);
+}
+
+.scroll-active {
+    box-shadow: $header-shadow;
 }

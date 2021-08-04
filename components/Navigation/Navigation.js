@@ -6,6 +6,7 @@ import classes from "./Navigation.module.scss";
 function Navigation(props) {
     const router = useRouter();
     const themeIconRef = useRef();
+    const headerRef = useRef();
     const items = [
         { path: "/", name: "Home" },
         { path: "/projects", name: "Projects" },
@@ -19,6 +20,17 @@ function Navigation(props) {
             document.body.classList[localTheme === "dark" ? "add" : "remove"]("dark-theme");
             themeIconRef.current.classList[localTheme === "dark" ? "add" : "remove"]("ri-sun-line");
         }
+        function scrollHandler() {
+            if (this.scrollY >= 30) headerRef.current.classList.add("scroll-active");
+            else headerRef.current.classList.remove("scroll-active");
+            console.log(headerRef.current.classList);
+        }
+
+        window.addEventListener("scroll", scrollHandler);
+
+        return () => {
+            window.removeEventListener("scroll", scrollHandler);
+        };
     }, []);
     function themeChangeHandler() {
         document.body.classList.toggle("dark-theme");
@@ -28,7 +40,7 @@ function Navigation(props) {
     }
 
     return (
-        <header className={classes.header}>
+        <header className={classes.header} ref={headerRef}>
             <nav className={`${classes.nav} container`}>
                 <Link href="/">
                     <a className={classes.nav__logo}>Htut Wai Phyoe</a>

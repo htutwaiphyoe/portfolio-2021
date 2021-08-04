@@ -1,7 +1,6 @@
 @use "abstracts/variables" as v;
 
 .home {
-    padding-top: 4rem;
     &__container {
         display: grid;
         gap: 1rem;
