@@ -1,0 +1,116 @@
+@use "abstracts/variables" as v;
+
+.home {
+    padding-top: 4rem;
+    &__container {
+        display: grid;
+        gap: 1rem;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: max-content 1fr 1fr;
+        align-items: center;
+        column-gap: 4.8rem;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__icon {
+            font-size: 2.7rem;
+            color: var(--first-color);
+            &:hover {
+                color: var(--first-color-alt);
+            }
+            &:active {
+                color: var(--first-color-lighter);
+            }
+        }
+        transform: translateX(-9rem);
+        -webkit-transform: translateX(-9rem);
+        -moz-transform: translateX(-9rem);
+        -ms-transform: translateX(-9rem);
+        -o-transform: translateX(-9rem);
+    }
+    &__image {
+        width: 340px;
+        order: 1;
+        justify-self: center;
+    }
+
+    &__title {
+        font-size: 5.5rem;
+        line-height: 1.4;
+        font-family: v.$heading-font;
+    }
+
+    &__subtitle {
+        font-size: 2.3rem;
+        color: var(--text-color);
+        font-weight: v.$font-weight-medium;
+        margin-bottom: v.$m-1;
+    }
+
+    &__description {
+        margin-bottom: v.$m-1-5;
+        font-size: 1.7rem;
+    }
+
+    &__btn {
+        background-color: var(--first-color);
+        padding: 1.5rem 1.7rem;
+        display: inline-flex;
+        align-items: center;
+
+        color: v.$color-white;
+        border-radius: 0.8rem;
+        -webkit-border-radius: 0.8rem;
+        -moz-border-radius: 0.8rem;
+        -ms-border-radius: 0.8rem;
+        -o-border-radius: 0.8rem;
+
+        &__icon {
+            font-size: 1.6rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    &__scroll {
+        &__btn {
+            margin-left: 5rem;
+            display: flex;
+            align-items: center;
+            color: var(--first-color);
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+
+            &:hover {
+                transform: translateY(5px);
+                -webkit-transform: translateY(5px);
+                -moz-transform: translateY(5px);
+                -ms-transform: translateY(5px);
+                -o-transform: translateY(5px);
+            }
+        }
+
+        &__mouse {
+            font-size: 3.2rem;
+        }
+
+        &__text {
+            color: var(--title-color);
+            font-weight: v.$font-weight-medium;
+            margin-right: 5px;
+        }
+
+        &__arrow {
+            font-size: 2rem;
+        }
+    }
+}

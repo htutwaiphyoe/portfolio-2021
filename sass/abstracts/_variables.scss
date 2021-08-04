@@ -8,21 +8,6 @@ $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 
-// color
-$hue-color: 250;
-$first-color: hsl($hue-color, 69%, 61%);
-$first-color-second: hsl($hue-color, 69%, 61%);
-$first-color-alt: hsl($hue-color, 57%, 53%);
-$first-color-lighter: hsl($hue-color, 92%, 85%);
-$title-color: hsl($hue-color, 8%, 15%);
-$text-color: hsl($hue-color, 8%, 45%);
-$text-color-light: hsl($hue-color, 8%, 65%);
-$input-color: hsl($hue-color, 70%, 96%);
-$body-color: hsl($hue-color, 60%, 99%);
-$scroll-bar-color: hsl($hue-color, 12%, 90%);
-$scroll-thumb-color: hsl($hue-color, 12%, 80%);
-$container-color: #fff;
-
 // z-index
 $z-tooltip: 10;
 $z-fixed: 100;
@@ -30,3 +15,12 @@ $z-modal: 500;
 
 // shadow
 $header-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+
+// margin
+$m-1: 1rem;
+$m-1-5: 1.5rem;
+$m-1-75: 1.75rem;
+$m-2: 2rem;
+
+// color
+$color-white: #fff;
