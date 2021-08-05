@@ -1,9 +1,5 @@
 import classes from "./Skills.module.scss";
-import {
-    CircularProgressbar,
-    buildStyles,
-    CircularProgressbarWithChildren,
-} from "react-circular-progressbar";
+import { buildStyles, CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
@@ -22,11 +18,16 @@ function Skills(props) {
             origin: "top",
             interval: 100,
         });
+        sr.reveal(`#skills-bar`, {
+            origin: "bottom",
+            interval: 100,
+        });
     });
 
     function onClickHandler(e) {
         frontBarRef.current.className = `${classes.skills__bar}  ${classes.skills__close}`;
         backBarRef.current.className = `${classes.skills__bar}  ${classes.skills__close}`;
+
         if (
             e.target.parentNode.parentNode.className ===
             `${classes.skills__bar}  ${classes.skills__close}`
@@ -61,7 +62,7 @@ function Skills(props) {
                                             <CountUp
                                                 end={percentage}
                                                 redraw={true}
-                                                duration={2}
+                                                duration={1}
                                                 delay={0}
                                             >
                                                 {({ countUpRef }) => (
@@ -93,13 +94,13 @@ function Skills(props) {
                                                 pathTransition:
                                                     percentage === 0
                                                         ? "none"
-                                                        : "stroke-dashoffset 2s ease",
+                                                        : "stroke-dashoffset 1s ease",
                                             })}
                                         >
                                             <CountUp
                                                 end={percentage}
                                                 redraw={true}
-                                                duration={2}
+                                                duration={1}
                                                 delay={0}
                                             >
                                                 {({ countUpRef }) => (
@@ -131,13 +132,13 @@ function Skills(props) {
                                                 pathTransition:
                                                     percentage === 0
                                                         ? "none"
-                                                        : "stroke-dashoffset 2s ease",
+                                                        : "stroke-dashoffset .5s ease",
                                             })}
                                         >
                                             <CountUp
                                                 end={percentage}
                                                 redraw={true}
-                                                duration={2}
+                                                duration={0.5}
                                                 delay={0}
                                             >
                                                 {({ countUpRef }) => (
@@ -175,7 +176,7 @@ function Skills(props) {
                                             <CountUp
                                                 end={percentage}
                                                 redraw={true}
-                                                duration={2}
+                                                duration={1}
                                                 delay={0}
                                             >
                                                 {({ countUpRef }) => (
@@ -200,11 +201,14 @@ function Skills(props) {
                     <div
                         className={`${classes.skills__bar}  ${classes.skills__open}`}
                         ref={frontBarRef}
+                        id="skills-bar"
                     >
-                        <div className={`${classes.skills__header}`} onClick={onClickHandler}>
+                        <div className={`${classes.skills__header}`}>
                             <i className={`ri-global-line ${classes.skills__icon}`}></i>
 
-                            <h2 className={`${classes.skills__name}`}>Frontend development</h2>
+                            <h2 className={`${classes.skills__name}`} onClick={onClickHandler}>
+                                Web Development
+                            </h2>
                             <i className={`ri-arrow-down-s-line ${classes.skills__arrow}`}></i>
                         </div>
                         <ul className={`${classes.skills__list}`}>
@@ -252,19 +256,6 @@ function Skills(props) {
                                     ></span>
                                 </div>
                             </li>
-                        </ul>
-                    </div>
-                    <div
-                        className={`${classes.skills__bar} ${classes.skills__close}`}
-                        ref={backBarRef}
-                    >
-                        <div className={`${classes.skills__header}`} onClick={onClickHandler}>
-                            <i className={`ri-server-line ${classes.skills__icon}`}></i>
-
-                            <h2 className={`${classes.skills__name}`}>Backend development</h2>
-                            <i className={`ri-arrow-down-s-line ${classes.skills__arrow}`}></i>
-                        </div>
-                        <ul className={`${classes.skills__list} `}>
                             <li className={`${classes.skills__item}`}>
                                 <div className={`${classes.skills__data}`}>
                                     <h3 className={`${classes.skills__text}`}>NextJS</h3>
@@ -276,14 +267,54 @@ function Skills(props) {
                                     ></span>
                                 </div>
                             </li>
+                        </ul>
+                    </div>
+                    <div
+                        className={`${classes.skills__bar} ${classes.skills__close}`}
+                        ref={backBarRef}
+                        id="skills-bar"
+                    >
+                        <div className={`${classes.skills__header}`}>
+                            <i className={`ri-server-line ${classes.skills__icon}`}></i>
+
+                            <h2 className={`${classes.skills__name}`} onClick={onClickHandler}>
+                                Tools & Technologies
+                            </h2>
+                            <i className={`ri-arrow-down-s-line ${classes.skills__arrow}`}></i>
+                        </div>
+                        <ul className={`${classes.skills__list} `}>
                             <li className={`${classes.skills__item}`}>
                                 <div className={`${classes.skills__data}`}>
-                                    <h3 className={`${classes.skills__text}`}>MySQL</h3>
-                                    <span className={`${classes.skills__number}`}>63%</span>
+                                    <h3 className={`${classes.skills__text}`}>Database</h3>
+                                    <span className={`${classes.skills__number}`}>67%</span>
                                 </div>
                                 <div className={`${classes.skills__amount}`}>
                                     <span
-                                        className={`${classes.skills__percent} ${classes.skills__sql}`}
+                                        className={`${classes.skills__percent} ${classes.skills__db}`}
+                                    ></span>
+                                </div>
+                            </li>
+                            <li className={`${classes.skills__item}`}>
+                                <div className={`${classes.skills__data}`}>
+                                    <h3 className={`${classes.skills__text}`}>
+                                        Data structures & Algorithms
+                                    </h3>
+                                    <span className={`${classes.skills__number}`}>65%</span>
+                                </div>
+                                <div className={`${classes.skills__amount}`}>
+                                    <span
+                                        className={`${classes.skills__percent} ${classes.skills__ds}`}
+                                    ></span>
+                                </div>
+                            </li>
+                            <li className={`${classes.skills__item}`}>
+                                <div className={`${classes.skills__data}`}>
+                                    <h3 className={`${classes.skills__text}`}>Git & Github</h3>
+                                    <span className={`${classes.skills__number}`}>68%</span>
+                                </div>
+                                <div className={`${classes.skills__amount}`}>
+                                    <span
+                                        className={`${classes.skills__percent} ${classes.skills__git}`}
                                     ></span>
                                 </div>
                             </li>

@@ -47,9 +47,6 @@
         padding: 0 2rem;
     }
 
-    &__bar {
-        cursor: pointer;
-    }
     &__header {
         display: grid;
         grid-template-columns: max-content 1fr max-content;
@@ -60,6 +57,7 @@
 
     &__name {
         font-size: 2rem;
+        cursor: pointer;
     }
 
     &__icon {
@@ -138,7 +136,13 @@
     &__next {
         width: 70%;
     }
-    &__sql {
-        width: 63%;
+    &__db {
+        width: 67%;
+    }
+    &__ds {
+        width: 65%;
+    }
+    &__git {
+        width: 68%;
     }
 }

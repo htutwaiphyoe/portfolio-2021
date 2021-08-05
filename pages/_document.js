@@ -16,6 +16,10 @@ class Doc extends Document {
                     href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
                     rel="stylesheet"
                 ></link>
+                <link
+                    rel="stylesheet"
+                    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+                />
 
                 <script src="https://unpkg.com/scrollreveal"></script>
 

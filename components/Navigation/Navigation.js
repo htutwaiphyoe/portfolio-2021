@@ -17,7 +17,7 @@ function Navigation(props) {
     useEffect(() => {
         const localTheme = localStorage.getItem("hwp-theme");
         if (localTheme) {
-            document.body.classList[localTheme === "dark" ? "add" : "remove"]("dark-theme");
+            window.document.body.classList[localTheme === "dark" ? "add" : "remove"]("dark-theme");
             themeIconRef.current.classList[localTheme === "dark" ? "add" : "remove"]("ri-sun-line");
         }
         function scrollHandler() {
@@ -32,9 +32,9 @@ function Navigation(props) {
         };
     }, []);
     function themeChangeHandler() {
-        document.body.classList.toggle("dark-theme");
+        window.document.body.classList.toggle("dark-theme");
         themeIconRef.current.classList.toggle("ri-sun-line");
-        const newTheme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+        const newTheme = window.document.body.classList.contains("dark-theme") ? "dark" : "light";
         localStorage.setItem("hwp-theme", newTheme);
     }
 

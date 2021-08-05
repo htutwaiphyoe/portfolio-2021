@@ -29,7 +29,7 @@ function Experience(props) {
                     >
                         <i className={`ri-time-line ${classes.experience__status__icon}`}></i>
                         <span className={`${classes.experience__status__number}`}>
-                            <CountUp end={1} redraw={true} duration={1} delay={0}>
+                            <CountUp end={1} redraw={true} duration={0.5} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
                                         <VisibilitySensor onChange={start} delayedCall>
@@ -51,7 +51,7 @@ function Experience(props) {
                         ></i>
 
                         <span className={`${classes.experience__status__number}`}>
-                            <CountUp end={10} redraw={true} duration={1} delay={0}>
+                            <CountUp end={10} redraw={true} duration={0.5} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
                                         <VisibilitySensor onChange={start} delayedCall>
@@ -72,7 +72,7 @@ function Experience(props) {
                     >
                         <i className={`ri-quill-pen-line ${classes.experience__status__icon}`}></i>
                         <span className={`${classes.experience__status__number}`}>
-                            <CountUp end={6} redraw={true} duration={1} delay={0}>
+                            <CountUp end={6} redraw={true} duration={0.5} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
                                         <VisibilitySensor onChange={start} delayedCall>
