@@ -1,4 +1,68 @@
+@use "abstracts/variables" as v;
+
 .footer {
     display: grid;
-    row-gap: 2rem;
+    row-gap: 6.5rem;
+    padding: 4.8rem 0 5rem;
+    background-color: var(--first-color-second);
+    color: v.$color-white;
+
+    &__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__info {
+        display: grid;
+        row-gap: 1.3rem;
+    }
+
+    &__title {
+        color: v.$color-white;
+        font-family: v.$heading-font;
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        column-gap: 4rem;
+        justify-self: center;
+    }
+
+    &__link {
+        color: v.$color-white;
+        font-size: 1.8rem;
+
+        &:hover {
+            color: var(--first-color-lighter);
+        }
+    }
+
+    &__socials {
+        justify-self: flex-end;
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        column-gap: 1.5rem;
+        align-self: flex-start;
+    }
+
+    &__social {
+        color: v.$color-white;
+        font-size: 3rem;
+        line-height: 1;
+        &:hover {
+            color: var(--first-color-lighter);
+        }
+    }
+    &__copy {
+        text-align: center;
+        font-size: 1.5rem;
+    }
 }
