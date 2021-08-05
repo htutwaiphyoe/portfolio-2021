@@ -7,7 +7,7 @@ function About(props) {
         const sr = ScrollReveal({
             distance: "60px",
             duration: 2800,
-            reset: true,
+            // reset: true,
         });
         sr.reveal(`#about-image`, {
             origin: "left",

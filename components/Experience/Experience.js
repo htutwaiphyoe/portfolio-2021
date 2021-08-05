@@ -9,7 +9,7 @@ function Experience(props) {
         const sr = ScrollReveal({
             distance: "60px",
             duration: 2800,
-            reset: true,
+            // reset: true,
         });
         sr.reveal(`#experience-status-item`, {
             origin: "top",
@@ -27,10 +27,9 @@ function Experience(props) {
                         className={`${classes.experience__status__item} load-hidden`}
                         id="experience-status-item"
                     >
-                        <i className={`ri-history-line ${classes.experience__status__icon}`}></i>
-
+                        <i className={`ri-time-line ${classes.experience__status__icon}`}></i>
                         <span className={`${classes.experience__status__number}`}>
-                            <CountUp end={1} redraw={true} duration={1} delay={1.5}>
+                            <CountUp end={1} redraw={true} duration={1} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
                                         <VisibilitySensor onChange={start} delayedCall>
@@ -52,7 +51,7 @@ function Experience(props) {
                         ></i>
 
                         <span className={`${classes.experience__status__number}`}>
-                            <CountUp end={10} redraw={true} duration={1} delay={1.5}>
+                            <CountUp end={10} redraw={true} duration={1} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
                                         <VisibilitySensor onChange={start} delayedCall>
@@ -73,7 +72,7 @@ function Experience(props) {
                     >
                         <i className={`ri-quill-pen-line ${classes.experience__status__icon}`}></i>
                         <span className={`${classes.experience__status__number}`}>
-                            <CountUp end={6} redraw={true} duration={1} delay={1.5}>
+                            <CountUp end={6} redraw={true} duration={1} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
                                         <VisibilitySensor onChange={start} delayedCall>

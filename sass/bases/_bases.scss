@@ -52,6 +52,7 @@ body {
 
 .main {
     padding: 7.2rem 0 0 0;
+    overflow-x: hidden;
 }
 
 h1,
@@ -80,7 +81,7 @@ html.sr .load-hidden {
 }
 
 .section {
-    padding: 7.8rem 0 3.2rem;
+    padding: 9rem 0 4rem;
 
     %center {
         text-align: center;
@@ -109,4 +110,13 @@ html.sr .load-hidden {
 
 .scroll-active {
     box-shadow: $header-shadow;
+}
+.CircularProgressbar-path {
+    stroke: var(--first-color) !important;
+}
+.CircularProgressbar-trail {
+    stroke: var(--container-color) !important;
+}
+.CircularProgressbar-text {
+    fill: var(--first-color) !important;
 }

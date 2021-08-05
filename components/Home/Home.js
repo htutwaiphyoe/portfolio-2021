@@ -8,7 +8,7 @@ function Home(props) {
         const sr = ScrollReveal({
             distance: "60px",
             duration: 2800,
-            reset: true,
+            // reset: true,
         });
         sr.reveal(`#home-social, #home-data`, {
             origin: "left",

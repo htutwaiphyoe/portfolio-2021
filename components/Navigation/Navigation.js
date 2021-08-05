@@ -23,7 +23,6 @@ function Navigation(props) {
         function scrollHandler() {
             if (this.scrollY >= 30) headerRef.current.classList.add("scroll-active");
             else headerRef.current.classList.remove("scroll-active");
-            console.log(headerRef.current.classList);
         }
 
         window.addEventListener("scroll", scrollHandler);
