@@ -14,7 +14,8 @@ $z-fixed: 100;
 $z-modal: 500;
 
 // shadow
-$header-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+$header-shadow: 0 2px 10px 0 rgb(0 0 0 / 5%);
+$header-shadow-hover: 0 2px 10px 0 rgb(0 0 0 / 5%);
 
 // margin
 $m-1: 1rem;

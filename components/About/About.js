@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
 
 import classes from "./About.module.scss";
 
@@ -19,8 +17,8 @@ function About(props) {
             origin: "right",
             interval: 100,
         });
-        sr.reveal(`#about-status-item`, {
-            origin: "top",
+        sr.reveal(`#about-download`, {
+            origin: "bottom",
             interval: 100,
         });
     });
@@ -34,63 +32,26 @@ function About(props) {
                     <img
                         src="images/logo/home3.svg"
                         alt=""
-                        className={`${classes.about__image}`}
+                        className={`${classes.about__image} load-hidden`}
                         id="about-image"
                     />
+                    <div>
+                        <p id="about-text" className={`${classes.about__text} load-hidden`}>
+                            I'm currently a 21 years old university student studying at Mandalay
+                            Technological University specialized in Computer Engineering &
+                            Information Technology. I started coding during second year and
+                            apparently I'm pursuing Web Development.
+                        </p>
 
-                    <p id="about-text">
-                        I'm currently a 21 years old university student studying at Mandalay
-                        Technological University specialized in Computer Engineering & Information
-                        Technology. I started coding during second year and apparently I'm pursuing
-                        Web Development.
-                    </p>
-                </div>
-
-                <div className={`${classes.about__status}`}>
-                    <div className={`${classes.about__status__item}`} id="about-status-item">
-                        <span className={`${classes.about__status__number}`}>
-                            <CountUp end={2} redraw={true} duration={1} delay={1.5}>
-                                {({ countUpRef, start }) => (
-                                    <>
-                                        <VisibilitySensor onChange={start} delayedCall>
-                                            <span ref={countUpRef} />
-                                        </VisibilitySensor>
-                                    </>
-                                )}
-                            </CountUp>
-                            <span className={`${classes.about__status__plus}`}>+</span>
-                        </span>
-                        <span className={`${classes.about__status__title}`}>Coding years</span>
-                    </div>
-                    <div className={`${classes.about__status__item}`} id="about-status-item">
-                        <span className={`${classes.about__status__number}`}>
-                            <CountUp end={10} redraw={true} duration={1} delay={1.5}>
-                                {({ countUpRef, start }) => (
-                                    <>
-                                        <VisibilitySensor onChange={start} delayedCall>
-                                            <span ref={countUpRef} />
-                                        </VisibilitySensor>
-                                    </>
-                                )}
-                            </CountUp>
-                            <span className={`${classes.about__status__plus}`}>+</span>
-                        </span>
-                        <span className={`${classes.about__status__title}`}>Projects done</span>
-                    </div>
-                    <div className={`${classes.about__status__item}`} id="about-status-item">
-                        <span className={`${classes.about__status__number}`}>
-                            <CountUp end={5} redraw={true} duration={1} delay={1.5}>
-                                {({ countUpRef, start }) => (
-                                    <>
-                                        <VisibilitySensor onChange={start} delayedCall>
-                                            <span ref={countUpRef} />
-                                        </VisibilitySensor>
-                                    </>
-                                )}
-                            </CountUp>
-                            <span className={`${classes.about__status__plus}`}>+</span>
-                        </span>
-                        <span className={`${classes.about__status__title}`}>Years experience</span>
+                        <a
+                            href="pdf/hwp.pdf"
+                            download={true}
+                            className={`${classes.about__btn} load-hidden`}
+                            id="about-download"
+                        >
+                            Download CV
+                            <i className={`ri-download-2-line ${classes.about__btn__icon}`}></i>
+                        </a>
                     </div>
                 </div>
             </div>
