@@ -1,0 +1,79 @@
+@use "abstracts/variables" as v;
+.subscription {
+    &__container {
+        background-color: var(--first-color-second);
+        border-radius: 3rem;
+        -webkit-border-radius: 3rem;
+        -moz-border-radius: 3rem;
+        -ms-border-radius: 3rem;
+        -o-border-radius: 3rem;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        // max-width: 768px;
+        // column-gap: 2rem;
+    }
+
+    &__image {
+        width: 30rem;
+        padding: 2rem;
+    }
+
+    &__data {
+        display: grid;
+        row-gap: 2rem;
+
+        justify-self: flex-end;
+    }
+
+    &__info {
+        display: grid;
+        row-gap: 0.5rem;
+    }
+    &__title {
+        font-family: v.$heading-font;
+        letter-spacing: 1px;
+        font-size: 3rem;
+        color: v.$color-white;
+    }
+
+    &__description {
+        color: v.$color-white;
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__input {
+        width: 30rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    &__btn {
+        padding: 1rem;
+        margin-left: -4.5rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        background-color: var(--first-color);
+        color: v.$color-white;
+        font-size: 1.7rem;
+        cursor: pointer;
+    }
+}

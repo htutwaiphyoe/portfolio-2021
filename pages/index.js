@@ -3,6 +3,8 @@ import About from "../components/About/About";
 import Experience from "../components/Experience/Experience";
 import Skills from "../components/Skills/Skills";
 import Qualification from "../components/Qualification/Qualification";
+import Subscription from "../components/Subscription/Subscription";
+import Footer from "../components/Footer/Footer";
 
 function HomePage(props) {
     return (
@@ -10,8 +12,10 @@ function HomePage(props) {
             <Home />
             <About />
             <Skills />
-            <Experience />
             <Qualification />
+            <Experience />
+            <Subscription />
+            <Footer />
         </>
     );
 }

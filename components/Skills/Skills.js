@@ -275,7 +275,7 @@ function Skills(props) {
                         id="skills-bar"
                     >
                         <div className={`${classes.skills__header}`}>
-                            <i className={`ri-server-line ${classes.skills__icon}`}></i>
+                            <i className={`ri-tools-line ${classes.skills__icon}`}></i>
 
                             <h2 className={`${classes.skills__name}`} onClick={onClickHandler}>
                                 Tools & Technologies
