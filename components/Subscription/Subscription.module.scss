@@ -1,4 +1,6 @@
 @use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+
 .subscription {
     &__container {
         background-color: var(--first-color-second);
@@ -75,5 +77,39 @@
         color: v.$color-white;
         font-size: 1.7rem;
         cursor: pointer;
+    }
+
+    @include m.responsive(1199, 1) {
+        &__container {
+            padding: 2rem 0 2rem 3rem;
+            grid-template-columns: 2fr 1fr;
+            column-gap: 2rem;
+        }
+        &__image {
+            width: 27rem;
+        }
+    }
+
+    @include m.responsive(767, 1) {
+        &__container {
+            padding: 2rem;
+            grid-template-columns: 1fr;
+            border-radius: 0rem;
+            -webkit-border-radius: 0rem;
+            -moz-border-radius: 0rem;
+            -ms-border-radius: 0rem;
+            -o-border-radius: 0rem;
+            row-gap: 2rem;
+        }
+        &__data {
+            justify-self: center;
+            justify-items: center;
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+    @include m.responsive(575, 1) {
     }
 }
