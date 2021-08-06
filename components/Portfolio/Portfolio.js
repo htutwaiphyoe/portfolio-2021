@@ -2,33 +2,33 @@ import { useEffect } from "react";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
-import classes from "./Experience.module.scss";
+import classes from "./Portfolio.module.scss";
 
-function Experience(props) {
+function Portfolio(props) {
     useEffect(() => {
         const sr = ScrollReveal({
             distance: "60px",
             duration: 2800,
             // reset: true,
         });
-        sr.reveal(`#experience-status-item`, {
+        sr.reveal(`#portfolio-status-item`, {
             origin: "top",
             interval: 100,
         });
     }, []);
     return (
-        <section className={`section ${classes.experience}`}>
-            <h2 className={`section__title`}>Experience</h2>
+        <section className={`section ${classes.portfolio}`}>
+            <h2 className={`section__title`}>Portfolio</h2>
             <span className={`section__subtitle`}>Developer life</span>
 
-            <div className={`container ${classes.experience__container}`}>
-                <div className={`${classes.experience__status}`}>
+            <div className={`container ${classes.portfolio__container}`}>
+                <div className={`${classes.portfolio__status}`}>
                     <div
-                        className={`${classes.experience__status__item} load-hidden`}
-                        id="experience-status-item"
+                        className={`${classes.portfolio__status__item} load-hidden`}
+                        id="portfolio-status-item"
                     >
-                        <i className={`ri-time-line ${classes.experience__status__icon}`}></i>
-                        <span className={`${classes.experience__status__number}`}>
+                        <i className={`ri-time-line ${classes.portfolio__status__icon}`}></i>
+                        <span className={`${classes.portfolio__status__number}`}>
                             <CountUp end={1} redraw={true} duration={0.5} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
@@ -38,19 +38,19 @@ function Experience(props) {
                                     </>
                                 )}
                             </CountUp>
-                            <span className={`${classes.experience__status__plus}`}>+</span>
+                            <span className={`${classes.portfolio__status__plus}`}>+</span>
                         </span>
-                        <span className={`${classes.experience__status__title}`}>Coding years</span>
+                        <span className={`${classes.portfolio__status__title}`}>Coding years</span>
                     </div>
                     <div
-                        className={`${classes.experience__status__item} load-hidden`}
-                        id="experience-status-item"
+                        className={`${classes.portfolio__status__item} load-hidden`}
+                        id="portfolio-status-item"
                     >
                         <i
-                            className={`ri-code-s-slash-fill ${classes.experience__status__icon}`}
+                            className={`ri-code-s-slash-fill ${classes.portfolio__status__icon}`}
                         ></i>
 
-                        <span className={`${classes.experience__status__number}`}>
+                        <span className={`${classes.portfolio__status__number}`}>
                             <CountUp end={10} redraw={true} duration={0.5} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
@@ -60,18 +60,16 @@ function Experience(props) {
                                     </>
                                 )}
                             </CountUp>
-                            <span className={`${classes.experience__status__plus}`}>+</span>
+                            <span className={`${classes.portfolio__status__plus}`}>+</span>
                         </span>
-                        <span className={`${classes.experience__status__title}`}>
-                            Projects done
-                        </span>
+                        <span className={`${classes.portfolio__status__title}`}>Projects done</span>
                     </div>
                     <div
-                        className={`${classes.experience__status__item} load-hidden`}
-                        id="experience-status-item"
+                        className={`${classes.portfolio__status__item} load-hidden`}
+                        id="portfolio-status-item"
                     >
-                        <i className={`ri-quill-pen-line ${classes.experience__status__icon}`}></i>
-                        <span className={`${classes.experience__status__number}`}>
+                        <i className={`ri-quill-pen-line ${classes.portfolio__status__icon}`}></i>
+                        <span className={`${classes.portfolio__status__number}`}>
                             <CountUp end={6} redraw={true} duration={0.5} delay={0}>
                                 {({ countUpRef, start }) => (
                                     <>
@@ -81,9 +79,9 @@ function Experience(props) {
                                     </>
                                 )}
                             </CountUp>
-                            <span className={`${classes.experience__status__plus}`}>+</span>
+                            <span className={`${classes.portfolio__status__plus}`}>+</span>
                         </span>
-                        <span className={`${classes.experience__status__title}`}>
+                        <span className={`${classes.portfolio__status__title}`}>
                             Sharing contents
                         </span>
                     </div>
@@ -93,4 +91,4 @@ function Experience(props) {
     );
 }
 
-export default Experience;
+export default Portfolio;
