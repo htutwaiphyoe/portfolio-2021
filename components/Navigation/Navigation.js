@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef, useEffect, useState } from "react";
 import classes from "./Navigation.module.scss";
