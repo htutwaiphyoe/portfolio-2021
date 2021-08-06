@@ -1,4 +1,5 @@
 @use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
 .qualification {
     &__container {
         display: grid;
@@ -9,7 +10,7 @@
     &__tabs {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 8rem;
+        column-gap: 5rem;
     }
 
     &__tab {
@@ -106,6 +107,35 @@
     &__active {
         &.qualification__tab {
             color: var(--first-color);
+        }
+    }
+
+    @include m.responsive(1199, 1) {
+    }
+
+    @include m.responsive(767, 1) {
+        &__container {
+            padding: 0 2.4rem;
+        }
+    }
+    @include m.responsive(575, 1) {
+        &__icon {
+            font-size: 3rem;
+        }
+
+        &__label {
+            font-size: 1.9rem;
+        }
+        &__title {
+            font-size: 1.8rem;
+        }
+
+        &__subtitle {
+            font-size: 1.4rem;
+        }
+
+        &__calendar {
+            font-size: 1.2rem;
         }
     }
 }

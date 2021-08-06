@@ -48,7 +48,7 @@
     @include m.responsive(767, 1) {
         &__info {
             grid-template-columns: 1fr;
-            gap: 2rem 0;
+            gap: 2.5rem 0;
         }
         &__image {
             justify-self: center;

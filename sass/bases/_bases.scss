@@ -106,6 +106,9 @@ textarea {
         font-size: 1.6rem;
         @extend %center;
         margin-bottom: 6rem;
+        @include responsive(575, 1) {
+            margin-bottom: 4rem;
+        }
     }
 }
 .container {
