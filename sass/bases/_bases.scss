@@ -39,6 +39,9 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    @include responsive(319, 1) {
+        font-size: 56%;
+    }
 }
 
 body {

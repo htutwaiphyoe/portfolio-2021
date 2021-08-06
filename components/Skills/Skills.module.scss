@@ -44,7 +44,7 @@
     &__bars {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
+        gap: 2rem 3rem;
         padding: 0 2rem;
     }
 
@@ -53,7 +53,6 @@
         grid-template-columns: max-content 1fr max-content;
         column-gap: 1rem;
         align-items: center;
-        margin-bottom: 3rem;
     }
 
     &__name {
@@ -78,16 +77,18 @@
         display: grid;
         row-gap: 2rem;
         padding-left: 4.3rem;
+        margin: 2rem 0;
     }
     &__close &__list {
-        height: 0;
+        display: none;
         overflow: hidden;
     }
 
     &__open &__list {
-        height: -webkit-max-content;
-        height: -moz-max-content;
-        height: max-content;
+        // height: -webkit-max-content;
+        // height: -moz-max-content;
+        // height: max-content;
+        display: grid;
     }
 
     &__open &__arrow {
@@ -150,6 +151,23 @@
     @include m.responsive(1199, 1) {
         &__circles {
             grid-template-columns: repeat(2, 1fr);
+            gap: 6rem 0;
+        }
+    }
+
+    @include m.responsive(767, 1) {
+        &__container {
+            row-gap: 4rem;
+        }
+        &__bars {
+            grid-template-columns: 1fr;
+            padding: 0 1rem;
+        }
+    }
+
+    @include m.responsive(575, 1) {
+        &__circles {
+            grid-template-columns: 1fr;
             gap: 6rem 0;
         }
     }

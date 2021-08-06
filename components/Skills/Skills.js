@@ -278,7 +278,7 @@ function Skills(props) {
                             <i className={`ri-tools-line ${classes.skills__icon}`}></i>
 
                             <h2 className={`${classes.skills__name}`} onClick={onClickHandler}>
-                                Tools & Technologies
+                                Computer Science
                             </h2>
                             <i className={`ri-arrow-down-s-line ${classes.skills__arrow}`}></i>
                         </div>
