@@ -21,7 +21,7 @@ function About(props) {
             origin: "bottom",
             interval: 100,
         });
-    });
+    }, []);
     return (
         <section className={`${classes.about} section`} id="about">
             <h2 className={`section__title`}>About me</h2>

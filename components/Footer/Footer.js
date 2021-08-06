@@ -17,7 +17,7 @@ function Footer(props) {
             origin: "bottom",
             interval: 100,
         });
-    });
+    }, []);
     return (
         <footer className={`${classes.footer}`}>
             <div className={`${classes.footer__container} container`}>

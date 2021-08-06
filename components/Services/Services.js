@@ -27,7 +27,7 @@ function Services(props) {
             origin: "left",
             interval: 100,
         });
-    });
+    }, []);
     return (
         <section className={`section`} id="services">
             <h2 className={`section__title`}>Services</h2>

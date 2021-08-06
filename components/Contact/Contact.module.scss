@@ -5,17 +5,12 @@
         grid-template-columns: 1fr 1.5fr;
     }
 
-    &__informations {
-        // display: grid;
-        // row-gap: 2.4rem;
-    }
-
     &__information {
         display: grid;
         grid-template-columns: max-content 1fr;
         column-gap: 1.5rem;
         align-items: center;
-        margin-bottom: 2.7rem;
+        margin-bottom: 2.5rem;
     }
 
     &__icon {

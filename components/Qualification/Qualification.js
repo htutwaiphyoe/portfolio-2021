@@ -17,7 +17,7 @@ function Qualification(props) {
             origin: "bottom",
             interval: 100,
         });
-    });
+    }, []);
     function onClickHandler(e) {
         const tabs = window.document.querySelectorAll("[data-target]");
         const tabContents = window.document.querySelectorAll("[data-content]");

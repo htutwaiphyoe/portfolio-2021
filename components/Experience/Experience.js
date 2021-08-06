@@ -15,7 +15,7 @@ function Experience(props) {
             origin: "top",
             interval: 100,
         });
-    });
+    }, []);
     return (
         <section className={`section ${classes.experience}`}>
             <h2 className={`section__title`}>Experience</h2>

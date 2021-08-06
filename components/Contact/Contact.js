@@ -1,12 +1,29 @@
+import { useEffect } from "react";
+
 import classes from "./Contact.module.scss";
 
 function Contact(props) {
+    useEffect(() => {
+        const sr = ScrollReveal({
+            distance: "60px",
+            duration: 2800,
+            // reset: true,
+        });
+        sr.reveal(`#contact-informations`, {
+            origin: "left",
+            interval: 100,
+        });
+        sr.reveal(`#contact-form`, {
+            origin: "right",
+            interval: 100,
+        });
+    }, []);
     return (
         <section id="section" className={`section ${classes.contact}`}>
             <h2 className={`section__title`}>Contact me</h2>
             <span className={`section__subtitle`}>Get in touch</span>
             <div className={`container ${classes.contact__container}`}>
-                <div className={`${classes.contact__informations}`}>
+                <div className={`${classes.contact__informations}`} id="contact-informations">
                     <div className={`${classes.contact__information}`}>
                         <i className={`ri-phone-line ${classes.contact__icon}`}></i>
                         <div className={`${classes.contact__data}`}>
@@ -33,7 +50,7 @@ function Contact(props) {
                         </div>
                     </div>
                 </div>
-                <form className={`${classes.contact__form}`}>
+                <form className={`${classes.contact__form}`} id="contact-form">
                     <div className={`${classes.contact__content}`}>
                         <label htmlFor="name" className={`${classes.contact__label}`}>
                             Name
