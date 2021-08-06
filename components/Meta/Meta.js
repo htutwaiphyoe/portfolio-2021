@@ -10,21 +10,21 @@ function Meta({ title, description }) {
                 name="description"
                 content={
                     description ||
-                    `Htut Wai Phyoe, Web developer and IT student at Mandalay Technological University. Techstack is MERN Stack.`
+                    `Web developer and IT student at Mandalay Technological University. JavaScript is main programming language and techstack is MERN Stack.`
                 }
             />
             <meta
                 property="og:description"
                 content={
                     description ||
-                    `Htut Wai Phyoe, Web developer and IT student at Mandalay Technological University. Techstack is MERN Stack.`
+                    `Web developer and IT student at Mandalay Technological University. JavaScript is main programming language and techstack is MERN Stack.`
                 }
             />
             <meta
                 name="twitter:description"
                 content={
                     description ||
-                    `Htut Wai Phyoe, Web developer and IT student at Mandalay Technological University. Techstack is MERN Stack.`
+                    `Web developer and IT student at Mandalay Technological University. JavaScript is main programming language and techstack is MERN Stack.`
                 }
             />
         </Head>

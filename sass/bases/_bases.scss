@@ -108,6 +108,10 @@ textarea {
 .container {
     max-width: 1024px;
     margin: 0 auto;
+
+    @include responsive(1199, 1) {
+        max-width: 768px;
+    }
 }
 
 .active-link {

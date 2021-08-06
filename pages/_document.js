@@ -4,7 +4,6 @@ class Doc extends Document {
     render() {
         return (
             <Html lang="en">
-                <Head />
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="keywords" content="htutwaiphyoe, web developer, blogs" />
@@ -24,7 +23,9 @@ class Doc extends Document {
 
                 <meta name="twitter:url" content="https://twitter.com/mrdamiano_" />
                 <meta name="twitter:card" content="/logo192.png" />
-                <meta name="twitter:image" content="/logo.png" />
+                <meta name="twitter:image" content="/logo192.png" />
+
+                <Head />
 
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

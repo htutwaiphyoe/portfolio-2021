@@ -1,4 +1,5 @@
 @use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
 %icon {
     font-size: 3.2rem;
     color: var(--first-color);
@@ -144,5 +145,12 @@
     }
     &__git {
         width: 68%;
+    }
+
+    @include m.responsive(1199, 1) {
+        &__circles {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6rem 0;
+        }
     }
 }
