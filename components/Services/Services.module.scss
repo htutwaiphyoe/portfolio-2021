@@ -1,7 +1,6 @@
 @use "abstracts/variables" as v;
 .services {
-    &__container {
-    }
+ 
     &__item {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

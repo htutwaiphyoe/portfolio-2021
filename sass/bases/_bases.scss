@@ -81,7 +81,8 @@ html.sr .load-hidden {
 }
 
 button,
-input {
+input,
+textarea {
     border: none;
     outline: none;
 }
@@ -135,7 +136,7 @@ input {
     background-color: var(--first-color) !important;
 }
 .swiper-pagination-bullet {
-    width: 1.4rem !important;
-    height: 1.4rem !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
     background-color: var(--first-color) !important;
 }

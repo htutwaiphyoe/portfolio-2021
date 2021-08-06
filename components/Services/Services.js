@@ -29,7 +29,7 @@ function Services(props) {
         });
     });
     return (
-        <section className={`section`}>
+        <section className={`section`} id="services">
             <h2 className={`section__title`}>Services</h2>
             <span className={`section__subtitle`}>What I offer</span>
 
@@ -41,7 +41,6 @@ function Services(props) {
                     loop={true}
                     grabCursor={true}
                     spaceBetween={48}
-                    className="mySwiper"
                 >
                     <SwiperSlide>
                         <div className={`container ${classes.services__item}`}>
