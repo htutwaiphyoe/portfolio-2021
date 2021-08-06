@@ -38,7 +38,7 @@
 
     @include m.responsive(1199, 1) {
         &__container {
-            padding: 0 1rem;
+            padding: 0 2rem;
         }
         &__info {
             column-gap: 3rem;

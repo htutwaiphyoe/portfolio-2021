@@ -1,4 +1,5 @@
 @use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
 
 .portfolio {
     &__container {
@@ -30,11 +31,6 @@
             position: absolute;
             top: -20%;
             left: 6%;
-            // transform: translateX(-50%);
-            // -webkit-transform: translateX(-50%);
-            // -moz-transform: translateX(-50%);
-            // -ms-transform: translateX(-50%);
-            // -o-transform: translateX(-50%);
             background-color: var(--first-color);
             padding: 0.8rem 1.8rem;
             color: v.$color-white;
@@ -56,6 +52,31 @@
 
         &__title {
             margin-top: -0.9rem;
+        }
+    }
+
+    @include m.responsive(1199, 1) {
+        &__container {
+            padding: 2rem 2rem 0;
+        }
+    }
+
+    @include m.responsive(767, 1) {
+        &__container {
+            padding: 2rem 3rem 0;
+        }
+        &__status {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6rem 3rem;
+        }
+    }
+    @include m.responsive(575, 1) {
+        &__container {
+            padding: 2rem 1.5rem 0;
+            max-width: 44rem;
+        }
+        &__status {
+            grid-template-columns: 1fr;
         }
     }
 }
