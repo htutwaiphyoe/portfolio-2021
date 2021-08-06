@@ -19,7 +19,7 @@ function Contact(props) {
         });
     }, []);
     return (
-        <section id="section" className={`section ${classes.contact}`}>
+        <section id="section" className={`section ${classes.contact}`} id="contact">
             <h2 className={`section__title`}>Contact me</h2>
             <span className={`section__subtitle`}>Get in touch</span>
             <div className={`container ${classes.contact__container}`}>

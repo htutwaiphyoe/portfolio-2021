@@ -19,7 +19,7 @@ function Subscription(props) {
         });
     });
     return (
-        <section className={`section ${classes.subscription}`}>
+        <section className={`section ${classes.subscription}`} id="subscription">
             <div className={`container ${classes.subscription__container}`}>
                 <div className={`${classes.subscription__data}`} id="subscription-data">
                     <div className={`${classes.subscription__info}`}>

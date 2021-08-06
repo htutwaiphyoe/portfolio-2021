@@ -23,6 +23,10 @@ function Home(props) {
             interval: 100,
         });
     }, []);
+
+    function onClickHandler() {
+        document.getElementById("about").scrollIntoView();
+    }
     return (
         <section className={`${classes.home} section`}>
             <div className={`container ${classes.home__container}`}>
@@ -95,14 +99,12 @@ function Home(props) {
                 </div>
 
                 <div className={`${classes.home__scroll} load-hidden`} id="home-scroll">
-                    <Link href="#about">
-                        <a className={classes.home__scroll__btn}>
-                            <i className={`ri-mouse-line ${classes.home__scroll__mouse}`}></i>
-                            <span className={classes.home__scroll__text}>Scroll down</span>
+                    <div className={classes.home__scroll__btn} onClick={onClickHandler}>
+                        <i className={`ri-mouse-line ${classes.home__scroll__mouse}`}></i>
+                        <span className={classes.home__scroll__text}>Scroll down</span>
 
-                            <i className={`ri-arrow-down-fill ${classes.home__scroll__arrow}`}></i>
-                        </a>
-                    </Link>
+                        <i className={`ri-arrow-down-fill ${classes.home__scroll__arrow}`}></i>
+                    </div>
                 </div>
             </div>
         </section>

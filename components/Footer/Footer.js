@@ -18,6 +18,9 @@ function Footer(props) {
             interval: 100,
         });
     }, []);
+    function onClickHandler(id) {
+        document.getElementById(id).scrollIntoView();
+    }
     return (
         <footer className={`${classes.footer}`}>
             <div className={`${classes.footer__container} container`}>
@@ -27,20 +30,17 @@ function Footer(props) {
                 </div>
 
                 <ul className={`${classes.footer__links}`} id="footer-links">
-                    <li>
-                        <a href="#services" className={classes.footer__link}>
-                            Services
-                        </a>
+                    <li onClick={() => onClickHandler("services")} className={classes.footer__link}>
+                        Services
                     </li>
-                    <li>
-                        <a href="#subscription" className={classes.footer__link}>
-                            Subscription
-                        </a>
+                    <li
+                        onClick={() => onClickHandler("subscription")}
+                        className={classes.footer__link}
+                    >
+                        Subscription
                     </li>
-                    <li>
-                        <a href="#contact" className={classes.footer__link}>
-                            Contact
-                        </a>
+                    <li onClick={() => onClickHandler("contact")} className={classes.footer__link}>
+                        Contact
                     </li>
                 </ul>
 

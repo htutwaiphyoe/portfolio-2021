@@ -40,6 +40,7 @@
     &__link {
         color: v.$color-white;
         font-size: 1.8rem;
+        cursor: pointer;
 
         &:hover {
             color: var(--first-color-lighter);

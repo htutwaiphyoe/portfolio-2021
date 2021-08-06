@@ -28,6 +28,9 @@ function Services(props) {
             interval: 100,
         });
     }, []);
+    function onClickHandler() {
+        document.getElementById("contact").scrollIntoView();
+    }
     return (
         <section className={`section`} id="services">
             <h2 className={`section__title`}>Services</h2>
@@ -57,12 +60,15 @@ function Services(props) {
                                     animated interactions and adapatable to all devices
                                 </p>
 
-                                <a href="#contact" className={`${classes.services__btn}`}>
+                                <div
+                                    className={`${classes.services__btn}`}
+                                    onClick={onClickHandler}
+                                >
                                     Hire me
                                     <i
                                         className={`ri-briefcase-line ${classes.services__btn__icon}`}
                                     ></i>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -83,12 +89,15 @@ function Services(props) {
                                     library, ReactJS
                                 </p>
 
-                                <a href="#contact" className={`${classes.services__btn}`}>
+                                <div
+                                    className={`${classes.services__btn}`}
+                                    onClick={onClickHandler}
+                                >
                                     Hire me
                                     <i
                                         className={`ri-briefcase-line ${classes.services__btn__icon}`}
                                     ></i>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -110,12 +119,15 @@ function Services(props) {
                                     and MongoDB database
                                 </p>
 
-                                <a href="#contact" className={`${classes.services__btn}`}>
+                                <div
+                                    className={`${classes.services__btn}`}
+                                    onClick={onClickHandler}
+                                >
                                     Hire me
                                     <i
                                         className={`ri-briefcase-line ${classes.services__btn__icon}`}
                                     ></i>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </SwiperSlide>
