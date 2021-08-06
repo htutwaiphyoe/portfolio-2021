@@ -1,4 +1,6 @@
 @use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+
 .services {
     &__item {
         display: grid;
@@ -46,5 +48,29 @@
             font-size: 1.6rem;
             margin-left: 0.5rem;
         }
+    }
+
+    @include m.responsive(1199, 1) {
+        &__container {
+            padding: 0 2rem;
+        }
+    }
+
+    @include m.responsive(767, 1) {
+        &__image {
+            width: 43rem;
+            justify-self: center;
+        }
+        &__item {
+            grid-template-columns: 1fr;
+            row-gap: 2.5rem;
+        }
+        &__data {
+            // text-align: center;
+            max-width: 43rem;
+            margin: 0 auto;
+        }
+    }
+    @include m.responsive(575, 1) {
     }
 }
