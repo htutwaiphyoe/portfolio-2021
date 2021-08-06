@@ -1,4 +1,5 @@
 @use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
 
 .about {
     &__info {
@@ -32,6 +33,37 @@
         &__icon {
             font-size: 1.6rem;
             margin-left: 0.5rem;
+        }
+    }
+
+    @include m.responsive(1199, 1) {
+        &__container {
+            padding: 0 1rem;
+        }
+        &__info {
+            column-gap: 3rem;
+        }
+    }
+
+    @include m.responsive(767, 1) {
+        &__info {
+            grid-template-columns: 1fr;
+            gap: 2rem 0;
+        }
+        &__image {
+            justify-self: center;
+            width: 320px;
+        }
+
+        &__data {
+            text-align: center;
+            max-width: 50rem;
+            margin: 0 auto;
+        }
+    }
+    @include m.responsive(575, 1) {
+        &__image {
+            width: 270px;
         }
     }
 }
