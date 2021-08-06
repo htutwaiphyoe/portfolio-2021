@@ -24,7 +24,7 @@ function About(props) {
     });
     return (
         <section className={`${classes.about} section`} id="about">
-            <h1 className={`section__title`}>About me</h1>
+            <h2 className={`section__title`}>About me</h2>
             <span className={`section__subtitle`}>Introduction</span>
 
             <div className={`container`}>

@@ -31,7 +31,7 @@ function Qualification(props) {
     }
     return (
         <section className={`section ${classes.qualification}`}>
-            <h1 className={`section__title`}>Qualification</h1>
+            <h2 className={`section__title`}>Qualification</h2>
             <span className={`section__subtitle`}>Personal journey</span>
 
             <div className={`container ${classes.qualification__container}`}>

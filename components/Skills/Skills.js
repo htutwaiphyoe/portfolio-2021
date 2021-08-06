@@ -37,7 +37,7 @@ function Skills(props) {
     }
     return (
         <section className={`section ${classes.skills}`}>
-            <h1 className={`section__title`}>Skills</h1>
+            <h2 className={`section__title`}>Skills</h2>
             <span className={`section__subtitle`}>Technical level</span>
 
             <div className={`container ${classes.skills__container}`}>

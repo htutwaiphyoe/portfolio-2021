@@ -4,6 +4,7 @@ import Experience from "../components/Experience/Experience";
 import Skills from "../components/Skills/Skills";
 import Qualification from "../components/Qualification/Qualification";
 import Subscription from "../components/Subscription/Subscription";
+import Services from "../components/Services/Services";
 import Footer from "../components/Footer/Footer";
 
 function HomePage(props) {
@@ -14,6 +15,7 @@ function HomePage(props) {
             <Skills />
             <Qualification />
             <Experience />
+            <Services />
             <Subscription />
             <Footer />
         </>

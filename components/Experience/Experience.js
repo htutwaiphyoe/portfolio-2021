@@ -18,7 +18,7 @@ function Experience(props) {
     });
     return (
         <section className={`section ${classes.experience}`}>
-            <h1 className={`section__title`}>Experience</h1>
+            <h2 className={`section__title`}>Experience</h2>
             <span className={`section__subtitle`}>Developer life</span>
 
             <div className={`container ${classes.experience__container}`}>
