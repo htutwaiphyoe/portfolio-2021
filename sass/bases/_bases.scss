@@ -91,7 +91,9 @@ textarea {
 }
 .section {
     padding: 9rem 0 4rem;
-
+    @include responsive(575, 1) {
+        padding: 5rem 0 4rem;
+    }
     %center {
         text-align: center;
     }

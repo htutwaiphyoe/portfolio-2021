@@ -1,16 +1,16 @@
 @use "abstracts/variables" as v;
-
+@use "abstracts/mixins" as m;
 .home {
     &__container {
         display: grid;
-        gap: 1rem;
+        gap: 3rem;
     }
 
     &__content {
         display: grid;
-        grid-template-columns: max-content 1fr 1fr;
+        // grid-template-columns: max-content 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
-        column-gap: 4.8rem;
     }
 
     &__social {
@@ -28,18 +28,17 @@
                 color: var(--first-color-lighter);
             }
         }
-        transform: translateX(-9rem);
-        -webkit-transform: translateX(-9rem);
-        -moz-transform: translateX(-9rem);
-        -ms-transform: translateX(-9rem);
-        -o-transform: translateX(-9rem);
+        position: relative;
+        left: -5rem;
     }
     &__image {
         width: 340px;
         order: 1;
         justify-self: center;
     }
-
+    &__data {
+        justify-self: center;
+    }
     &__title {
         font-size: 5.5rem;
         line-height: 1.4;
@@ -79,8 +78,9 @@
 
     &__scroll {
         cursor: pointer;
+        justify-self: center;
         &__btn {
-            margin-left: 5rem;
+            // margin-left: 4rem;
             display: flex;
             align-items: center;
             color: var(--first-color);
@@ -111,6 +111,84 @@
 
         &__arrow {
             font-size: 2rem;
+        }
+    }
+    @include m.responsive(1199, 1) {
+        &__image {
+            width: 300px;
+        }
+        &__title {
+            font-size: 5rem;
+        }
+
+        &__subtitle {
+            font-size: 2.1rem;
+        }
+
+        &__description {
+            font-size: 1.5rem;
+        }
+
+        &__content {
+            // column-gap: 4rem;
+            padding-left: 3rem;
+        }
+
+        &__scroll {
+            &__btn {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    @include m.responsive(767, 1) {
+        &__image {
+            width: 230px;
+        }
+        &__title {
+            font-size: 3.5rem;
+        }
+
+        &__subtitle {
+            font-size: 2rem;
+        }
+
+        &__description {
+            font-size: 1.5rem;
+        }
+
+        &__scroll {
+            display: none;
+        }
+    }
+    @include m.responsive(575, 1) {
+        &__content {
+            grid-template-columns: 1fr;
+            row-gap: 3rem;
+            width: 30rem;
+            margin: 0 auto;
+
+            padding: 0 1rem;
+        }
+        &__image {
+            width: 250px;
+            order: 0;
+            justify-self: initial;
+        }
+
+        &__data {
+            justify-self: initial;
+        }
+        &__title {
+            font-size: 4.8rem;
+        }
+
+        &__subtitle {
+            font-size: 2.4rem;
+        }
+
+        &__description {
+            font-size: 1.7rem;
         }
     }
 }

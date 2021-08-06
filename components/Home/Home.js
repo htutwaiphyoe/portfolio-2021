@@ -31,7 +31,7 @@ function Home(props) {
         <section className={`${classes.home} section`}>
             <div className={`container ${classes.home__container}`}>
                 <div className={classes.home__content}>
-                    <div className={`${classes.home__social} load-hidden`} id="home-social">
+                    {/* <div className={`${classes.home__social} load-hidden`} id="home-social">
                         <a
                             href="www.facebook.com/hwp.dev"
                             className={classes.home__social__link}
@@ -66,7 +66,7 @@ function Home(props) {
                         >
                             <i className={`ri-github-fill ${classes.home__social__icon}`}></i>
                         </a>
-                    </div>
+                    </div> */}
 
                     <figure className={`${classes.home__image} load-hidden`} id="home-image">
                         <img src="images/logo/home4.svg" alt="Home" />
@@ -86,8 +86,8 @@ function Home(props) {
                             />
                         </h2>
                         <p className={classes.home__description}>
-                            I write aritcles about web development especially for JavaScript and
-                            MERN Stack.
+                            Producing quality sharing content about web development especially for
+                            JavaScrip and MERN stack
                         </p>
                         <Link href="/blogs">
                             <a className={classes.home__btn}>
