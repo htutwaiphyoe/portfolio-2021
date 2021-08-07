@@ -1,4 +1,5 @@
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
+import SectionHOC from "../../hoc/Section/Section";
 import classes from "./Qualification.module.scss";
 
 function Qualification(props) {
@@ -14,10 +15,7 @@ function Qualification(props) {
         e.target.parentNode.classList.add(`${classes.qualification__active}`);
     }
     return (
-        <section className={`section ${classes.qualification}`}>
-            <h2 className={`section__title`}>Qualification</h2>
-            <span className={`section__subtitle`}>Personal journey</span>
-
+        <SectionHOC id="qualification" title="Qualification" subtitle="Personal journey">
             <div className={`container ${classes.qualification__container}`}>
                 <ScrollRevealHOC target="qualification-tab" origin="top">
                     <div className={`${classes.qualification__tabs}`}>
@@ -167,7 +165,7 @@ function Qualification(props) {
                     </div>
                 </ScrollRevealHOC>
             </div>
-        </section>
+        </SectionHOC>
     );
 }
 

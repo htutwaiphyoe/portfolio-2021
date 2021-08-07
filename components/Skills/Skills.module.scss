@@ -1,17 +1,6 @@
 @use "abstracts/variables" as v;
 @use "abstracts/mixins" as m;
-%icon {
-    font-size: 3.2rem;
-    color: var(--first-color);
-}
-%bar {
-    height: 5px;
-    border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
-}
+
 .skills {
     &__container {
         padding: 0.5rem;
@@ -25,127 +14,12 @@
         justify-content: center;
         justify-items: center;
     }
-    &__circle {
-        width: 20rem;
-    }
-
-    &__percentage {
-        font-size: 2.3rem;
-        color: var(--first-color);
-    }
-
-    &__title {
-        text-align: center;
-        margin-top: 2rem;
-        font-size: 2rem;
-        font-weight: v.$font-weight-medium;
-    }
 
     &__bars {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem 3rem;
         padding: 0 2rem;
-    }
-
-    &__header {
-        display: grid;
-        grid-template-columns: max-content 1fr max-content;
-        column-gap: 1rem;
-        align-items: center;
-    }
-
-    &__name {
-        font-size: 2rem;
-        cursor: pointer;
-    }
-
-    &__icon {
-        @extend %icon;
-    }
-    &__arrow {
-        @extend%icon;
-
-        transition: 0.3s;
-        -webkit-transition: 0.3s;
-        -moz-transition: 0.3s;
-        -ms-transition: 0.3s;
-        -o-transition: 0.3s;
-    }
-
-    &__list {
-        display: grid;
-        row-gap: 2rem;
-        padding-left: 4.3rem;
-        margin: 2rem 0;
-    }
-    &__close &__list {
-        display: none;
-        overflow: hidden;
-    }
-
-    &__open &__list {
-        // height: -webkit-max-content;
-        // height: -moz-max-content;
-        // height: max-content;
-        display: grid;
-    }
-
-    &__open &__arrow {
-        transform: rotate(-180deg);
-        -webkit-transform: rotate(-180deg);
-        -moz-transform: rotate(-180deg);
-        -ms-transform: rotate(-180deg);
-        -o-transform: rotate(-180deg);
-    }
-    &__item {
-        display: grid;
-        row-gap: 1rem;
-    }
-
-    &__data {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__text {
-        font-size: 1.7rem;
-    }
-
-    &__amount {
-        @extend %bar;
-        background-color: var(--first-color-lighter);
-    }
-
-    &__percent {
-        display: block;
-        background-color: var(--first-color);
-        @extend %bar;
-    }
-
-    &__html {
-        width: 85%;
-    }
-    &__css {
-        width: 80%;
-    }
-    &__sass {
-        width: 73%;
-    }
-    &__js {
-        width: 75%;
-    }
-    &__next {
-        width: 70%;
-    }
-    &__db {
-        width: 67%;
-    }
-    &__ds {
-        width: 65%;
-    }
-    &__git {
-        width: 68%;
     }
 
     @include m.responsive(1199, 1) {
