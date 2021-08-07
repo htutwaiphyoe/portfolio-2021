@@ -17,7 +17,7 @@ function Circle({ circle }) {
     return (
         <div className={`${classes.circle}`} id="skills-circle">
             <div>
-                <VisibilitySensor partialVisibility={true} offset={{ top: 0 }}>
+                <VisibilitySensor>
                     {({ isVisible }) => {
                         return (
                             <CircularProgressbarWithChildren
