@@ -71,6 +71,7 @@
         color: var(--first-color);
         @extend %mouse-action;
         display: none;
+        cursor: pointer;
     }
     &__btns {
         display: flex;
