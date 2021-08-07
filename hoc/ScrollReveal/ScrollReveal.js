@@ -11,6 +11,10 @@ function ScrollRevealHOC({ target, origin, children }) {
             origin,
             interval: 100,
         });
+
+        return () => {
+            sr.destroy();
+        };
     }, []);
 
     return <>{children}</>;
