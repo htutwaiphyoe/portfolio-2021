@@ -1,18 +1,16 @@
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
+import Section from "../../hoc/Section/Section";
 import classes from "./About.module.scss";
 
 function About(props) {
     return (
-        <section className={`${classes.about} section`} id="about">
-            <h2 className={`section__title`}>About me</h2>
-            <span className={`section__subtitle`}>Introduction</span>
-
+        <Section id="about" title="About me" subtitle="Introduction">
             <div className={`container ${classes.about__container}`}>
                 <div className={`${classes.about__info}`}>
                     <ScrollRevealHOC target="about-image" origin="left">
                         <img
                             src="images/logo/home3.svg"
-                            alt=""
+                            alt="coder with github"
                             className={`${classes.about__image}`}
                             id="about-image"
                         />
@@ -26,6 +24,7 @@ function About(props) {
                                 apparently I'm pursuing Web Development.
                             </p>
                         </ScrollRevealHOC>
+
                         <ScrollRevealHOC target="about-download" origin="bottom">
                             <a
                                 href="pdf/hwp.pdf"
@@ -40,7 +39,7 @@ function About(props) {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
 export default About;
