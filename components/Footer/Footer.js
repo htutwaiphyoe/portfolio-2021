@@ -2,6 +2,13 @@ import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import classes from "./Footer.module.scss";
 
 function Footer(props) {
+    const links = ["Services", "Subscription", "Contact"];
+    const socials = [
+        { href: "https://www.facebook.com/hwp.dev/", icon: "facebook-circle" },
+        { href: "https://www.instagram.com/htutwaiphyoe_/", icon: "instagram" },
+        { href: "https://www.linkedin.com/in/htut-wai-phyoe-876a21190/", icon: "linkedin-box" },
+        { href: "https://github.com/htutwaiphyoe", icon: "github" },
+    ];
     function onClickHandler(id) {
         document.getElementById(id).scrollIntoView();
     }
@@ -18,59 +25,29 @@ function Footer(props) {
                         </div>
 
                         <ul className={`${classes.footer__links}`}>
-                            <li
-                                onClick={() => onClickHandler("services")}
-                                className={classes.footer__link}
-                            >
-                                Services
-                            </li>
-                            <li
-                                onClick={() => onClickHandler("subscription")}
-                                className={classes.footer__link}
-                            >
-                                Subscription
-                            </li>
-                            <li
-                                onClick={() => onClickHandler("contact")}
-                                className={classes.footer__link}
-                            >
-                                Contact
-                            </li>
+                            {links.map((link) => (
+                                <li
+                                    onClick={() => onClickHandler(link.toLowerCase())}
+                                    className={classes.footer__link}
+                                    key={link}
+                                >
+                                    {link}
+                                </li>
+                            ))}
                         </ul>
 
                         <ul className={`${classes.footer__socials}`}>
-                            <a
-                                href="https://www.facebook.com/hwp.dev/"
-                                className={classes.footer__social}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i className="ri-facebook-circle-fill"></i>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/htutwaiphyoe_/"
-                                className={classes.footer__social}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i className="ri-instagram-fill"></i>
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/htut-wai-phyoe-876a21190/"
-                                className={classes.footer__social}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i className="ri-linkedin-box-fill"></i>
-                            </a>
-                            <a
-                                href="https://github.com/htutwaiphyoe"
-                                className={classes.footer__social}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i className="ri-github-fill"></i>
-                            </a>
+                            {socials.map((social, i) => (
+                                <a
+                                    href={social.href}
+                                    className={classes.footer__social}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    key={i}
+                                >
+                                    <i className={`ri-${social.icon}-fill`}></i>
+                                </a>
+                            ))}
                         </ul>
                     </div>
 
