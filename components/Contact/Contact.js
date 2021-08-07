@@ -1,39 +1,22 @@
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
+import SectionHOC from "../../hoc/Section/Section";
+import Information from "./Information/Information";
 import classes from "./Contact.module.scss";
 
 function Contact(props) {
+    const informations = [
+        { icon: "phone", title: "Phone", subtitle: "09798652590" },
+        { icon: "mail", title: "Email", subtitle: "htutwaiphyoe@gmail.com" },
+        { icon: "map-pin", title: "Location", subtitle: "Mandalay, Myanmar" },
+    ];
     return (
-        <section id="section" className={`section ${classes.contact}`} id="contact">
-            <h2 className={`section__title`}>Contact me</h2>
-            <span className={`section__subtitle`}>Get in touch</span>
+        <SectionHOC id="contact" title="Contact me" subtitle="Get in touch">
             <div className={`container ${classes.contact__container}`}>
                 <ScrollRevealHOC target="contact-informations" origin="left">
                     <div className={`${classes.contact__informations}`} id="contact-informations">
-                        <div className={`${classes.contact__information}`}>
-                            <i className={`ri-phone-line ${classes.contact__icon}`}></i>
-                            <div className={`${classes.contact__data}`}>
-                                <h3 className={`${classes.contact__title}`}>Phone</h3>
-                                <span className={`${classes.contact__subtitle}`}>09798652590</span>
-                            </div>
-                        </div>
-                        <div className={`${classes.contact__information}`}>
-                            <i className={`ri-mail-line ${classes.contact__icon}`}></i>
-                            <div className={`${classes.contact__data}`}>
-                                <h3 className={`${classes.contact__title}`}>Email</h3>
-                                <span className={`${classes.contact__subtitle}`}>
-                                    htutwaiphyoe@gmail.com
-                                </span>
-                            </div>
-                        </div>
-                        <div className={`${classes.contact__information}`}>
-                            <i className={`ri-map-pin-line ${classes.contact__icon}`}></i>
-                            <div className={`${classes.contact__data}`}>
-                                <h3 className={`${classes.contact__title}`}>Location</h3>
-                                <span className={`${classes.contact__subtitle}`}>
-                                    Mandalay, Myanmar
-                                </span>
-                            </div>
-                        </div>
+                        {informations.map((information, i) => (
+                            <Information information={information} key={i} />
+                        ))}
                     </div>
                 </ScrollRevealHOC>
 
@@ -79,7 +62,7 @@ function Contact(props) {
                     </form>
                 </ScrollRevealHOC>
             </div>
-        </section>
+        </SectionHOC>
     );
 }
 

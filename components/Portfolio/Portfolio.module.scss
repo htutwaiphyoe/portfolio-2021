@@ -9,50 +9,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 3rem;
-        &__item {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            background-color: var(--container-color);
-            padding: 2rem;
-            box-shadow: v.$box-shadow;
-            border-radius: 1rem;
-            -webkit-border-radius: 1rem;
-            -moz-border-radius: 1rem;
-            -ms-border-radius: 1rem;
-            -o-border-radius: 1rem;
-            position: relative;
-            &:hover {
-                box-shadow: 0 7px 15px 0 rgb(0 0 0 / 9%);
-            }
-        }
-        &__icon {
-            font-size: 3rem;
-            position: absolute;
-            top: -20%;
-            left: 6%;
-            background-color: var(--first-color);
-            padding: 0.8rem 1.8rem;
-            color: v.$color-white;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-        }
-        &__number {
-            font-size: 7rem;
-            color: var(--first-color);
-            font-weight: v.$font-weight-medium;
-        }
-        &__plus {
-            font-size: 3.5rem;
-            color: var(--first-color);
-        }
-
-        &__title {
-            margin-top: -0.9rem;
-        }
+        
     }
 
     @include m.responsive(1199, 1) {

@@ -1,10 +1,10 @@
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
-import Section from "../../hoc/Section/Section";
+import SectionHOC from "../../hoc/Section/Section";
 import classes from "./About.module.scss";
 
 function About(props) {
     return (
-        <Section id="about" title="About me" subtitle="Introduction">
+        <SectionHOC id="about" title="About me" subtitle="Introduction">
             <div className={`container ${classes.about__container}`}>
                 <div className={`${classes.about__info}`}>
                     <ScrollRevealHOC target="about-image" origin="left">
@@ -39,7 +39,7 @@ function About(props) {
                     </div>
                 </div>
             </div>
-        </Section>
+        </SectionHOC>
     );
 }
 export default About;

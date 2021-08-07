@@ -11,10 +11,8 @@ import SwiperCore, { Pagination } from "swiper/core";
 // install Swiper modules
 SwiperCore.use([Pagination]);
 
-import Image from "next/image";
-
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
-import Section from "../../hoc/Section/Section";
+import SectionHOC from "../../hoc/Section/Section";
 import Service from "./Service/Service";
 import classes from "./Services.module.scss";
 
@@ -44,7 +42,7 @@ function Services(props) {
     ];
 
     return (
-        <Section id="services" title="Services" subtitle="What I offer">
+        <SectionHOC id="services" title="Services" subtitle="What I offer">
             <ScrollRevealHOC target="services-container" origin="left">
                 <div className={`container ${classes.services__container}`} id="services-container">
                     <Swiper
@@ -63,7 +61,7 @@ function Services(props) {
                     </Swiper>
                 </div>
             </ScrollRevealHOC>
-        </Section>
+        </SectionHOC>
     );
 }
 
