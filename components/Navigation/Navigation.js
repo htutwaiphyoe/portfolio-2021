@@ -7,11 +7,13 @@ function Navigation(props) {
     const router = useRouter();
     const themeIconRef = useRef();
     const headerRef = useRef();
+    const toggleIconRef = useRef();
+    const navMenuRef = useRef();
     const items = [
-        { path: "/", name: "Home" },
-        { path: "/projects", name: "Projects" },
-        { path: "/blogs", name: "Blogs" },
-        { path: "/series", name: "Series" },
+        { path: "/", name: "Home", icon: "home-5" },
+        { path: "/projects", name: "Projects", icon: "award" },
+        { path: "/blogs", name: "Blogs", icon: "article" },
+        { path: "/series", name: "Series", icon: "folder" },
     ];
 
     useEffect(() => {
@@ -37,7 +39,9 @@ function Navigation(props) {
         const newTheme = window.document.body.classList.contains("dark-theme") ? "dark" : "light";
         localStorage.setItem("hwp-theme", newTheme);
     }
-
+    function toggleChangeHandler() {
+        navMenuRef.current.classList.toggle(classes.nav__menu_active);
+    }
     return (
         <header className={classes.header} ref={headerRef}>
             <nav className={`${classes.nav} container`}>
@@ -45,7 +49,7 @@ function Navigation(props) {
                     <a className={classes.nav__logo}>Htut Wai Phyoe</a>
                 </Link>
 
-                <div className={classes.nav__menu}>
+                <div className={classes.nav__menu} ref={navMenuRef}>
                     <ul className={classes.nav__list}>
                         {items.map((item) => (
                             <li className={classes.nav__item} key={item.path}>
@@ -57,12 +61,20 @@ function Navigation(props) {
                                                 : ""
                                         }`}
                                     >
+                                        <i
+                                            className={`ri-${item.icon}-line ${classes.nav__link__icon}`}
+                                        ></i>
                                         {item.name}
                                     </a>
                                 </Link>
                             </li>
                         ))}
                     </ul>
+
+                    <i
+                        className={`ri-close-line ${classes.nav__close}`}
+                        onClick={toggleChangeHandler}
+                    ></i>
                 </div>
 
                 <div className={classes.nav__btns}>
@@ -70,6 +82,12 @@ function Navigation(props) {
                         className={`ri-moon-line ${classes.nav__icon}`}
                         onClick={themeChangeHandler}
                         ref={themeIconRef}
+                    ></i>
+
+                    <i
+                        className={`ri-menu-line ${classes.nav__icon} ${classes.nav__toggle}`}
+                        ref={toggleIconRef}
+                        onClick={toggleChangeHandler}
                     ></i>
                 </div>
             </nav>

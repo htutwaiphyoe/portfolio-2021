@@ -156,10 +156,6 @@
         &__description {
             font-size: 1.5rem;
         }
-
-        &__scroll {
-            display: none;
-        }
     }
     @include m.responsive(575, 1) {
         &__content {
@@ -180,7 +176,7 @@
             justify-self: initial;
         }
         &__title {
-            font-size: 4.8rem;
+            font-size: 4.3rem;
         }
 
         &__subtitle {
@@ -189,6 +185,9 @@
 
         &__description {
             font-size: 1.7rem;
+        }
+        &__scroll {
+            display: none;
         }
     }
 }
