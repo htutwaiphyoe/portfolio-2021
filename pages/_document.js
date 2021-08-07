@@ -6,7 +6,10 @@ class Doc extends Document {
             <Html lang="en">
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta name="keywords" content="htutwaiphyoe, web developer, blogs" />
+                <meta
+                    name="keywords"
+                    content="htut wai phyoe, htut, wai, phyoe, webdeveloper, blogs"
+                />
                 <meta name="theme-color" content="#6E57E0" />
                 <meta property="article:modified_time" content="2021-08-11T14:20:40.000Z" />
                 <meta name="robots" content="index, follow" />
@@ -44,6 +47,7 @@ class Doc extends Document {
                     href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
                 />
 
+                {/* <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> */}
                 <script src="https://unpkg.com/scrollreveal"></script>
 
                 <body>
