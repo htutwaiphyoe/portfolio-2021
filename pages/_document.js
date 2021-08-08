@@ -55,6 +55,7 @@ class Doc extends Document {
                 ></script>
                 <body>
                     <Main />
+                    <div id="scrollup"></div>
 
                     <NextScript />
                 </body>
