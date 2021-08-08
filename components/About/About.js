@@ -30,7 +30,7 @@ function About(props) {
                             <Button
                                 type="download"
                                 config={{
-                                    href: "pdf/hwp.pdf",
+                                    href: "hwp.pdf",
                                     download: true,
                                     id: "about-download",
                                 }}
