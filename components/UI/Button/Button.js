@@ -20,7 +20,13 @@ function Button(props) {
                     <i className={`${props.icon} ${classes.btn__icon}`}></i>
                 </a>
             );
-
+        case "reverse":
+            return (
+                <button className={classes.btn} onClick={props.onClickHandler}>
+                    <i className={`${props.icon} ${classes.btn__icon} ${classes.btn__reverse}`}></i>
+                    {props.text}
+                </button>
+            );
         default:
             return (
                 <button className={classes.btn} onClick={props.onClickHandler}>

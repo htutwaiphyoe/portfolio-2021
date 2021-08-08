@@ -54,4 +54,4 @@ var twoSum = function (nums, target) {
 
 အသေးစိတ်သိချင်ရင် [https://jsdoc.app/](https://jsdoc.app/) ဆိုပြီး documentation ထုတ်ထားတာရှိတယ်။ ပြီးတော့ standard အတွက် [inline-documentation-standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/) ဒီမှာဝင်ကြည့်လို့ရတယ်။
 
-**_Wanna make a donation?_** [get KBZPay QR CODE here](/donation)
+

@@ -1,6 +1,7 @@
 @use "abstracts/variables" as v;
 @use "abstracts/mixins" as m;
 .blog {
+    cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     background-color: var(--container-color);

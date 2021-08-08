@@ -116,6 +116,6 @@ JavaScript မှာတော့ ဒီ case ဟာ invalid ဖြစ်ပါ�
 
 သူ့ကတော့ camelCase ပုံစံကိုမှ စာလုံးတိုင်းကို အသေးတွေနဲ့ပဲရေးတာပါ။ ဒီနည်းနဲ့ရေးရင် အပေါ်က function ဟာ getuserbyemail ဆိုပြီးဖြစ်သွားမှာပါ။ flatcase ကိုတော့ Java ရဲ့ package name တွေမှာ တွေ့ရပါတယ်။
 
+
 အပေါ်က case တွေဟာ အသုံးများတဲ့ case တွေကိုဖော်ပြထားတာပါ။ langauge standard အရသတ်မှတ်ထားပေမယ့် language တစ်ခုဟာ case တစ်ခုပဲသုံးရမယ်လို့တော့ မရှိပါဘူး။ project ရေးတဲ့ team ရဲ့ standard ပေါ်မူတည်ပြီး အပြောင်းအလဲရှိပါလိမ့်မယ်။
 
-**_Wanna make a donation?_** [get KBZPay QR CODE here](/donation)

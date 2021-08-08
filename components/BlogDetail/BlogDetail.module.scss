@@ -1,0 +1,55 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+.blogdetail {
+    max-width: 700px;
+    padding: 2rem 0;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 4rem;
+        line-height: 1.2;
+        font-family: v.$heading-font;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.55rem;
+        color: var(--text-color-light);
+        margin: 1rem 0 2rem;
+    }
+    &__date {
+        margin-right: 1.5rem;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__content {
+        padding-top: 3rem;
+        font-size: 2rem;
+        line-height: 1.7;
+    }
+
+    &__h2 {
+        font-size: 3.2rem;
+    }
+    &__p {
+        margin: 1rem 0;
+    }
+
+    @include m.responsive(1199, 1) {
+        padding: 2rem;
+    }
+
+    @include m.responsive(767, 1) {
+        &__title {
+            font-size: 3rem;
+        }
+        padding: 2rem 1.5rem;
+    }
+    @include m.responsive(575, 1) {
+        padding: 1rem;
+    }
+}

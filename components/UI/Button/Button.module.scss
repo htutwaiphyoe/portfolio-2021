@@ -17,4 +17,14 @@
         font-size: 1.6rem;
         margin-left: 0.5rem;
     }
+
+    &__reverse {
+        margin-left: 0;
+        margin-right: 0.5rem;
+    }
+
+    &:hover,
+    &:active {
+        background-color: var(--first-color-alt);
+    }
 }
