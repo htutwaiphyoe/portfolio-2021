@@ -15,7 +15,7 @@ function Footer(props) {
     return (
         <footer className={`${classes.footer}`}>
             <ScrollRevealHOC target="footer-bg" origin="top">
-                <div id="footer-bg" className={`${classes.footer__bg}`}>
+                <div id="footer-bg" className={`${classes.footer__bg} load-hidden`}>
                     <div className={`${classes.footer__container} container`}>
                         <div className={`${classes.footer__info} footer-info`}>
                             <h1 className={`${classes.footer__title}`}>Htut Wai Phyoe</h1>

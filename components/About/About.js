@@ -11,14 +11,14 @@ function About(props) {
                         <img
                             src="images/logo/home3.svg"
                             alt="coder with github"
-                            className={`${classes.about__image}`}
+                            className={`${classes.about__image} load-hidden`}
                             id="about-image"
                         />
                     </ScrollRevealHOC>
 
                     <div className={`${classes.about__data}`}>
                         <ScrollRevealHOC target="about-text" origin="right">
-                            <p id="about-text" className={`${classes.about__text}`}>
+                            <p id="about-text" className={`${classes.about__text} load-hidden`}>
                                 I'm currently a fourth year student studying CEIT at Mandalay
                                 Technological University. I started coding at second year and
                                 apparently I'm pursuing Web Development.
@@ -29,7 +29,7 @@ function About(props) {
                             <a
                                 href="pdf/hwp.pdf"
                                 download={true}
-                                className={`${classes.about__btn}`}
+                                className={`${classes.about__btn} load-hidden`}
                                 id="about-download"
                             >
                                 Download CV

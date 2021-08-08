@@ -47,7 +47,6 @@ class Doc extends Document {
                     href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
                 />
 
-                {/* <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> */}
                 <script src="https://unpkg.com/scrollreveal"></script>
 
                 <script

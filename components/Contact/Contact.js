@@ -18,7 +18,10 @@ function Contact(props) {
         >
             <div className={`container ${classes.contact__container}`}>
                 <ScrollRevealHOC target="contact-informations" origin="left">
-                    <div className={`${classes.contact__informations}`} id="contact-informations">
+                    <div
+                        className={`${classes.contact__informations} load-hidden`}
+                        id="contact-informations"
+                    >
                         {informations.map((information, i) => (
                             <Information information={information} key={i} />
                         ))}
@@ -26,7 +29,7 @@ function Contact(props) {
                 </ScrollRevealHOC>
 
                 <ScrollRevealHOC target="contact-form" origin="right">
-                    <form className={`${classes.contact__form}`} id="contact-form">
+                    <form className={`${classes.contact__form} load-hidden`} id="contact-form">
                         <div className={`${classes.contact__content}`}>
                             <label htmlFor="name" className={`${classes.contact__label}`}>
                                 Name

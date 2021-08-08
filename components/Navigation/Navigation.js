@@ -42,6 +42,9 @@ function Navigation(props) {
     function toggleChangeHandler() {
         navMenuRef.current.classList.toggle(classes.nav__menu_active);
     }
+    function removeActiveNav() {
+        navMenuRef.current.classList.remove(classes.nav__menu_active);
+    }
     return (
         <header className={classes.header} ref={headerRef}>
             <nav className={`${classes.nav} container`}>
@@ -50,7 +53,7 @@ function Navigation(props) {
                 </Link>
 
                 <div className={classes.nav__menu} ref={navMenuRef}>
-                    <ul className={classes.nav__list}>
+                    <ul className={classes.nav__list} onClick={removeActiveNav}>
                         {items.map((item) => (
                             <li className={classes.nav__item} key={item.path}>
                                 <Link href={item.path}>

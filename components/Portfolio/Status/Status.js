@@ -14,13 +14,13 @@ function Status({ s }) {
         return isCountUp ? s.number : 0;
     }
     return (
-        <div className={`${classes.status__item}`} id="portfolio-status-item">
+        <div className={`${classes.status__item} load-hidden`} id="portfolio-status-item">
             <i className={`ri-${s.icon} ${classes.status__icon}`}></i>
             <span className={`${classes.status__number}`}>
                 <VisibilitySensor>
                     {({ isVisible }) => {
                         return (
-                            <CountUp end={checkCountUp(isVisible)} duration={1} delay={1}>
+                            <CountUp delay={1} end={checkCountUp(isVisible)} duration={1}>
                                 {({ countUpRef }) => <span ref={countUpRef} />}
                             </CountUp>
                         );

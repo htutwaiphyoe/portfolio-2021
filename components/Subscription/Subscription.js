@@ -6,7 +6,10 @@ function Subscription(props) {
         <section className={`section ${classes.subscription}`} id="subscription">
             <div className={`container ${classes.subscription__container}`}>
                 <ScrollRevealHOC target="subscription-data" origin="left">
-                    <div className={`${classes.subscription__data}`} id="subscription-data">
+                    <div
+                        className={`${classes.subscription__data} load-hidden`}
+                        id="subscription-data"
+                    >
                         <div className={`${classes.subscription__info}`}>
                             <h2 className={`${classes.subscription__title}`}>Stay Tuned</h2>
                             <p className={`${classes.subscription__description}`}>
@@ -31,7 +34,10 @@ function Subscription(props) {
                 </ScrollRevealHOC>
 
                 <ScrollRevealHOC target="subscription-image" origin="right">
-                    <figure className={`${classes.subscription__image}`} id="subscription-image">
+                    <figure
+                        className={`${classes.subscription__image} load-hidden`}
+                        id="subscription-image"
+                    >
                         <img src="images/subscription.svg" alt="Subscription" />
                     </figure>
                 </ScrollRevealHOC>

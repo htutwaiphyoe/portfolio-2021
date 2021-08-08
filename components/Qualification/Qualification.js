@@ -46,7 +46,10 @@ function Qualification(props) {
                 </ScrollRevealHOC>
 
                 <ScrollRevealHOC target="qualification-list" origin="bottom">
-                    <div className={`${classes.qualification__lists}`} id="qualification-list">
+                    <div
+                        className={`${classes.qualification__lists} load-hidden`}
+                        id="qualification-list"
+                    >
                         {lists.map((list, i) => (
                             <List list={list} key={i} activeClass={classes.qualification__active} />
                         ))}

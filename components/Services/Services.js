@@ -49,7 +49,10 @@ function Services(props) {
             classname={classes.services}
         >
             <ScrollRevealHOC target="services-container" origin="left">
-                <div className={`container ${classes.services__container}`} id="services-container">
+                <div
+                    className={`container ${classes.services__container} load-hidden`}
+                    id="services-container"
+                >
                     <Swiper
                         pagination={{
                             dynamicBullets: true,

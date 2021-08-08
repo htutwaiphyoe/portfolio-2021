@@ -13,7 +13,9 @@ function Bar({ bar }) {
     }
     return (
         <div
-            className={`${classes.bar} ${classes[`${bar.open ? "bar__open" : "bar__close"}`]}`}
+            className={`${classes.bar} ${
+                classes[`${bar.open ? "bar__open" : "bar__close"}`]
+            } load-hidden`}
             ref={barRef}
             id="skills-bar"
         >

@@ -14,7 +14,7 @@ function Tab({ tab, activeClass }) {
         <div
             className={`${classes.tab} ${tab.active ? classes.tab__active : ""} ${
                 tab.target === "education" ? classes.tab_edu : ""
-            }`}
+            } load-hidden`}
             data-target={`#${tab.target}`}
             id="qualification-tab"
         >
