@@ -10,7 +10,12 @@ function Contact(props) {
         { icon: "map-pin", title: "Location", subtitle: "Mandalay, Myanmar" },
     ];
     return (
-        <SectionHOC id="contact" title="Contact me" subtitle="Get in touch">
+        <SectionHOC
+            id="contact"
+            title="Contact me"
+            subtitle="Get in touch"
+            classname={classes.contact}
+        >
             <div className={`container ${classes.contact__container}`}>
                 <ScrollRevealHOC target="contact-informations" origin="left">
                     <div className={`${classes.contact__informations}`} id="contact-informations">

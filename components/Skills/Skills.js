@@ -37,7 +37,12 @@ function Skills(props) {
     ];
 
     return (
-        <SectionHOC id="skills" title="Skills" subtitle="Technical level">
+        <SectionHOC
+            id="skills"
+            title="Skills"
+            subtitle="Technical level"
+            classname={classes.skills}
+        >
             <div className={`container ${classes.skills__container}`}>
                 <ScrollRevealHOC target="skills-circle" origin="top">
                     <div className={`${classes.skills__circles}`}>

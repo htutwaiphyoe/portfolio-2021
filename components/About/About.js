@@ -4,7 +4,7 @@ import classes from "./About.module.scss";
 
 function About(props) {
     return (
-        <SectionHOC id="about" title="About me" subtitle="Introduction">
+        <SectionHOC id="about" title="About me" subtitle="Introduction" classname={classes.about}>
             <div className={`container ${classes.about__container}`}>
                 <div className={`${classes.about__info}`}>
                     <ScrollRevealHOC target="about-image" origin="left">

@@ -42,7 +42,12 @@ function Services(props) {
     ];
 
     return (
-        <SectionHOC id="services" title="Services" subtitle="What I offer">
+        <SectionHOC
+            id="services"
+            title="Services"
+            subtitle="What I offer"
+            classname={classes.services}
+        >
             <ScrollRevealHOC target="services-container" origin="left">
                 <div className={`container ${classes.services__container}`} id="services-container">
                     <Swiper

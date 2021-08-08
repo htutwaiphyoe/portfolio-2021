@@ -4,7 +4,7 @@ class Doc extends Document {
     render() {
         return (
             <Html lang="en">
-                <meta charset="utf-8" />
+                <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta
                     name="keywords"
@@ -50,6 +50,10 @@ class Doc extends Document {
                 {/* <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> */}
                 <script src="https://unpkg.com/scrollreveal"></script>
 
+                <script
+                    defer
+                    src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+                ></script>
                 <body>
                     <Main />
 

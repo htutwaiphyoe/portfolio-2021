@@ -13,26 +13,7 @@
         column-gap: 5rem;
     }
 
-    &__tab {
-        display: flex;
-        align-items: center;
-
-        &_edu {
-            justify-self: flex-end;
-        }
-    }
-
-    &__icon {
-        font-size: 4rem;
-        margin-right: 0.5rem;
-    }
-
-    &__label {
-        font-size: 2rem;
-        cursor: pointer;
-    }
-
-    &__data {
+    &__lists {
         position: relative;
         &::after {
             content: "";
@@ -40,60 +21,15 @@
             width: 3px;
             height: 100%;
             background-color: var(--first-color);
-            top: 5px;
+            top: 6px;
             left: 50%;
             position: absolute;
-            transform: translateX(-60%);
-            -webkit-transform: translateX(-60%);
-            -moz-transform: translateX(-60%);
-            -ms-transform: translateX(-60%);
-            -o-transform: translateX(-60%);
+            transform: translateX(-40%);
+            -webkit-transform: translateX(-40%);
+            -moz-transform: translateX(-40%);
+            -ms-transform: translateX(-40%);
+            -o-transform: translateX(-40%);
         }
-    }
-    &__list {
-        display: grid;
-        row-gap: 1rem;
-    }
-    &__item {
-        display: grid;
-        grid-template-columns: 1fr max-content 1fr;
-        column-gap: 2rem;
-    }
-    &__title {
-        font-size: 2rem;
-        font-weight: v.$font-weight-medium;
-    }
-
-    &__subtitle {
-        display: inline-block;
-        font-size: 1.55rem;
-        margin-bottom: 1rem;
-        color: var(--text-color);
-    }
-
-    &__calendar {
-        font-size: 1.5rem;
-        color: var(--text-color-light);
-        display: flex;
-        align-items: center;
-    }
-    &__year {
-        margin-left: 0.5rem;
-    }
-
-    &__content {
-        justify-self: flex-end;
-    }
-    &__rounder {
-        display: inline-block;
-        width: 1.3rem;
-        height: 1.3rem;
-        background-color: var(--first-color);
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
     }
 
     & [data-content] {
@@ -104,38 +40,9 @@
         display: block;
     }
 
-    &__active {
-        &.qualification__tab {
-            color: var(--first-color);
-        }
-    }
-
-    @include m.responsive(1199, 1) {
-    }
-
     @include m.responsive(767, 1) {
         &__container {
             padding: 0 2.4rem;
-        }
-    }
-    @include m.responsive(575, 1) {
-        &__icon {
-            font-size: 3rem;
-        }
-
-        &__label {
-            font-size: 1.9rem;
-        }
-        &__title {
-            font-size: 1.8rem;
-        }
-
-        &__subtitle {
-            font-size: 1.4rem;
-        }
-
-        &__calendar {
-            font-size: 1.2rem;
         }
     }
 }

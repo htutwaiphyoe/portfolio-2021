@@ -1,167 +1,55 @@
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import SectionHOC from "../../hoc/Section/Section";
+import Tab from "./Tab/Tab";
+import List from "./List/List";
 import classes from "./Qualification.module.scss";
 
 function Qualification(props) {
-    function onClickHandler(e) {
-        const tabs = window.document.querySelectorAll("[data-target]");
-        const tabContents = window.document.querySelectorAll("[data-content]");
-        const target = window.document.querySelector(e.target.parentNode.dataset.target);
-        tabContents.forEach((tabContent) =>
-            tabContent.classList.remove(`${classes.qualification__active}`)
-        );
-        target.classList.add(`${classes.qualification__active}`);
-        tabs.forEach((tab) => tab.classList.remove(`${classes.qualification__active}`));
-        e.target.parentNode.classList.add(`${classes.qualification__active}`);
-    }
+    const tabs = [
+        { active: true, target: "education", icon: "graduation-cap", label: "Education" },
+        { active: false, target: "work", icon: "briefcase-alt", label: "Work" },
+    ];
+
+    const lists = [
+        {
+            id: "education",
+            active: true,
+            items: [
+                { title: "Matriculation", subtitle: "High School - MDY", year: "2015 - 2016" },
+                { title: "Computer Engineer", subtitle: "MTU - COE", year: "2016 - Present" },
+                { title: "IT Student", subtitle: "CS50 - Harvard", year: "2020" },
+            ],
+        },
+        {
+            id: "work",
+            active: false,
+            items: [
+                { title: "Web Developer", subtitle: "MTU - COE", year: "2019 - Present" },
+                { title: "Freelancer", subtitle: "Mandalay", year: "2020 - Present" },
+            ],
+        },
+    ];
     return (
-        <SectionHOC id="qualification" title="Qualification" subtitle="Personal journey">
+        <SectionHOC
+            id="qualification"
+            title="Qualification"
+            subtitle="Personal journey"
+            classname={classes.qualification}
+        >
             <div className={`container ${classes.qualification__container}`}>
                 <ScrollRevealHOC target="qualification-tab" origin="top">
                     <div className={`${classes.qualification__tabs}`}>
-                        <div
-                            className={`${classes.qualification__tab} ${classes.qualification__active} ${classes.qualification__tab_edu}`}
-                            data-target="#education"
-                            id="qualification-tab"
-                        >
-                            <i
-                                className={`uil uil-graduation-cap ${classes.qualification__icon}`}
-                            ></i>
-                            <span
-                                className={`${classes.qualification__label}`}
-                                onClick={onClickHandler}
-                            >
-                                Education
-                            </span>
-                        </div>
-
-                        <div
-                            className={`${classes.qualification__tab}`}
-                            data-target="#work"
-                            id="qualification-tab"
-                        >
-                            <i
-                                className={`uil uil-briefcase-alt ${classes.qualification__icon}`}
-                            ></i>
-                            <span
-                                className={`${classes.qualification__label}`}
-                                onClick={onClickHandler}
-                            >
-                                Work
-                            </span>
-                        </div>
+                        {tabs.map((tab, i) => (
+                            <Tab tab={tab} key={i} activeClass={classes.qualification__active} />
+                        ))}
                     </div>
                 </ScrollRevealHOC>
+
                 <ScrollRevealHOC target="qualification-list" origin="bottom">
-                    <div className={`${classes.qualification__data}`} id="qualification-list">
-                        <div
-                            className={`${classes.qualification__list} ${classes.qualification__active}`}
-                            data-content
-                            id="education"
-                        >
-                            <div className={`${classes.qualification__item}`}>
-                                <div className={`${classes.qualification__content}`}>
-                                    <h3 className={`${classes.qualification__title}`}>
-                                        Matriculation
-                                    </h3>
-                                    <span className={`${classes.qualification__subtitle}`}>
-                                        High School - MDY
-                                    </span>
-                                    <div className={`${classes.qualification__calendar}`}>
-                                        <i className={`ri-calendar-2-line`}></i>
-                                        <span className={`${classes.qualification__year}`}>
-                                            2015 - 2016
-                                        </span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className={`${classes.qualification__rounder}`}></span>
-                                </div>
-                                <div></div>
-                            </div>
-                            <div className={`${classes.qualification__item}`}>
-                                <div></div>
-                                <div>
-                                    <span className={`${classes.qualification__rounder}`}></span>
-                                </div>
-                                <div>
-                                    <h3 className={`${classes.qualification__title}`}>
-                                        Computer Engineer
-                                    </h3>
-                                    <span className={`${classes.qualification__subtitle}`}>
-                                        MTU - COE
-                                    </span>
-                                    <div className={`${classes.qualification__calendar}`}>
-                                        <i className={`ri-calendar-2-line`}></i>
-                                        <span className={`${classes.qualification__year}`}>
-                                            2016 - Present
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`${classes.qualification__item}`}>
-                                <div className={`${classes.qualification__content}`}>
-                                    <h3 className={`${classes.qualification__title}`}>
-                                        IT Student
-                                    </h3>
-                                    <span className={`${classes.qualification__subtitle}`}>
-                                        CS50 - Harvard
-                                    </span>
-                                    <div className={`${classes.qualification__calendar}`}>
-                                        <i className={`ri-calendar-2-line`}></i>
-                                        <span className={`${classes.qualification__year}`}>
-                                            2020
-                                        </span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className={`${classes.qualification__rounder}`}></span>
-                                </div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div className={`${classes.qualification__list}`} data-content id="work">
-                            <div className={`${classes.qualification__item}`}>
-                                <div className={`${classes.qualification__content}`}>
-                                    <h3 className={`${classes.qualification__title}`}>
-                                        Web Developer
-                                    </h3>
-                                    <span className={`${classes.qualification__subtitle}`}>
-                                        MTU - COE
-                                    </span>
-                                    <div className={`${classes.qualification__calendar}`}>
-                                        <i className={`ri-calendar-2-line`}></i>
-                                        <span className={`${classes.qualification__year}`}>
-                                            2019 - Present
-                                        </span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className={`${classes.qualification__rounder}`}></span>
-                                </div>
-                                <div></div>
-                            </div>
-                            <div className={`${classes.qualification__item}`}>
-                                <div></div>
-                                <div>
-                                    <span className={`${classes.qualification__rounder}`}></span>
-                                </div>
-                                <div>
-                                    <h3 className={`${classes.qualification__title}`}>
-                                        Freelancer
-                                    </h3>
-                                    <span className={`${classes.qualification__subtitle}`}>
-                                        Mandalay
-                                    </span>
-                                    <div className={`${classes.qualification__calendar}`}>
-                                        <i className={`ri-calendar-2-line`}></i>
-                                        <span className={`${classes.qualification__year}`}>
-                                            2020 - Present
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className={`${classes.qualification__lists}`} id="qualification-list">
+                        {lists.map((list, i) => (
+                            <List list={list} key={i} activeClass={classes.qualification__active} />
+                        ))}
                     </div>
                 </ScrollRevealHOC>
             </div>

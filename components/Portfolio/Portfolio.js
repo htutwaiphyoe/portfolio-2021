@@ -1,6 +1,3 @@
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
-
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import SectionHOC from "../../hoc/Section/Section";
 import Status from "./Status/Status";
@@ -13,7 +10,12 @@ function Portfolio(props) {
         { icon: "quill-pen-line", number: 6, title: " Sharing contents" },
     ];
     return (
-        <SectionHOC id="portfolio" title="Portfolio" subtitle="Developer life">
+        <SectionHOC
+            id="portfolio"
+            title="Portfolio"
+            subtitle="Developer life"
+            classname={classes.portfolio}
+        >
             <div className={`container ${classes.portfolio__container}`}>
                 <ScrollRevealHOC target="portfolio-status-item" origin="top">
                     <div className={`${classes.portfolio__status}`}>
