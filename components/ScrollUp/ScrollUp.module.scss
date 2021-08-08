@@ -1,7 +1,7 @@
 @use "abstracts/variables" as v;
 @use "abstracts/mixins" as m;
 .scrollup {
-    padding: 0.7rem 1.2rem;
+    padding: 0.5rem 1.2rem;
     background-color: var(--first-color-alt);
     position: fixed;
     bottom: -100%;
@@ -23,7 +23,7 @@
     -o-transition: 0.3s;
     &__icon {
         color: v.$color-white;
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
 
     &__active {
@@ -31,8 +31,12 @@
     }
 
     @include m.responsive(575, 1) {
+        right: 1rem;
         &__active {
-            bottom: 11rem;
+            bottom: 10rem;
+        }
+        &__icon {
+            font-size: 1.8rem;
         }
     }
 }

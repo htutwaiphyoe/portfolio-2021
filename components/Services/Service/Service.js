@@ -1,3 +1,4 @@
+import Button from "../../UI/Button/Button";
 import classes from "./Service.module.scss";
 
 function Service({ service }) {
@@ -12,10 +13,7 @@ function Service({ service }) {
                 <h3 className={`${classes.service__title}`}>{service.title}</h3>
                 <p className={`${classes.service__description}`}>{service.description}</p>
 
-                <div className={`${classes.service__btn}`} onClick={onClickHandler}>
-                    Hire me
-                    <i className={`ri-briefcase-line ${classes.service__btn__icon}`}></i>
-                </div>
+                <Button onClickHandler={onClickHandler} text="Hire me" icon="ri-briefcase-line" />
             </div>
         </div>
     );

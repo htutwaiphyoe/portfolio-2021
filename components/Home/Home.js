@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Typed from "react-typed";
 
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
+import Button from "../UI/Button/Button";
 import classes from "./Home.module.scss";
 function Home(props) {
     function onClickHandler() {
@@ -40,14 +40,12 @@ function Home(props) {
                                 Producing quality sharing content about web development especially
                                 for JavaScrip and MERN stack
                             </p>
-                            <Link href="/blogs">
-                                <a className={classes.home__btn}>
-                                    Read blogs
-                                    <i
-                                        className={`ri-arrow-right-line ${classes.home__btn__icon}`}
-                                    ></i>
-                                </a>
-                            </Link>
+                            <Button
+                                type="link"
+                                href="/blogs"
+                                text="Read blogs"
+                                icon="ri-arrow-right-line"
+                            />
                         </div>
                     </ScrollRevealHOC>
                 </div>

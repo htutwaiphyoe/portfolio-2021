@@ -1,5 +1,6 @@
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import SectionHOC from "../../hoc/Section/Section";
+import Button from "../UI/Button/Button";
 import classes from "./About.module.scss";
 
 function About(props) {
@@ -26,15 +27,16 @@ function About(props) {
                         </ScrollRevealHOC>
 
                         <ScrollRevealHOC target="about-download" origin="bottom">
-                            <a
-                                href="pdf/hwp.pdf"
-                                download={true}
-                                className={`${classes.about__btn} load-hidden`}
-                                id="about-download"
-                            >
-                                Download CV
-                                <i className={`ri-download-2-line ${classes.about__btn__icon}`}></i>
-                            </a>
+                            <Button
+                                type="download"
+                                config={{
+                                    href: "pdf/hwp.pdf",
+                                    download: true,
+                                    id: "about-download",
+                                }}
+                                text="Download CV"
+                                icon="ri-download-2-line"
+                            />
                         </ScrollRevealHOC>
                     </div>
                 </div>

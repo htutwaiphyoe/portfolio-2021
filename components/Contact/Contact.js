@@ -1,6 +1,7 @@
 import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import SectionHOC from "../../hoc/Section/Section";
 import Information from "./Information/Information";
+import Button from "../UI/Button/Button";
 import classes from "./Contact.module.scss";
 
 function Contact(props) {
@@ -9,6 +10,10 @@ function Contact(props) {
         { icon: "mail", title: "Email", subtitle: "htutwaiphyoe@gmail.com" },
         { icon: "map-pin", title: "Location", subtitle: "Mandalay, Myanmar" },
     ];
+
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+    };
     return (
         <SectionHOC
             id="contact"
@@ -29,7 +34,11 @@ function Contact(props) {
                 </ScrollRevealHOC>
 
                 <ScrollRevealHOC target="contact-form" origin="right">
-                    <form className={`${classes.contact__form} load-hidden`} id="contact-form">
+                    <form
+                        className={`${classes.contact__form} load-hidden`}
+                        id="contact-form"
+                        onSubmit={onSubmitHandler}
+                    >
                         <div className={`${classes.contact__content}`}>
                             <label htmlFor="name" className={`${classes.contact__label}`}>
                                 Name
@@ -60,12 +69,7 @@ function Contact(props) {
                         </div>
 
                         <div>
-                            <button href="#contact" className={`${classes.contact__btn}`}>
-                                Send now
-                                <i
-                                    className={`ri-send-plane-2-line ${classes.contact__btn__icon}`}
-                                ></i>
-                            </button>
+                            <Button text="Send now" icon="ri-send-plane-2-line" />
                         </div>
                     </form>
                 </ScrollRevealHOC>

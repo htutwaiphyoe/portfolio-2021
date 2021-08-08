@@ -2,6 +2,9 @@ import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import classes from "./Subscription.module.scss";
 
 function Subscription(props) {
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+    };
     return (
         <section className={`section ${classes.subscription}`} id="subscription">
             <div className={`container ${classes.subscription__container}`}>
@@ -20,7 +23,10 @@ function Subscription(props) {
                             </p>
                         </div>
 
-                        <form className={`${classes.subscription__form}`}>
+                        <form
+                            className={`${classes.subscription__form}`}
+                            onSubmit={onSubmitHandler}
+                        >
                             <input
                                 type="email"
                                 placeholder="Enter your email address"
