@@ -3,17 +3,21 @@ import FeaturedBlog from "./Blog/Blog";
 function Blogs(props) {
     return (
         <section className={`${classes.blogs} section container`}>
-            {/* <div className={`${classes.blogs__heading}`}>
-                <h2 className="section__title">All Blogs</h2>
-                <span className="section__subtitle">What I share</span>
-            </div> */}
-
-            <div className={`container ${classes.blogs__list}`}>
+            <div className={` ${classes.blogs__list}`}>
                 <FeaturedBlog />
                 <FeaturedBlog />
                 <FeaturedBlog />
                 <FeaturedBlog />
                 <FeaturedBlog />
+            </div>
+            <div className={` ${classes.blogs__find}`}>
+                <p className={` ${classes.blogs__title}`}>Find with topic</p>
+                <div className={classes.blogs__topics}>
+                    <span className={classes.blogs__topic}>JAVASCRIPT</span>
+                    <span className={classes.blogs__topic}>REACTJS</span>
+                    <span className={classes.blogs__topic}>BESTPRACTICES</span>
+                    <span className={classes.blogs__topic}>TIPS&TRICKS</span>
+                </div>
             </div>
         </section>
     );

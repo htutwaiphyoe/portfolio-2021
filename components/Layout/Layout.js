@@ -5,7 +5,6 @@ import ScrollUp from "../ScrollUp/ScrollUp";
 function Layout(props) {
     useEffect(() => {
         function disableSelection(event) {
-            console.log(event.detail);
             if (event.detail > 1) {
                 event.preventDefault();
             }

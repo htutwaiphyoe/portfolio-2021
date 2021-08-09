@@ -3,29 +3,23 @@
 .blog {
     cursor: pointer;
     display: grid;
-    grid-template-columns: 1fr;
-    box-shadow: v.$box-shadow;
+    grid-template-columns: 1fr 1.5fr;
+    // box-shadow: v.$box-shadow;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    background-color: var(--container-color);
+    // background-color: var(--container-color);
+    width: 100%;
 
-    &:hover {
-        box-shadow: v.$box-shadow-hover;
-    }
-    &_featured {
-        grid-template-columns: repeat(2, 1fr);
-    }
     &__image {
-        border-radius: 1rem 1rem 0 0;
-        -webkit-border-radius: 1rem 1rem 0 0;
-        -moz-border-radius: 1rem 1rem 0 0;
-        -ms-border-radius: 1rem 1rem 0 0;
-        -o-border-radius: 1rem 1rem 0 0;
+        // border-radius: 1rem 0 0 1rem;
+        // -webkit-border-radius: 1rem 0 0 1rem;
+        // -moz-border-radius: 1rem 0 0 1rem;
+        // -ms-border-radius: 1rem 0 0 1rem;
+        // -o-border-radius: 1rem 0 0 1rem;
         object-fit: cover;
-        height: 30rem !important;
     }
 
     &__data {
@@ -34,19 +28,29 @@
         row-gap: 0.7rem;
         align-self: center;
     }
+    &__topics {
+        margin-bottom: 0.8rem;
+    }
+    &__topic {
+        font-size: 1.3rem;
+        color: v.$color-white;
+        margin-right: 1rem;
+        padding: 0.5rem 1rem;
 
-    &__tag {
-        font-size: 1.5rem;
-        color: var(--first-color);
-        margin-right: 1.5rem;
+        background-color: var(--first-color);
         &:hover,
         &:active {
             text-decoration: underline;
         }
+        border-radius: 5rem;
+        -webkit-border-radius: 5rem;
+        -moz-border-radius: 5rem;
+        -ms-border-radius: 5rem;
+        -o-border-radius: 5rem;
     }
 
     &__title {
-        line-height: 1;
+        line-height: 1.3;
         margin-bottom: 0.3rem;
         font-size: 2.1rem;
     }
@@ -54,18 +58,20 @@
     &__info {
         display: flex;
         justify-content: space-between;
-        font-size: 1.45rem;
+        font-size: 1.4rem;
         color: var(--text-color-light);
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
-
+    @include m.responsive(1199, 1) {
+    }
     @include m.responsive(767, 1) {
-        &_featured {
-            grid-template-columns: 1fr;
-        }
+        grid-template-columns: 1fr 1.1fr;
 
-        &__image {
-            max-height: 30rem;
+        &__data {
+            padding: 2rem;
         }
+    }
+    @include m.responsive(575, 1) {
+        grid-template-columns: 1fr;
     }
 }
