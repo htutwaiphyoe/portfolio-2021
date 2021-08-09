@@ -1,22 +1,21 @@
 import classes from "./Blogs.module.scss";
-import FeaturedBlog from "./Blog/Blog";
+import Blog from "./Blog/Blog";
 function Blogs(props) {
     return (
         <section className={`${classes.blogs} section container`}>
             <div className={` ${classes.blogs__list}`}>
-                <FeaturedBlog />
-                <FeaturedBlog />
-                <FeaturedBlog />
-                <FeaturedBlog />
-                <FeaturedBlog />
+                {props.blogs.map((blog, i) => (
+                    <Blog blog={blog} key={i} />
+                ))}
             </div>
             <div className={` ${classes.blogs__find}`}>
                 <p className={` ${classes.blogs__title}`}>Find with topic</p>
                 <div className={classes.blogs__topics}>
-                    <span className={classes.blogs__topic}>JAVASCRIPT</span>
-                    <span className={classes.blogs__topic}>REACTJS</span>
-                    <span className={classes.blogs__topic}>BESTPRACTICES</span>
-                    <span className={classes.blogs__topic}>TIPS&TRICKS</span>
+                    {props.topics.map((topic) => (
+                        <span className={classes.blogs__topic} key={topic}>
+                            {topic}
+                        </span>
+                    ))}
                 </div>
             </div>
         </section>

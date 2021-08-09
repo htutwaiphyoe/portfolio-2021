@@ -5,12 +5,12 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     // box-shadow: v.$box-shadow;
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    // background-color: var(--container-color);
+    // border-radius: 1rem;
+    // -webkit-border-radius: 1rem;
+    // -moz-border-radius: 1rem;
+    // -ms-border-radius: 1rem;
+    // -o-border-radius: 1rem;
+    background-color: var(--container-color);
     width: 100%;
 
     &__image {
@@ -36,7 +36,7 @@
         color: v.$color-white;
         margin-right: 1rem;
         padding: 0.5rem 1rem;
-
+        text-transform: uppercase;
         background-color: var(--first-color);
         &:hover,
         &:active {

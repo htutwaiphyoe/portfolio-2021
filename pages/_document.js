@@ -6,7 +6,6 @@ class Doc extends Document {
             <Html lang="en">
                 <Head>
                     <meta charSet="utf-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <meta name="keywords" content="htut wai phyoe, web developer, blogs" />
                     <meta name="theme-color" content="#6E57E0" />
                     <meta property="article:modified_time" content="2021-08-11T14:20:40.000Z" />
