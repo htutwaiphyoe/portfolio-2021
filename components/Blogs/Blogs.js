@@ -1,5 +1,6 @@
 import classes from "./Blogs.module.scss";
 import Blog from "./Blog/Blog";
+import BlogTopic from "./BlogTopic/BlogTopic";
 function Blogs(props) {
     return (
         <section className={`${classes.blogs} section container`}>
@@ -12,9 +13,7 @@ function Blogs(props) {
                 <p className={` ${classes.blogs__title}`}>Find with topic</p>
                 <div className={classes.blogs__topics}>
                     {props.topics.map((topic) => (
-                        <span className={classes.blogs__topic} key={topic}>
-                            {topic}
-                        </span>
+                        <BlogTopic topic={topic} key={topic} />
                     ))}
                 </div>
             </div>

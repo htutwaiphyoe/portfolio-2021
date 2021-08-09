@@ -1,24 +1,11 @@
 @use "abstracts/variables" as v;
 @use "abstracts/mixins" as m;
 .blog {
-    cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    // box-shadow: v.$box-shadow;
-    // border-radius: 1rem;
-    // -webkit-border-radius: 1rem;
-    // -moz-border-radius: 1rem;
-    // -ms-border-radius: 1rem;
-    // -o-border-radius: 1rem;
     background-color: var(--container-color);
-    width: 100%;
 
     &__image {
-        // border-radius: 1rem 0 0 1rem;
-        // -webkit-border-radius: 1rem 0 0 1rem;
-        // -moz-border-radius: 1rem 0 0 1rem;
-        // -ms-border-radius: 1rem 0 0 1rem;
-        // -o-border-radius: 1rem 0 0 1rem;
         object-fit: cover;
     }
 
@@ -28,25 +15,9 @@
         row-gap: 0.7rem;
         align-self: center;
     }
+
     &__topics {
         margin-bottom: 0.8rem;
-    }
-    &__topic {
-        font-size: 1.3rem;
-        color: v.$color-white;
-        margin-right: 1rem;
-        padding: 0.5rem 1rem;
-        text-transform: uppercase;
-        background-color: var(--first-color);
-        &:hover,
-        &:active {
-            text-decoration: underline;
-        }
-        border-radius: 5rem;
-        -webkit-border-radius: 5rem;
-        -moz-border-radius: 5rem;
-        -ms-border-radius: 5rem;
-        -o-border-radius: 5rem;
     }
 
     &__title {
@@ -62,8 +33,7 @@
         color: var(--text-color-light);
         margin-top: 1rem;
     }
-    @include m.responsive(1199, 1) {
-    }
+
     @include m.responsive(767, 1) {
         grid-template-columns: 1fr 1.1fr;
 
