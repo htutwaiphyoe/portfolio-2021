@@ -15,7 +15,7 @@ function Circle({ circle }) {
         return isCountUp ? circle.amount : 0;
     }
     return (
-        <div className={`${classes.circle} load-hidden`} id="skills-circle">
+        <div className={`${classes.circle}`} id="skills-circle">
             <div>
                 <VisibilitySensor>
                     {({ isVisible }) => {

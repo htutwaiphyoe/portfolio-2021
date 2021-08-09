@@ -1,0 +1,71 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+.blog {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: v.$box-shadow;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background-color: var(--container-color);
+
+    &:hover {
+        box-shadow: v.$box-shadow-hover;
+    }
+    &_featured {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__image {
+        border-radius: 1rem 1rem 0 0;
+        -webkit-border-radius: 1rem 1rem 0 0;
+        -moz-border-radius: 1rem 1rem 0 0;
+        -ms-border-radius: 1rem 1rem 0 0;
+        -o-border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+        height: 30rem !important;
+    }
+
+    &__data {
+        padding: 2.5rem;
+        display: grid;
+        row-gap: 0.7rem;
+        align-self: center;
+    }
+
+    &__tag {
+        font-size: 1.5rem;
+        color: var(--first-color);
+        margin-right: 1.5rem;
+        &:hover,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+
+    &__title {
+        line-height: 1;
+        margin-bottom: 0.3rem;
+        font-size: 2.1rem;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.45rem;
+        color: var(--text-color-light);
+        margin-top: 1.5rem;
+    }
+
+    @include m.responsive(767, 1) {
+        &_featured {
+            grid-template-columns: 1fr;
+        }
+
+        &__image {
+            max-height: 30rem;
+        }
+    }
+}

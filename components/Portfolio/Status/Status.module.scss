@@ -16,7 +16,7 @@
         -o-border-radius: 1rem;
         position: relative;
         &:hover {
-            box-shadow: 0 7px 15px 0 rgb(0 0 0 / 9%);
+            box-shadow: v.$box-shadow-hover;
         }
     }
     &__icon {

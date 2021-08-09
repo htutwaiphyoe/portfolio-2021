@@ -1,4 +1,3 @@
-import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import SectionHOC from "../../hoc/Section/Section";
 import Status from "./Status/Status";
 import classes from "./Portfolio.module.scss";
@@ -17,13 +16,11 @@ function Portfolio(props) {
             classname={classes.portfolio}
         >
             <div className={`container ${classes.portfolio__container}`}>
-                <ScrollRevealHOC target="portfolio-status-item" origin="top">
-                    <div className={`${classes.portfolio__status}`}>
-                        {status.map((s, i) => (
-                            <Status key={i} s={s} />
-                        ))}
-                    </div>
-                </ScrollRevealHOC>
+                <div className={`${classes.portfolio__status}`}>
+                    {status.map((s, i) => (
+                        <Status key={i} s={s} />
+                    ))}
+                </div>
             </div>
         </SectionHOC>
     );

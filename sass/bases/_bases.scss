@@ -13,6 +13,8 @@
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     --container-color: #fff;
+
+    --blog-item-color: #fbfbfe;
 }
 
 body.dark-theme {
@@ -25,6 +27,8 @@ body.dark-theme {
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+
+    --blog-item-color: #100e1b;
 }
 
 *,
@@ -51,6 +55,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     font-size: $font-size-normal;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .main {

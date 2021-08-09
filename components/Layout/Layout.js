@@ -1,7 +1,21 @@
+import { useEffect } from "react";
 import Navigation from "../Navigation/Navigation";
 import ScrollUp from "../ScrollUp/ScrollUp";
 
 function Layout(props) {
+    useEffect(() => {
+        function disableSelection(event) {
+            console.log(event.detail);
+            if (event.detail > 1) {
+                event.preventDefault();
+            }
+        }
+        window.document.addEventListener("mousedown", disableSelection, false);
+
+        return () => {
+            window.document.removeEventListener("mousedown", disableSelection);
+        };
+    }, []);
     return (
         <>
             <Navigation />

@@ -1,4 +1,3 @@
-import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import SectionHOC from "../../hoc/Section/Section";
 import Tab from "./Tab/Tab";
 import List from "./List/List";
@@ -37,24 +36,17 @@ function Qualification(props) {
             classname={classes.qualification}
         >
             <div className={`container ${classes.qualification__container}`}>
-                <ScrollRevealHOC target="qualification-tab" origin="top">
-                    <div className={`${classes.qualification__tabs}`}>
-                        {tabs.map((tab, i) => (
-                            <Tab tab={tab} key={i} activeClass={classes.qualification__active} />
-                        ))}
-                    </div>
-                </ScrollRevealHOC>
+                <div className={`${classes.qualification__tabs}`}>
+                    {tabs.map((tab, i) => (
+                        <Tab tab={tab} key={i} activeClass={classes.qualification__active} />
+                    ))}
+                </div>
 
-                <ScrollRevealHOC target="qualification-list" origin="bottom">
-                    <div
-                        className={`${classes.qualification__lists} load-hidden`}
-                        id="qualification-list"
-                    >
-                        {lists.map((list, i) => (
-                            <List list={list} key={i} activeClass={classes.qualification__active} />
-                        ))}
-                    </div>
-                </ScrollRevealHOC>
+                <div className={`${classes.qualification__lists}`} id="qualification-list">
+                    {lists.map((list, i) => (
+                        <List list={list} key={i} activeClass={classes.qualification__active} />
+                    ))}
+                </div>
             </div>
         </SectionHOC>
     );

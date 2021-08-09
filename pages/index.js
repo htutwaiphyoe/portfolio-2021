@@ -27,3 +27,8 @@ function HomePage(props) {
 }
 
 export default HomePage;
+
+// top="#footer-bg, #portfolio-status-item, #qualification-tab, #skills-circle"
+// right="#about-text, #contact-form, #home-image, #subscription-image"
+// left="#about-image, #contact-informations, #home-data, #services-container, #subscription-data"
+// bottom="#about-download, #home-scroll, #qualification-list, #skills-bar"

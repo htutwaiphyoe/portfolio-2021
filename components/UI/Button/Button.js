@@ -7,7 +7,7 @@ function Button(props) {
         case "link":
             return (
                 <Link href={props.href}>
-                    <a className={`${classes.btn} ${props.hidden && "load-hidden"}`}>
+                    <a className={`${classes.btn}`}>
                         {props.text}
                         <i className={`${props.icon} ${classes.btn__icon}`}></i>
                     </a>
@@ -15,7 +15,7 @@ function Button(props) {
             );
         case "download":
             return (
-                <a className={`${classes.btn} load-hidden`} {...props.config}>
+                <a className={`${classes.btn}`} {...props.config}>
                     {props.text}
                     <i className={`${props.icon} ${classes.btn__icon}`}></i>
                 </a>

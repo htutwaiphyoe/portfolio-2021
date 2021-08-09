@@ -4,18 +4,16 @@ import classes from "./Bar.module.scss";
 function Bar({ bar }) {
     const barRef = useRef();
     function onClickHandler(e) {
-        document.getElementsByClassName(
-            `${classes.bar} ${classes.bar__open}`
-        )[0].classList = `${classes.bar} ${classes.bar__close}`;
-        if (barRef.current.className === `${classes.bar} ${classes.bar__close}`) {
-            barRef.current.className = `${classes.bar} ${classes.bar__open}`;
+        window.document
+            .querySelectorAll("#skills-bar")
+            .forEach((bar) => (bar.className = `${classes.bar} ${classes.bar__close}`));
+        if (Array.from(e.target.parentNode.parentNode.classList).includes(classes.bar__close)) {
+            e.target.parentNode.parentNode.classList = `${classes.bar} ${classes.bar__open}`;
         }
     }
     return (
         <div
-            className={`${classes.bar} ${
-                classes[`${bar.open ? "bar__open" : "bar__close"}`]
-            } load-hidden`}
+            className={`${classes.bar} ${classes[`${bar.open ? "bar__open" : "bar__close"}`]} `}
             ref={barRef}
             id="skills-bar"
         >

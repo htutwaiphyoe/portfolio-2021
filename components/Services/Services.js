@@ -11,7 +11,6 @@ import SwiperCore, { Pagination } from "swiper/core";
 // install Swiper modules
 SwiperCore.use([Pagination]);
 
-import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import SectionHOC from "../../hoc/Section/Section";
 import Service from "./Service/Service";
 import classes from "./Services.module.scss";
@@ -48,27 +47,22 @@ function Services(props) {
             subtitle="What I offer"
             classname={classes.services}
         >
-            <ScrollRevealHOC target="services-container" origin="left">
-                <div
-                    className={`container ${classes.services__container} load-hidden`}
-                    id="services-container"
+            <div className={`container ${classes.services__container}`} id="services-container">
+                <Swiper
+                    pagination={{
+                        dynamicBullets: true,
+                    }}
+                    loop={true}
+                    grabCursor={true}
+                    spaceBetween={48}
                 >
-                    <Swiper
-                        pagination={{
-                            dynamicBullets: true,
-                        }}
-                        loop={true}
-                        grabCursor={true}
-                        spaceBetween={48}
-                    >
-                        {services.map((service, i) => (
-                            <SwiperSlide key={i}>
-                                <Service service={service} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-            </ScrollRevealHOC>
+                    {services.map((service, i) => (
+                        <SwiperSlide key={i}>
+                            <Service service={service} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </SectionHOC>
     );
 }

@@ -47,12 +47,12 @@ class Doc extends Document {
                     href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
                 />
 
-                <script src="https://unpkg.com/scrollreveal"></script>
-
                 <script
                     defer
                     src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
                 ></script>
+
+                <script src="https://unpkg.com/scrollreveal"></script>
                 <body>
                     <Main />
                     <div id="scrollup"></div>

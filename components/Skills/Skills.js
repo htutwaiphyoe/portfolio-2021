@@ -1,4 +1,3 @@
-import ScrollRevealHOC from "../../hoc/ScrollReveal/ScrollReveal";
 import SectionHOC from "../../hoc/Section/Section";
 import Circle from "./Circle/Circle";
 import Bar from "./Bar/Bar";
@@ -44,20 +43,17 @@ function Skills(props) {
             classname={classes.skills}
         >
             <div className={`container ${classes.skills__container}`}>
-                <ScrollRevealHOC target="skills-circle" origin="top">
-                    <div className={`${classes.skills__circles}`}>
-                        {circles.map((circle, i) => (
-                            <Circle circle={circle} key={i} />
-                        ))}
-                    </div>
-                </ScrollRevealHOC>
-                <ScrollRevealHOC target="skills-bar" origin="bottom">
-                    <div className={`${classes.skills__bars}`}>
-                        {bars.map((bar, i) => (
-                            <Bar bar={bar} key={i} />
-                        ))}
-                    </div>
-                </ScrollRevealHOC>
+                <div className={`${classes.skills__circles}`}>
+                    {circles.map((circle, i) => (
+                        <Circle circle={circle} key={i} />
+                    ))}
+                </div>
+
+                <div className={`${classes.skills__bars}`}>
+                    {bars.map((bar, i) => (
+                        <Bar bar={bar} key={i} />
+                    ))}
+                </div>
             </div>
         </SectionHOC>
     );
