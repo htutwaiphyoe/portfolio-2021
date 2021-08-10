@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -15,10 +15,6 @@ import BlogTopic from "../Blogs/BlogTopic/BlogTopic";
 import { formatDate } from "@/utils/helpers";
 
 function BlogDetail({ blog }) {
-    const router = useRouter();
-    function onClickHandler() {
-        router.back();
-    }
     const components = {
         p(p) {
             const { node } = p;
@@ -103,7 +99,8 @@ function BlogDetail({ blog }) {
                 text="Back"
                 icon="ri-arrow-left-line"
                 type="reverse"
-                onClickHandler={onClickHandler}
+                href="/blogs"
+                scroll={false}
             />
         </section>
     );
