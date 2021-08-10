@@ -7,7 +7,7 @@ topics: ["javascript"]
 readTime: 6
 ---
 
-# Hosting ဆိုတာဘာလဲ။
+# What's Hoisting?
 
 Hoisting အကြောင်းသိဖို့ဆိုရင် အရင်ဆုံး JavaScript ဟာ runtime မှာဘယ်လိုအလုပ်လုပ်လဲဆိုတာကို နားလည်ဖို့လိုပါတယ်။ ဒီနေရာမှာ runtime ကို တစ်ခုလုံးအသေးစိတ်ရှင်းပြလိုက်ရင် စာအရမ်းရှည်သွားမှာဆိုးလို့ hoisting နဲ့ပတ်သတ်တာလေးပဲ ပြောသွားပါ့မယ်။ JavaScript Engine ဟာ JIT (Just-in-time) compilation ကိုသုံးပါတယ်။ code တွေကို compiled လုပ်ပြီးတဲ့အခါ run ဖို့ portable file တစ်ခုမဆောက်တော့ဘဲ တန်းပြီး execution လုပ်ပါတယ်။ execute စလုပ်ဖို့အတွက် အရင်ဆုံး execution stack ထဲမှာ global execution context ကို create လုပ်ပါတယ်။ သူ့အထဲမှာတော့ top-level code တွေကို execute ပါတယ်။ ပြီးရင်တော့ function တစ်ခုချင်းဆီအတွက် execution context တစ်ခုဆီကိုဆောက်ပြီး stack ပေါ်တင် run ပါတယ်။ execution context မှာ phase နှစ်ခုရှိပါတယ်။ creation phase နဲ့ execution phase ပါ။ creation phase ကတော့ function ကို run ဖို့အတွက် လိုအပ်တဲ့ အရာတွေမှန်သမျှကို generate လုပ်ပါတယ်။ ဘာတွေလည်းဆိုရင် ပထမတစ်ခုက variable environment object ပါ။ သူ့က function ထဲမှာရှိတဲ့ variables,function declaration တွေနဲ့ function ရဲ့ argument object ကို သိမ်းပါတယ်။ ဒုတိယက scope chain ပါ။ နောက်ဆုံးကတော့ **this** variable ပါ။
 

@@ -37,7 +37,11 @@ function BlogDetail({ blog }) {
         },
 
         h1(h1) {
-            return <h2 className={`${classes.blogdetail__h2}`}>{h1.children}</h2>;
+            return <h2 className={`${classes.blogdetail__h1}`}>{h1.children}</h2>;
+        },
+
+        h2(h2) {
+            return <h2 className={`${classes.blogdetail__h2}`}>{h2.children}</h2>;
         },
 
         a(a) {
