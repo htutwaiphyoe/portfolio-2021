@@ -11,7 +11,7 @@ function Blog(props) {
 
     return (
         <Link href={`/blogs/${slug}`}>
-            <div className={`container ${classes.blog}`}>
+            <div className={`${classes.blog}`}>
                 <Image
                     src={imagePath}
                     width={500}

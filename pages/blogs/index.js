@@ -30,6 +30,7 @@ export async function getStaticProps(context) {
             blogs,
             topics,
         },
+      
     };
 }
 

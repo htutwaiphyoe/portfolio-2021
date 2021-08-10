@@ -8,4 +8,9 @@
     height: 4px;
     background-color: var(--first-color);
     z-index: v.$z-modal;
+
+    @include m.responsive(575, 1) {
+        top: initial;
+        bottom: 0;
+    }
 }

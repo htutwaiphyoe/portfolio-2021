@@ -1,0 +1,36 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+
+.series {
+    padding: 3rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+    &__data {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    &__image {
+        justify-self: center;
+        width: 25rem;
+    }
+    &__text {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    @include m.responsive(1199, 1) {
+    }
+
+    @include m.responsive(767, 1) {
+        &__data {
+            padding: 0 2rem;
+            gap: 2rem;
+        }
+    }
+
+    @include m.responsive(575, 1) {
+        &__data {
+            grid-template-columns: 1fr;
+        }
+    }
+}
