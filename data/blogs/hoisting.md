@@ -1,10 +1,10 @@
 ---
-title: "JavaScript သိုင်းကျမ်း အပိုင်း (၄) - Hoisting"
+title: "JavaScript သိုင်းကျမ်း အပိုင်း(၄) - Hoisting"
 date: "2021-07-10"
 image: "js.png"
 description: "JavaScript ရဲ့ ထူးခြားတဲ့ feature တစ်ခုဖြစ်တဲ့ hoisting အကြောင်း"
 topics: ["javascript"]
-readTime: 6
+readTime: 7
 ---
 
 # What's Hoisting?
@@ -47,7 +47,7 @@ let isHoisted = true;
 
 ### Temporal Dead Zone (TDZ)
 
-var တုန်းကလို ခေါ်သုံးလို့ဘာလို့မရတာလဲဆိုရင် **Temporal Dead Zone (TDZ)** ထဲရောက်နေလို့ပါ။ TDZ က variable တွေကို scope ရဲ့ အစနဲ့ သူတို့ရဲ့ actual declaration code ရဲ့ ကြားအတွင်းမှာ access လုပ်ခွင့်မရအောင်လုပ်ထားတဲ့ အချိန်အပိုင်းအခြား တစ်ခုပါ။ နောက်တစ်ခုက temporal dead zone က related with time ပါ။ spatial မဟုတ်ပါဘူး။ ဆိုလိုတာက variable ကို access လုပ်လို့မရတဲ့ time duration ကိုပြောတာပါ။ vaiable ကို သုံးလို့မရတဲ့ နေရာကိုပြောတာမဟုတ်ပါဘူး။ ဥပမာ ကြည့်လိုက်ရင် ပိုရှင်းမယ်ထင်ပါတယ်။
+var တုန်းကလို ခေါ်သုံးလို့ဘာလို့မရတာလဲဆိုရင် **Temporal Dead Zone (TDZ)** ထဲရောက်နေလို့ပါပဲ။ TDZ က variable တွေကို scope ရဲ့ အစနဲ့ သူတို့ရဲ့ actual declaration code ရဲ့ ကြားအတွင်းမှာ access လုပ်ခွင့်မရအောင်လုပ်ထားတဲ့ အချိန်အပိုင်းအခြား တစ်ခုပါ။ နောက်တစ်ခုက temporal dead zone က related with time ပါ။ spatial မဟုတ်ပါဘူး။ ဆိုလိုတာက variable ကို access လုပ်လို့မရတဲ့ time duration ကိုပြောတာပါ။ vaiable ကို သုံးလို့မရတဲ့ နေရာကိုပြောတာမဟုတ်ပါဘူး။ ဥပမာ ကြည့်လိုက်ရင် ပိုရှင်းမယ်ထင်ပါတယ်။
 
 ```js
 function sayHello() {

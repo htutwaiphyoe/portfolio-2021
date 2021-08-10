@@ -4,7 +4,7 @@ date: "2021-07-03"
 image: "js.png"
 description: "JavaScript မှာရှိတဲ့ semicolon နဲ့ သူရဲ့ ထူးခြားမှု"
 topics: ["javascript"]
-readTime: 6
+readTime: 5
 ---
 
 # Semicolons
@@ -13,7 +13,7 @@ Semicolon ကတော့ programmer တွေကိုတော်တော်�
 
 ## Why semicolon is needed
 
-semicolon ကို program ရဲ့ statement တွေမှာ terminator or separator အဖြစ်အသုံးပြုပါတယ်။ အဲ့လိုသုံးခြင်းအားဖြင့် code ဟာ ပိုရှင်းသွားပြီး သူ့ရဲ့ readability တိုးလာပါတယ်။ မဟုတ်ရင် statement တစ်ခုနဲ့ တစ်ခုက ဆက်နေနိုင်တဲ့အတွက် ဘယ်တစ်ခုက ဘယ်မှာဆုံးလဲ အလွယ်တကူ မသိနိုင်တော့ဘူး။ ဘာသာစကားတွေမှာ စာရေးတဲ့အခါ ဖတ်ရလွယ်အောင် ပုဒ်ဖြတ်ပုဒ်ရပ်သင်္ကေတတွေကို သုံးရသလိုပါပဲ။ ဥပမာ မြန်မာမှာဆို ပုဒ်ကလေး (၊) ပုဒ်မ (။) လိုဟာတွေပေါ့။
+semicolon ကို program ရဲ့ statement တွေမှာ terminator or separator အဖြစ်အသုံးပြုပါတယ်။ အဲ့လိုသုံးခြင်းအားဖြင့် code ဟာ ပိုရှင်းသွားပြီး သူ့ရဲ့ readability တိုးလာပါတယ်။ မဟုတ်ရင် statement တစ်ခုနဲ့ တစ်ခုက ဆက်နေနိုင်တဲ့အတွက် ဘယ်တစ်ခုက ဘယ်မှာဆုံးလဲ အလွယ်တကူ မသိနိုင်တော့ပါဘူး။ ဘာသာစကားတွေမှာ စာရေးတဲ့အခါ ဖတ်ရလွယ်အောင် ပုဒ်ဖြတ်ပုဒ်ရပ်သင်္ကေတတွေကို သုံးရသလိုပါပဲ။ ဥပမာ မြန်မာမှာဆို ပုဒ်ကလေး (၊) ပုဒ်မ (။) လိုဟာတွေပေါ့။
 
 C-like language တွေဖြစ်တဲ့C,C++, Java, PHP တို့မှာsemicolon ကို မဖြစ်မနေ ထည့်ပေးရပေမယ့် python လို language မှာတော့ semicolon ထည့်ပေးစရာမလိုပါဘူး။ JavaScript မှာတော့ semicolon က optional ပါ။ ထည့်လည်းရသလို JavaScript ကနေ auto insertion လုပ်ပေးတဲ့အတွက် omit လုပ်လို့လည်းရပါတယ်။ ဒါပေမယ့် manually မဖြစ်မနေထည့်ပေးဖို့လိုတဲ့ နေရာတွေရှိပါတယ်။
 
@@ -24,18 +24,18 @@ Program ရဲ့ အဆုံး ဒါမှမဟုတ် next token က clo
 ```js
 function addNumbers(a, b) {
     // next token is }
-    return a + b;
+    return a + b
 }
 
 // end of program
-console.log(addNumbers(1, 2));
+console.log(addNumbers(1, 2))
 ```
 
 JS မှာ statement နှစ်ခုဟာ separate lines ဖြစ်နေရင် first statement ရဲ့ semicolon ကို omit လို့ရပါတယ်။
 
 ```js
 // written
-let a = 3;
+let a = 3
 let b = 4;
 
 // interpret to
@@ -46,17 +46,18 @@ let b = 4;
 statement နှစ်ခုဟာ single line ဖြစ်နေရင်တော့ first statement ရဲ့ semicolon ကို manually ထည့်ပေးရပါမယ်။
 
 ```js
-let a = 3;
-b = 4;
+let a = 3; let b = 4;
 ```
 
 JavaScript မှာ link break တိုင်းကို semicolon မထည့်ပါဘူး။ JS interpreter ဟာ code တစ်ကြောင်းဖတ်ပြီး ; နဲ့ မဆုံးပဲ next line ဆင်းထားရင် next line က character ကို အပေါ်က statement ရဲ့ အဆက် အဖြစ် interpret လုပ်ရမရစစ်ပါတယ်။ ရရင် line break မလုပ်ဘဲ ဆက်ဖတ်သွားပြီး မရရင် line break အဖြစ်သတ်မှတ်ကာ semicolon ကို insertion လုပ်ပါတယ်။
 
 ```js
 // written
-let a;
-a = 3;
-console.log(a);
+let a
+a 
+= 
+3
+console.log(a)
 
 // interpret to
 let a;
@@ -68,7 +69,8 @@ console.log(a);
 
 ```js
 // written
-let y = x + f(a + b).toString();
+let y = x + f
+(a + b).toString()
 
 // interpret to
 let y = x + f(a + b).toString();
@@ -79,8 +81,8 @@ let y = x + f(a + b).toString();
 ယေဘုယျအနေနဲ့ +, ,-, /, (,[ တို့နဲ့စတဲ့ statement တွေဆို continuation အဖြစ် interpretation လုပ်နိုင်ပါတယ်။ continuation အဖြစ်မလုပ်စေချင်ရင်တော့ next line ရဲ့အစမှာ defensive semicolon ထည့်ပေးလို့ရပါတယ်။
 
 ```js
-let x = 0; // Semicolon omitted here
-[x, x + 1, x + 2].forEach(console.log); // Defensive ; keeps this statement separate
+let x = 0 // Semicolon omitted here
+;[x, x + 1, x + 2].forEach(console.log) // Defensive ; keeps this statement separate
 ```
 
 JS မှာ next line ဟာ continuation အဖြစ် parsing လုပ်လို့ရသော်လည်း ဆက်မဖတ်တော့ပဲ line break အဖြစ် သတ်မှတ်ပြီး auto insertion လုပ်ဖို့အတွက် ကန့်သတ်ထားတဲ့ exceptions သုံးခုရှိပါတယ်။
@@ -89,7 +91,7 @@ JS မှာ next line ဟာ continuation အဖြစ် parsing လုပ်�
 
 ```js
 // written
-return;
+return
 true;
 
 // excepted
@@ -107,8 +109,9 @@ let x = 1,
     y = 1;
 
 // written
-x;
-++y;
+x
+++
+y
 
 // excepted
 x++;
