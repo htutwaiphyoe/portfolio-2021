@@ -108,12 +108,11 @@
             -ms-border-radius: 2.5rem 2.5rem 0 0;
             -o-border-radius: 2.5rem 2.5rem 0 0;
             box-shadow: v.$header-shadow;
-            transition: 0.3s;
-            -webkit-transition: 0.3s;
-            -moz-transition: 0.3s;
-            -ms-transition: 0.3s;
-            -o-transition: 0.3s;
-
+            transition: 0.2s;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+            -ms-transition: 0.2s;
+            -o-transition: 0.2s;
             &_active {
                 bottom: 0 !important;
             }

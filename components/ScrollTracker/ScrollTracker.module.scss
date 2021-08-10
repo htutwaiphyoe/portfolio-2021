@@ -1,0 +1,11 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+.scrolltracker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: var(--first-color);
+    z-index: v.$z-modal;
+}

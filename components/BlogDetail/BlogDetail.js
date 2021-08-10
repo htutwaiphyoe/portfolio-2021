@@ -12,6 +12,8 @@ import Button from "../UI/Button/Button";
 import classes from "./BlogDetail.module.scss";
 import BlogTopic from "../Blogs/BlogTopic/BlogTopic";
 
+import { formatDate } from "@/utils/helpers";
+
 function BlogDetail({ blog }) {
     const router = useRouter();
     function onClickHandler() {
@@ -75,7 +77,7 @@ function BlogDetail({ blog }) {
             <h1 className={`${classes.blogdetail__title}`}>{blog.title}</h1>
             <div className={`${classes.blogdetail__info}`}>
                 <div>
-                    <span className={`${classes.blogdetail__date}`}>{blog.date}</span>
+                    <span className={`${classes.blogdetail__date}`}>{formatDate(blog.date)}</span>
                     <span>{blog.readTime} MIN READ</span>
                 </div>
 

@@ -52,6 +52,7 @@ class Doc extends Document {
                 <body>
                     <Main />
                     <div id="scrollup"></div>
+                    <div id="scrolltracker"></div>
 
                     <NextScript />
                 </body>

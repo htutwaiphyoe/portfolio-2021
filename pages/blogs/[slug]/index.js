@@ -1,11 +1,13 @@
 import BlogDetail from "@/components/BlogDetail/BlogDetail";
 import Meta from "@/components/Meta/Meta";
+import ScrollTracker from "@/components/ScrollTracker/ScrollTracker";
 
 import { getFileData, getAllFiles } from "@/utils/blogs";
 function BlogDetailPage({ blog }) {
     return (
         <>
             <Meta title={`${blog.title} - Htut Wai Phyoe`} description={blog.description} />
+            <ScrollTracker />
             <BlogDetail blog={blog} />
         </>
     );
