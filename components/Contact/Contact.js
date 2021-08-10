@@ -1,4 +1,4 @@
-import SectionHOC from "../../hoc/Section/Section";
+import SectionHOC from "@/hoc/Section/Section";
 import Information from "./Information/Information";
 import Button from "../UI/Button/Button";
 import classes from "./Contact.module.scss";
@@ -21,10 +21,7 @@ function Contact(props) {
             classname={classes.contact}
         >
             <div className={`container ${classes.contact__container}`}>
-                <div
-                    className={`${classes.contact__informations}`}
-                    id="contact-informations"
-                >
+                <div className={`${classes.contact__informations}`} id="contact-informations">
                     {informations.map((information, i) => (
                         <Information information={information} key={i} />
                     ))}

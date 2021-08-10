@@ -1,4 +1,4 @@
-import SectionHOC from "../../hoc/Section/Section";
+import SectionHOC from "@/hoc/Section/Section";
 import Status from "./Status/Status";
 import classes from "./Portfolio.module.scss";
 

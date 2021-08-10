@@ -1,0 +1,26 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+%mb {
+    margin-bottom: 1rem;
+}
+.notfound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    &__image {
+        width: 40rem;
+        @extend %mb;
+    }
+    &__text {
+        font-size: 2.2rem;
+        @extend %mb;
+    }
+    @include m.responsive(575, 1) {
+        height: 85vh;
+        &__image {
+            width: 30rem;
+        }
+    }
+}

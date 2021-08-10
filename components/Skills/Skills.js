@@ -1,4 +1,4 @@
-import SectionHOC from "../../hoc/Section/Section";
+import SectionHOC from "@/hoc/Section/Section";
 import Circle from "./Circle/Circle";
 import Bar from "./Bar/Bar";
 import classes from "./Skills.module.scss";

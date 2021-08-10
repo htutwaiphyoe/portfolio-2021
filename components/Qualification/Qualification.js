@@ -1,4 +1,4 @@
-import SectionHOC from "../../hoc/Section/Section";
+import SectionHOC from "@/hoc/Section/Section";
 import Tab from "./Tab/Tab";
 import List from "./List/List";
 import classes from "./Qualification.module.scss";

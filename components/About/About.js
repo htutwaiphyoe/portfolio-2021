@@ -1,4 +1,4 @@
-import SectionHOC from "../../hoc/Section/Section";
+import SectionHOC from "@/hoc/Section/Section";
 import Button from "../UI/Button/Button";
 import classes from "./About.module.scss";
 

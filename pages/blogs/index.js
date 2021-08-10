@@ -1,5 +1,5 @@
 import Blogs from "@/components/Blogs/Blogs";
-import Meta from "../../components/Meta/Meta";
+import Meta from "@/components/Meta/Meta";
 
 import { getAllBlogs, getAllTopics } from "@/utils/blogs";
 

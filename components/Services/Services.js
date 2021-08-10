@@ -11,7 +11,7 @@ import SwiperCore, { Pagination } from "swiper/core";
 // install Swiper modules
 SwiperCore.use([Pagination]);
 
-import SectionHOC from "../../hoc/Section/Section";
+import SectionHOC from "@/hoc/Section/Section";
 import Service from "./Service/Service";
 import classes from "./Services.module.scss";
 
