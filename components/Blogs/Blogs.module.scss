@@ -22,7 +22,14 @@
         font-size: 2rem;
         margin-bottom: 1.5rem;
     }
+    &__notfound {
+        text-align: center;
+    }
 
+    &__text {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
     @include m.responsive(1199, 1) {
         padding: 3rem 2rem;
         grid-template-columns: 1fr;
