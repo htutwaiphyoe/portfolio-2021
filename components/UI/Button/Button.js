@@ -22,14 +22,10 @@ function Button(props) {
             );
         case "reverse":
             return (
-                <Link href={props.href} scroll={props.scroll}>
-                    <a className={`${classes.btn}`}>
-                        <i
-                            className={`${props.icon} ${classes.btn__icon} ${classes.btn__reverse}`}
-                        ></i>
-                        {props.text}
-                    </a>
-                </Link>
+                <button className={classes.btn} onClick={props.onClickHandler}>
+                    <i className={`${props.icon} ${classes.btn__icon} ${classes.btn__reverse}`}></i>
+                    {props.text}
+                </button>
             );
         default:
             return (

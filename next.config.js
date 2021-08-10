@@ -12,7 +12,7 @@ module.exports = {
         includePaths: [path.join(__dirname, "sass")],
     },
 
-    // experimental: {
-    //     scrollRestoration: true,
-    // },
+    experimental: {
+        scrollRestoration: true,
+    },
 };

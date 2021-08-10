@@ -15,7 +15,7 @@ function Series(props) {
                 </p>
             </div>
 
-            <p className={`${classes.series__text}`}>Series are not yet available. 😅</p>
+            <p className={`${classes.series__text}`}>Sorry, series are not yet available.</p>
         </section>
     );
 }
