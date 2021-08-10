@@ -17,6 +17,7 @@ function Blog(props) {
                     width={500}
                     height={300}
                     className={`${classes.blog__image}`}
+                    priority={true}
                 />
 
                 <div className={`${classes.blog__data}`}>

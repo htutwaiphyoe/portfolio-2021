@@ -3,7 +3,7 @@ title: "Well-prepared beginner ဖြစ်စေဖို့"
 date: "2021-01-08"
 image: "cover.jpg"
 description: "beginner တွေအတွက် tips & tricks"
-topics: ["tips&tricks"]
+topics: ["tipsandtricks"]
 readTime: 8
 ---
 

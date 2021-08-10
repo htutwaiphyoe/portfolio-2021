@@ -91,6 +91,7 @@ function BlogDetail({ blog }) {
                 height={300}
                 layout="responsive"
                 className={classes.blogdetail__image}
+                priority={true}
             />
             <article className={`${classes.blogdetail__content}`}>
                 <ReactMarkdown components={components}>{blog.content}</ReactMarkdown>
