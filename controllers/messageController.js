@@ -15,7 +15,7 @@ export const createMessage = catchAsyncError(async (req, res, next) => {
     await sendEmail({
         email: "htutwaiphyoe@gmail.com",
         subject: "New message",
-        body: `${email} is sent message to you.`,
+        body: `${name} is sent message to you. His email is ${email} and the message is ${message}`,
     });
 
     res.status(201).json({

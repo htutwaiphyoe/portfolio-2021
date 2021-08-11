@@ -29,7 +29,11 @@ function Button(props) {
             );
         default:
             return (
-                <button className={classes.btn} onClick={props.onClickHandler}>
+                <button
+                    className={classes.btn}
+                    onClick={props.onClickHandler}
+                    disabled={props.disabled}
+                >
                     {props.text}
                     <i className={`${props.icon} ${classes.btn__icon}`}></i>
                 </button>

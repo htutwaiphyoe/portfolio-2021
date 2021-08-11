@@ -21,11 +21,12 @@ function Subscription(props) {
     useEffect(() => {
         if (message) {
             toast.success(message);
+            dispatch(resetNewSubscription());
         }
         if (error) {
             toast.error(error);
+            dispatch(resetNewSubscription());
         }
-        dispatch(resetNewSubscription());
     }, [message, dispatch, error]);
     return (
         <section className={`section ${classes.subscription}`} id="subscription">

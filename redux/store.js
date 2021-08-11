@@ -5,10 +5,10 @@ import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 
 const bindMiddlewares = (middlewares) => {
-    if (process.env.NODE_ENV !== "production") {
-        const { composeWithDevTools } = require("redux-devtools-extension");
-        return composeWithDevTools(applyMiddleware(...middlewares));
-    }
+    // if (process.env.NODE_ENV !== "production") {
+    //     const { composeWithDevTools } = require("redux-devtools-extension");
+    //     return composeWithDevTools(applyMiddleware(...middlewares));
+    // }
     return applyMiddleware(...middlewares);
 };
 
