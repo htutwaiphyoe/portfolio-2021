@@ -135,7 +135,9 @@ button {
         max-width: 768px;
     }
 }
-
+.grid {
+    display: grid;
+}
 .active-link {
     color: var(--first-color);
 }

@@ -1,0 +1,63 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+
+.projects {
+    padding: 3rem 0;
+    &__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    &__item {
+        max-width: 50rem;
+        background-color: var(--container-color);
+    }
+    &__image {
+        object-fit: cover;
+    }
+
+    &__info {
+        padding: 1rem 2rem 2rem;
+    }
+
+    &__type {
+        font-size: 1.5rem;
+        color: var(--first-color);
+        margin-right: 1rem;
+    }
+    &__name {
+        font-size: 2.2rem;
+    }
+    &__action {
+        margin-top: 1.5rem;
+    }
+
+    &__btn {
+        background-color: var(--first-color);
+        padding: 1rem;
+        color: v.$color-white;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+
+    @include m.responsive(1199, 1) {
+        padding: 3rem 2rem;
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include m.responsive(767, 1) {
+    }
+
+    @include m.responsive(575, 1) {
+        padding: 1rem;
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            gap: 1rem;
+        }
+    }
+}

@@ -3,7 +3,7 @@ import classes from "./Series.module.scss";
 function Series(props) {
     return (
         <section className={` ${classes.series}`}>
-            <div className={`${classes.series__data} u-mb-3`}>
+            <div className={`${classes.series__data} u-mb-5`}>
                 <img
                     src="/images/site/series/series2.svg"
                     alt="Blog series"
@@ -15,7 +15,10 @@ function Series(props) {
                 </p>
             </div>
 
-            <p className={`${classes.series__text}`}>Sorry, series are not yet available.</p>
+            <p className={`${classes.series__text}`}>
+                Series will be released soon. <br />
+                Stay tuned 🔔
+            </p>
         </section>
     );
 }
