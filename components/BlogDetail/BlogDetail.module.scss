@@ -8,8 +8,6 @@
     &__title {
         font-size: 4rem;
         line-height: 1.2;
-        font-weight: 500;
-        font-family: v.$heading-font;
     }
 
     &__info {
@@ -39,14 +37,15 @@
     &__h2 {
         font-size: 2.7rem;
     }
+    &__h3 {
+        font-size: 2.5rem;
+    }
     &__p {
         margin: 1rem 0;
     }
-    & h2 {
-        font-weight: 500;
-    }
+    & h2,
     & h3 {
-        font-size: 2.2rem;
+        font-weight: 500;
     }
     @include m.responsive(1199, 1) {
         padding: 2rem;
@@ -64,14 +63,17 @@
             font-size: 1.8rem;
         }
         &__title {
-            font-size: 2.5rem;
+            font-size: 2.7rem;
         }
         &__h1 {
-            font-size: 2.7rem;
+            font-size: 2.5rem;
         }
 
         &__h2 {
             font-size: 2.3rem;
+        }
+        &__h3 {
+            font-size: 2rem;
         }
     }
 }
