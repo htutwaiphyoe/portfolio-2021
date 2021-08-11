@@ -1,13 +1,17 @@
+import Image from "next/image";
 import classes from "./Series.module.scss";
 
 function Series(props) {
     return (
         <section className={` ${classes.series}`}>
             <div className={`${classes.series__data} u-mb-5`}>
-                <img
+                <Image
                     src="/images/site/series/series2.svg"
                     alt="Blog series"
                     className={`${classes.series__image}`}
+                    width={250}
+                    height={240}
+                    priority={true}
                 />
                 <p>
                     Series သဖွယ် ရေးသားထားသည့် blog များကို စုပေါင်း ကောက်နုတ်ပေးထားခြင်းဖြစ်ပါသည်။

@@ -12,7 +12,10 @@
     }
     &__image {
         justify-self: center;
-        width: 25rem;
+        // width: 25rem !important;
+        // max-width: 25rem !important;
+        // min-width: 0% !important;
+        // margin: 0 auto !important;
     }
     &__text {
         font-size: 1.8rem;
