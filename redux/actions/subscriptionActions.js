@@ -21,3 +21,9 @@ export const createNewSubscription = (subscription) => async (dispatch) => {
         });
     }
 };
+
+export const resetNewSubscription = () => {
+    return {
+        type: subscriptionActionTypes.NEW_SUBSCRIPTION_RESET,
+    };
+};

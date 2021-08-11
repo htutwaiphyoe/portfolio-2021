@@ -1,3 +1,4 @@
+import wrapper from "@/redux/store";
 import "../sass/main.scss";
 import Layout from "@/components/Layout/Layout";
 function App({ Component, pageProps }) {
@@ -8,4 +9,4 @@ function App({ Component, pageProps }) {
     );
 }
 
-export default App;
+export default wrapper.withRedux(App);

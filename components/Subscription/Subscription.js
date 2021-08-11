@@ -1,9 +1,32 @@
+import { useState, useEffect } from "react";
+import validator from "validator";
+import { toast } from "react-toastify";
+import { useSelector, useDispatch } from "react-redux";
+
+import { createNewSubscription, resetNewSubscription } from "@/redux/actions/subscriptionActions";
 import classes from "./Subscription.module.scss";
 
 function Subscription(props) {
+    const [email, setEmail] = useState("");
+    const { message, loading, error } = useSelector((state) => state.newSubscription);
+    const dispatch = useDispatch();
     const onSubmitHandler = (e) => {
         e.preventDefault();
+        if (!validator.isEmail(email)) return toast.error("Please enter valid email address");
+
+        dispatch(createNewSubscription({ email }));
+        setEmail("");
     };
+
+    useEffect(() => {
+        if (message) {
+            toast.success(message);
+        }
+        if (error) {
+            toast.error(error);
+        }
+        dispatch(resetNewSubscription());
+    }, [message, dispatch, error]);
     return (
         <section className={`section ${classes.subscription}`} id="subscription">
             <div className={`container ${classes.subscription__container}`}>
@@ -23,8 +46,11 @@ function Subscription(props) {
                             type="email"
                             placeholder="Enter your email address"
                             className={`${classes.subscription__input}`}
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            required={true}
                         />
-                        <button className={`${classes.subscription__btn}`}>
+                        <button className={`${classes.subscription__btn}`} disabled={loading}>
                             <i className="ri-send-plane-fill"></i>
                         </button>
                     </form>

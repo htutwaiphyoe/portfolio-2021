@@ -9,7 +9,9 @@
             "@/controllers/*": ["controllers/*"],
             "@/config/*": ["config/*"],
             "@/models/*": ["models/*"],
-            "@/middlewares/*": ["middlewares/*"]
+            "@/middlewares/*": ["middlewares/*"],
+            "@/redux/*": ["redux/*"],
+            "@/mail/*": ["mail/*"]
         }
     }
 }

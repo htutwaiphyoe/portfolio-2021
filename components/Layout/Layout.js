@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Navigation from "../Navigation/Navigation";
 import ScrollUp from "../ScrollUp/ScrollUp";
 
@@ -19,6 +22,7 @@ function Layout(props) {
         <>
             <Navigation />
             <main className="main">{props.children}</main>
+            <ToastContainer position="top-center" />
             <ScrollUp />
         </>
     );
