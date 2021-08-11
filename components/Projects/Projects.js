@@ -1,100 +1,45 @@
-import Image from "next/image";
-import Button from "../UI/Button/Button";
+import Project from "./Project/Project";
 import classes from "./Projects.module.scss";
 function Projects(props) {
+    const projects = [
+        {
+            image: "/images/site/projects/omnifood.png",
+            title: "Omnifood",
+            description: "Food service website built with HTML, CSS, JavaScript, JQuery",
+            types: ["landing-page", "responsive"],
+        },
+
+        {
+            image: "/images/site/projects/venus.png",
+            title: "Venus Travel",
+            description: "Travel agency website built with HTML, CSS, SASS, JavaScript",
+            types: ["landing-page", "responsive"],
+        },
+        {
+            image: "/images/site/projects/tictactoe.png",
+            title: "TicTacToe",
+            description: "DOM game built with HTML, CSS, SASS, JavaScript",
+            types: ["game"],
+        },
+        {
+            image: "/images/site/projects/portfolio.png",
+            title: "Portfolio",
+            description: "Personal website built with NextJS, ReactJS, SASS",
+            types: ["portfolio"],
+        },
+        // {
+        //     image: "/images/site/projects/valhalla.png",
+        //     title: "Hotel Valhalla",
+        //     description: "Web application for hotel booking built with NextJS, ReactJS, MongoDB",
+        //     types: ["web-app"],
+        // },
+    ];
     return (
         <section className={`container ${classes.projects}`}>
-            <div className={`${classes.projects__data}`}>
-                <div className={`${classes.projects__list} grid`}>
-                    <div className={classes.projects__item}>
-                        <Image
-                            src="/images/site/projects/omnifood.png"
-                            alt="Omnifood"
-                            className={classes.projects__image}
-                            width={600}
-                            height={300}
-                        />
-                        <div className={classes.projects__info}>
-                            <div>
-                                <span className={classes.projects__type}>#landing-page</span>
-                                <span className={classes.projects__type}>#responsive</span>
-                            </div>
-                            <h3 className={classes.projects__name}>Omnifood</h3>
-                            <p className={classes.projects__tech}>
-                                Built with HTML, CSS, JavaScript, JQuery
-                            </p>
-                            {/* <div className={classes.projects__action}>
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={classes.projects__btn}
-                                >
-                                    See in action
-                                </a>
-                            </div> */}
-                        </div>
-                    </div>
-                    <div className={classes.projects__item}>
-                        <Image
-                            src="/images/site/projects/natours.png"
-                            alt="Natours"
-                            className={classes.projects__image}
-                            width={600}
-                            height={300}
-                            // layout="responsive"
-                            // loading="lazy"
-                        />
-                        <div className={classes.projects__info}>
-                            <div>
-                                <span className={classes.projects__type}>#landing-page</span>
-                                <span className={classes.projects__type}>#responsive</span>
-                            </div>
-                            <h3 className={classes.projects__name}>Natours</h3>
-                            <p className={classes.projects__tech}>Built with HTML, CSS, SASS</p>
-                            {/* <div className={classes.projects__action}>
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={classes.projects__btn}
-                                >
-                                    See in action
-                                </a>
-                            </div> */}
-                        </div>
-                    </div>
-                    <div className={classes.projects__item}>
-                        <Image
-                            src="/images/site/projects/portfolio.png"
-                            alt="Natours"
-                            className={classes.projects__image}
-                            width={600}
-                            height={300}
-                            // layout="responsive"
-                            // loading="lazy"
-                        />
-                        <div className={classes.projects__info}>
-                            <div>
-                                <span className={classes.projects__type}>#portfolio</span>
-                            </div>
-                            <h3 className={classes.projects__name}>Natours</h3>
-                            <p className={classes.projects__tech}>
-                                Built with NextJS, ReactJS, SASS
-                            </p>
-                            {/* <div className={classes.projects__action}>
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={classes.projects__btn}
-                                >
-                                    See in action
-                                </a>
-                            </div> */}
-                        </div>
-                    </div>
-                </div>
+            <div className={`${classes.projects__list} grid`}>
+                {projects.map((project) => (
+                    <Project key={project.title} project={project} />
+                ))}
             </div>
         </section>
     );

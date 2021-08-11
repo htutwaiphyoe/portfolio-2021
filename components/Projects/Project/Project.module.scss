@@ -1,0 +1,39 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+.project {
+    width: 100%;
+    max-width: 50rem;
+    background-color: var(--container-color);
+
+    &__image {
+        object-fit: cover;
+        object-position: top;
+    }
+
+    &__info {
+        padding: 1rem 2rem 2rem;
+    }
+
+    &__type {
+        font-size: 1.5rem;
+        color: var(--first-color);
+        margin-right: 1rem;
+    }
+    &__title {
+        font-size: 2.2rem;
+    }
+    &__action {
+        margin-top: 1.5rem;
+    }
+
+    &__btn {
+        background-color: var(--first-color);
+        padding: 1rem;
+        color: v.$color-white;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+}
