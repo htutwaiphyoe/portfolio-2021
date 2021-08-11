@@ -9,6 +9,7 @@ function Project({ project }) {
                 className={classes.project__image}
                 width={600}
                 height={300}
+                priority={true}
             />
             <div className={classes.project__info}>
                 <div>

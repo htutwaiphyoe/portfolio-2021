@@ -4,7 +4,11 @@
         "paths": {
             "@/components/*": ["components/*"],
             "@/utils/*": ["utils/*"],
-            "@/hoc/*": ["hoc/*"]
+            "@/hoc/*": ["hoc/*"],
+            "@/controllers/*": ["controllers/*"],
+            "@/config/*": ["config/*"],
+            "@/models/*": ["models/*"],
+            "@/middlewares/*": ["middlewares/*"]
         }
     }
 }

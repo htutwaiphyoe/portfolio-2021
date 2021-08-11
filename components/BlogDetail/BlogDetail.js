@@ -32,6 +32,7 @@ function BlogDetail({ blog }) {
                         height={300}
                         layout="responsive"
                         className={classes.blogdetail__image}
+                        priority={true}
                     />
                 );
             }

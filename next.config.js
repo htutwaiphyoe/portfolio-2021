@@ -11,8 +11,4 @@ module.exports = {
     sassOptions: {
         includePaths: [path.join(__dirname, "sass")],
     },
-
-    // experimental: {
-    //     scrollRestoration: true,
-    // },
 };
