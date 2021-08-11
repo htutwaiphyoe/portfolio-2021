@@ -4,6 +4,7 @@
         "paths": {
             "@/components/*": ["components/*"],
             "@/utils/*": ["utils/*"],
+            "@/libs/*": ["libs/*"],
             "@/hoc/*": ["hoc/*"],
             "@/controllers/*": ["controllers/*"],
             "@/config/*": ["config/*"],

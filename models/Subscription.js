@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import validator from "validator";
 import uniqueValidator from "mongoose-unique-validator";
+import timeZone from "mongoose-timezone";
 
 const subscriptionSchema = new mongoose.Schema({
     email: {
@@ -16,5 +17,6 @@ const subscriptionSchema = new mongoose.Schema({
 });
 
 subscriptionSchema.plugin(uniqueValidator, { message: "You are already subscribed." });
+subscriptionSchema.plugin(timeZone);
 
 export default mongoose.models.Subscription || mongoose.model("Subscription", subscriptionSchema);

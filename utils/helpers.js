@@ -5,3 +5,10 @@ export function formatDate(date) {
         year: "numeric",
     });
 }
+
+export function updateState(oldObj, newObj) {
+    return {
+        ...oldObj,
+        ...newObj,
+    };
+}
