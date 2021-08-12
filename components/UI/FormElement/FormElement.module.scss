@@ -1,0 +1,26 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+
+.formelement {
+    background-color: var(--input-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1.2rem 1.6rem 0.4rem;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    &__label {
+        color: var(--title-color);
+        font-size: 1.5rem;
+    }
+    &__input {
+        background-color: var(--input-color);
+        font-family: v.$body-font;
+        font-size: 1.6rem;
+        width: 100%;
+        color: var(--text-color);
+        padding: 1rem 1rem 1rem 0;
+    }
+}
