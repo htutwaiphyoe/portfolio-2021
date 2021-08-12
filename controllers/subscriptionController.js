@@ -15,7 +15,7 @@ export const createSubscription = catchAsyncError(async (req, res, next) => {
         subject: "Welcome to my channel.",
         body: `Hi there,
 
-Thanks for subscribing. You'll receive a newsletter whenever a new blog or series is uploaded. For old blogs, you can find them in website.`,
+Thanks for subscribing. You'll receive a newsletter whenever a new blog or series is uploaded. For old blogs, you can find them on my website.`,
     });
 
     await sendEmail({

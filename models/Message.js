@@ -13,7 +13,6 @@ const messageSchema = new mongoose.Schema({
     email: {
         type: String,
         required: [true, "Please enter your email address"],
-        unique: true,
         validate: [validator.isEmail, "Please enter valid email address"],
         trim: true,
         lowercase: true,
