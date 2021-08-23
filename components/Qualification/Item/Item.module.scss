@@ -1,0 +1,58 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+.item {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 2rem;
+
+    &__title {
+        font-size: 2rem;
+        font-weight: v.$font-weight-medium;
+    }
+
+    &__subtitle {
+        display: inline-block;
+        font-size: 1.55rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    &__calendar {
+        font-size: 1.5rem;
+        color: var(--text-color-light);
+        display: flex;
+        align-items: center;
+    }
+    &__year {
+        margin-left: 0.5rem;
+    }
+
+    &__content {
+        justify-self: flex-end;
+    }
+    &__rounder {
+        display: inline-block;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: var(--first-color);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    @include m.responsive(575, 1) {
+        &__title {
+            font-size: 1.8rem;
+        }
+
+        &__subtitle {
+            font-size: 1.4rem;
+        }
+
+        &__calendar {
+            font-size: 1.2rem;
+        }
+    }
+}
