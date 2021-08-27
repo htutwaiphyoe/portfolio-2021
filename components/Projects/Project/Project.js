@@ -21,16 +21,25 @@ function Project({ project }) {
                 </div>
                 <h3 className={classes.project__title}>{project.title}</h3>
                 <p>{project.description}</p>
-                {/* <div className={classes.project__action}>
+                <div className={classes.project__action}>
                     <a
                         href="/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={classes.project__btn}
                     >
-                        See in action
+                        <i className={`ri-window-line ${classes.project__btn__icon}`}></i>website
                     </a>
-                </div> */}
+                    <a
+                        href="/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${classes.project__btn} ${classes.project__btn_code}`}
+                    >
+                        <i className={`ri-github-fill ${classes.project__btn__icon}`}></i>
+                        Code
+                    </a>
+                </div>
             </div>
         </div>
     );

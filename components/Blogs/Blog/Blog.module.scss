@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     background-color: var(--container-color);
+    box-shadow: v.$box-shadow;
 
     &__image {
         object-fit: cover;

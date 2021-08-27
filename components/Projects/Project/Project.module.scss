@@ -3,6 +3,7 @@
 .project {
     width: 100%;
     max-width: 50rem;
+    box-shadow: v.$box-shadow;
     background-color: var(--container-color);
 
     &__image {
@@ -18,22 +19,44 @@
         font-size: 1.5rem;
         color: var(--first-color);
         margin-right: 1rem;
+        text-transform: uppercase;
     }
     &__title {
         font-size: 2.2rem;
     }
     &__action {
         margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
     }
 
     &__btn {
         background-color: var(--first-color);
-        padding: 1rem;
+        padding: 0.5rem 0;
         color: v.$color-white;
         border-radius: 0.5rem;
         -webkit-border-radius: 0.5rem;
         -moz-border-radius: 0.5rem;
         -ms-border-radius: 0.5rem;
         -o-border-radius: 0.5rem;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+
+        &__icon {
+            font-size: 2.5rem;
+            margin-right: 0.5rem;
+        }
+
+        &_code {
+            border: 1px solid var(--first-color);
+            background-color: transparent;
+            color: var(--text-color);
+        }
     }
 }
