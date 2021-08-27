@@ -31,7 +31,7 @@ function Projects(props) {
             image: "/images/site/projects/valhalla.png",
             title: "Hotel Valhalla",
             description: "Web application for hotel booking built with NextJS, ReactJS, MongoDB",
-            types: ["fullstack"],
+            types: ["fullstack", "webapp"],
         },
         {
             image: "/images/site/projects/financy.png",
