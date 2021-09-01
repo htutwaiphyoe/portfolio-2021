@@ -46,12 +46,7 @@ function Projects(props) {
             description: "Dynamic image grid built with ReactJS, Firebase and Google OAuth",
             types: ["WEBAPP"],
         },
-        {
-            image: "/images/site/projects/codigo.png",
-            title: "Codigo.co",
-            description: "Codigo Code Test project built with NextJS, ReactJS and Sass",
-            types: ["WEBSITE"],
-        },
+        
     ];
     return (
         <section className={`container ${classes.projects}`}>
