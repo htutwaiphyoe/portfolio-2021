@@ -22,17 +22,11 @@ function Project({ project }) {
                 <h3 className={classes.project__title}>{project.title}</h3>
                 <p>{project.description}</p>
                 <div className={classes.project__action}>
-                    <a
-                        href="/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={classes.project__btn}
-                    >
+                    <a href="/" rel="noopener noreferrer" className={classes.project__btn}>
                         <i className={`ri-window-line ${classes.project__btn__icon}`}></i>website
                     </a>
                     <a
                         href="/"
-                        target="_blank"
                         rel="noopener noreferrer"
                         className={`${classes.project__btn} ${classes.project__btn_code}`}
                     >

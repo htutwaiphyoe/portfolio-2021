@@ -24,7 +24,7 @@ function About(props) {
                         <Button
                             type="download"
                             config={{
-                                href: "https://drive.google.com/file/d/1GMRVVKtyAmtEnR2M11xKvtNsIZGm9pFH/view?usp=sharing",
+                                href: "/",
                                 download: true,
                                 id: "about-download",
                             }}
