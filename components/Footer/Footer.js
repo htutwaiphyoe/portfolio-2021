@@ -5,7 +5,7 @@ function Footer(props) {
     const socials = [
         { href: "https://www.facebook.com/hwp.dev/", icon: "facebook-circle" },
         { href: "https://www.instagram.com/htutwaiphyoe_/", icon: "instagram" },
-        { href: "https://www.linkedin.com/in/htut-wai-phyoe-876a21190/", icon: "linkedin-box" },
+        { href: "https://www.linkedin.com/in/htutwaiphyoe/", icon: "linkedin-box" },
         { href: "https://github.com/htutwaiphyoe", icon: "github" },
     ];
     function onClickHandler(id) {
