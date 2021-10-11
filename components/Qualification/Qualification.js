@@ -15,7 +15,7 @@ function Qualification(props) {
             active: true,
             items: [
                 { title: "Matriculation", subtitle: "High School - MDY", year: "2015 - 2016" },
-                { title: "Computer Engineer", subtitle: "MTU - COE", year: "2016 - Present" },
+                { title: "Computer Engineer", subtitle: "MTU - MDY", year: "2016 - Present" },
                 { title: "IT Student", subtitle: "CS50 - Harvard", year: "2020" },
             ],
         },
@@ -23,8 +23,12 @@ function Qualification(props) {
             id: "work",
             active: false,
             items: [
-                { title: "Web Developer", subtitle: "MTU - COE", year: "2019 - Present" },
-                { title: "Freelancer", subtitle: "Mandalay", year: "2020 - Present" },
+                { title: "Freelancer", subtitle: "MTU - MDY", year: "Jan 2021 - Sept 2021" },
+                {
+                    title: "Frontend Developer",
+                    subtitle: "Codigo.co - YGN",
+                    year: "Oct 2021 - Present",
+                },
             ],
         },
     ];
