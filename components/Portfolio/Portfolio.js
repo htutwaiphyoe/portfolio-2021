@@ -6,7 +6,7 @@ function Portfolio(props) {
     const status = [
         { icon: "time-line", number: 1, title: "Coding years" },
         { icon: "code-s-slash-fill", number: 10, title: "Projects done" },
-        { icon: "quill-pen-line", number: 6, title: " Sharing contents" },
+        { icon: "quill-pen-line", number: 7, title: " Sharing contents" },
     ];
     return (
         <SectionHOC

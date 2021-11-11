@@ -26,7 +26,7 @@ function Qualification(props) {
                 { title: "Freelancer", subtitle: "MTU - MDY", year: "Jan 2021 - Sept 2021" },
                 {
                     title: "Frontend Developer",
-                    subtitle: "Codigo.co - YGN",
+                    subtitle: "Codigo.co - Singapore",
                     year: "Oct 2021 - Present",
                 },
             ],
