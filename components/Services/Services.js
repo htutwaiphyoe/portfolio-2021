@@ -6,10 +6,10 @@ import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination } from "swiper/core";
+import SwiperCore, { Pagination, Autoplay } from "swiper/core";
 
 // install Swiper modules
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Autoplay]);
 
 import SectionHOC from "@/hoc/Section/Section";
 import Service from "./Service/Service";
@@ -49,6 +49,11 @@ function Services(props) {
         >
             <div className={`container ${classes.services__container}`} id="services-container">
                 <Swiper
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
+                    speed={1000}
                     pagination={{
                         dynamicBullets: true,
                     }}

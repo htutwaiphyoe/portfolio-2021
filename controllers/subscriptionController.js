@@ -32,16 +32,14 @@ Thanks for subscribing. You'll receive a newsletter whenever a new blog or serie
 
 export const sendMailToSubscribers = catchAsyncError(async (req, res, next) => {
     const subscribers = await Subscription.find({}, { email: 1, _id: 0 });
-    const { blog } = req.body;
+    const { body, subject } = req.body;
 
     if (subscribers.length > 0) {
         subscribers.forEach(async (s) => {
             await sendEmail({
                 email: s.email,
-                subject: "New blog",
-                body: `Dear subscriber,
-
-Weekend blog about ${blog.title} is uploaded. Read it here https://www.htutwaiphyoe.me/blogs/${blog.slug}`,
+                subject,
+                body,
             });
         });
     }
@@ -49,7 +47,6 @@ Weekend blog about ${blog.title} is uploaded. Read it here https://www.htutwaiph
     res.status(200).json({
         status: "success",
         subscribers,
-        blog,
         message: "Emails are sent successfully!",
     });
 });
