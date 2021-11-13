@@ -86,7 +86,9 @@ function BlogDetail({ blog }) {
                 </div>
 
                 <div>
-                    <BlogTopic topic={blog.topics[0]} />
+                    {blog.topics.map((topic) => (
+                        <BlogTopic topic={topic} key={topic} />
+                    ))}
                 </div>
             </div>
 
