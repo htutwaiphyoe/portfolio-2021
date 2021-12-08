@@ -17,8 +17,8 @@ function About(props) {
                     <div className={`${classes.about__data}`}>
                         <p id="about-text" className={`${classes.about__text}`}>
                             I'm currently a frontend developer working at Codigo.co. I started
-                            coding at second year and apparently I'm pursuing fullstack web
-                            development.
+                            coding at second year and apparently I'm pursuing Fullstack Development
+                            with JavaScript.
                         </p>
 
                         <Button
