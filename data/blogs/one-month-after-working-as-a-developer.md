@@ -1,8 +1,8 @@
 ---
-title: "Developer တစ်ယောက်အဖြစ် လုပ်ငန်းခွင်ဝင်ပြီး တစ်လအကြာ"
+title: "တစ်လတာမှတ်တမ်းနှင့်အတွေးအခေါ်များ"
 date: "2021-11-11"
 image: "cover.jpg"
-description: "အလုပ်ခွင်မှာရတဲ့ Junior Developer တစ်ယောက်ရဲ့ အတွေ့အကြုံများ"
+description: "Developer တစ်ယောက်အဖြစ် လုပ်ငန်းခွင်ဝင်ပြီး တစ်လအကြာ အလုပ်ခွင်မှာရတဲ့ အတွေ့အကြုံများ"
 topics: ["knowledge", "career"]
 readTime: 10
 ---
