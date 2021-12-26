@@ -23,9 +23,13 @@ function Qualification(props) {
             id: "work",
             active: false,
             items: [
-                { title: "Freelancer", subtitle: "MTU - MDY", year: "Jan 2021 - Sept 2021" },
                 {
-                    title: "Frontend Developer",
+                    title: "Freelance Web Developer",
+                    subtitle: "MTU - MDY",
+                    year: "Jan 2021 - Sept 2021",
+                },
+                {
+                    title: "Junior Frontend Developer",
                     subtitle: "Codigo.co - Singapore",
                     year: "Oct 2021 - Present",
                 },

@@ -15,12 +15,12 @@ function Projects(props) {
             description: "Travel agency website built with HTML, CSS, SASS, JavaScript",
             types: ["landingpage", "responsive"],
         },
-        // {
-        //     image: "/images/site/projects/tictactoe.png",
-        //     title: "TicTacToe",
-        //     description: "DOM game built with HTML, CSS, SASS, JavaScript",
-        //     types: ["game"],
-        // },
+        {
+            image: "/images/site/projects/tictactoe.png",
+            title: "TicTacToe",
+            description: "DOM game built with HTML, CSS, SASS, JavaScript",
+            types: ["game"],
+        },
         {
             image: "/images/site/projects/portfolio.png",
             title: "Portfolio",
@@ -46,7 +46,6 @@ function Projects(props) {
             description: "Dynamic image grid built with ReactJS, Firebase and Google OAuth",
             types: ["WEBAPP"],
         },
-        
     ];
     return (
         <section className={`container ${classes.projects}`}>
