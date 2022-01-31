@@ -6,7 +6,8 @@
     grid-template-columns: 1fr 1.5fr;
     background-color: var(--container-color);
     box-shadow: v.$box-shadow;
-
+    @include m.border-radius(1rem);
+    overflow: hidden;
     &__image {
         object-fit: cover;
     }

@@ -1,12 +1,20 @@
 @mixin responsive($breakpoint, $type) {
     @if $type == 1 {
-        @media only screen and (max-width: $breakpoint * 1px) {
+        @media only screen and (max-width: ($breakpoint * 1px)) {
             @content;
         }
     }
     @if $type == 0 {
-        @media only screen and (min-width: $breakpoint * 1px) {
+        @media only screen and (min-width: ($breakpoint * 1px)) {
             @content;
         }
     }
+}
+
+@mixin border-radius($amount) {
+    border-radius: $amount !important;
+    -webkit-border-radius: $amount !important;
+    -moz-border-radius: $amount !important;
+    -ms-border-radius: $amount !important;
+    -o-border-radius: $amount !important;
 }

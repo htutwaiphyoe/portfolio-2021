@@ -22,8 +22,8 @@ function Skills(props) {
                 { text: "JavaScript", number: 75, type: "js" },
                 { text: "NextJS", number: 70, type: "next" },
                 { text: "Material UI", number: 55, type: "mui" },
-                { text: "NestJS (learning)", number: 33, type: "nest" },
-                { text: "ReactNative (learning)", number: 10, type: "reactnative" },
+                { text: "NestJS", number: 33, type: "nest" },
+                // { text: "ReactNative (learning)", number: 10, type: "reactnative" },
             ],
         },
         {

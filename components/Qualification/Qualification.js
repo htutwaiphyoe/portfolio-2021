@@ -15,8 +15,8 @@ function Qualification(props) {
             active: true,
             items: [
                 { title: "Matriculation", subtitle: "High School - MDY", year: "2015 - 2016" },
-                { title: "Computer Engineer", subtitle: "MTU - MDY", year: "2016 - Present" },
-                { title: "IT Student", subtitle: "CS50 - Harvard", year: "2020" },
+                { title: "IT Engineer", subtitle: "MTU - MDY", year: "2016 - Present" },
+                { title: "CS Student", subtitle: "CS50 - Harvard", year: "2020" },
             ],
         },
         {
@@ -24,12 +24,12 @@ function Qualification(props) {
             active: false,
             items: [
                 {
-                    title: "Freelance Web Developer",
+                    title: "Freelance Developer",
                     subtitle: "MTU - MDY",
-                    year: "Jan 2021 - Sept 2021",
+                    year: "Sept 2019 - Sept 2021",
                 },
                 {
-                    title: "Junior Frontend Developer",
+                    title: "Frontend Developer",
                     subtitle: "Codigo.co - Singapore",
                     year: "Oct 2021 - Present",
                 },

@@ -3,10 +3,14 @@
 .project {
     width: 100%;
     max-width: 50rem;
+    @include m.border-radius(1rem);
+    overflow: hidden;
     box-shadow: v.$box-shadow;
     background-color: var(--container-color);
-
-    &__image {
+    &__image
+    {
+        padding: 1rem !important;
+        @include m.border-radius(1.8rem);
         object-fit: cover;
         object-position: top;
     }
@@ -59,4 +63,5 @@
             color: var(--text-color);
         }
     }
+    
 }
