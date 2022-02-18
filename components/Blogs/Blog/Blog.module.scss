@@ -1,50 +1,50 @@
 @use "abstracts/variables" as v;
 @use "abstracts/mixins" as m;
 .blog {
-    cursor: pointer;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  background-color: var(--container-color);
+  box-shadow: v.$box-shadow;
+  @include m.border-radius(2rem);
+  overflow: hidden;
+  &__image {
+    object-fit: cover;
+  }
+
+  &__data {
+    padding: 2.5rem;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    background-color: var(--container-color);
-    box-shadow: v.$box-shadow;
-    @include m.border-radius(1rem);
-    overflow: hidden;
-    &__image {
-        object-fit: cover;
-    }
+    row-gap: 0.7rem;
+    align-self: center;
+  }
+
+  &__topics {
+    margin-bottom: 0.8rem;
+  }
+
+  &__title {
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+    font-size: 2.1rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: var(--text-color-light);
+    margin-top: 1rem;
+  }
+
+  @include m.responsive(767, 1) {
+    grid-template-columns: 1fr 1.1fr;
 
     &__data {
-        padding: 2.5rem;
-        display: grid;
-        row-gap: 0.7rem;
-        align-self: center;
+      padding: 2rem;
     }
-
-    &__topics {
-        margin-bottom: 0.8rem;
-    }
-
-    &__title {
-        line-height: 1.3;
-        margin-bottom: 0.3rem;
-        font-size: 2.1rem;
-    }
-
-    &__info {
-        display: flex;
-        justify-content: space-between;
-        font-size: 1.4rem;
-        color: var(--text-color-light);
-        margin-top: 1rem;
-    }
-
-    @include m.responsive(767, 1) {
-        grid-template-columns: 1fr 1.1fr;
-
-        &__data {
-            padding: 2rem;
-        }
-    }
-    @include m.responsive(575, 1) {
-        grid-template-columns: 1fr;
-    }
+  }
+  @include m.responsive(575, 1) {
+    grid-template-columns: 1fr;
+  }
 }
