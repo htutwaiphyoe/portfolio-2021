@@ -25,7 +25,7 @@ function Project({ project }) {
           <a
             href="/"
             rel="noopener noreferrer"
-            className={`${classes.project__btn} ${classes.project__btn_code}`}
+            className={`${classes.project__btn} ${classes.project__btn_code} ${classes.project__btn_outlined}`}
           >
             <i className={`ri-github-fill ${classes.project__btn__icon}`}></i>
             Code

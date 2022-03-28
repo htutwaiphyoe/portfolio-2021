@@ -1,17 +1,18 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@/components/*": ["components/*"],
-            "@/utils/*": ["utils/*"],
-            "@/libs/*": ["libs/*"],
-            "@/hoc/*": ["hoc/*"],
-            "@/controllers/*": ["controllers/*"],
-            "@/config/*": ["config/*"],
-            "@/models/*": ["models/*"],
-            "@/middlewares/*": ["middlewares/*"],
-            "@/redux/*": ["redux/*"],
-            "@/mail/*": ["mail/*"]
-        }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/utils/*": ["utils/*"],
+      "@/libs/*": ["libs/*"],
+      "@/hoc/*": ["hoc/*"],
+      "@/controllers/*": ["controllers/*"],
+      "@/config/*": ["config/*"],
+      "@/models/*": ["models/*"],
+      "@/middlewares/*": ["middlewares/*"],
+      "@/redux/*": ["redux/*"],
+      "@/mail/*": ["mail/*"],
+      "@/data/*": ["data/*"]
     }
+  }
 }

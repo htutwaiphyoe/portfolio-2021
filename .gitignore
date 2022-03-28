@@ -1,8 +1,9 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # custom
-notes.js
-half-year-after-wroking-as-a-developer.md
+
+half-year-after-working-as-a-developer/
+half-year-after-working-as-a-developer.md
 
 # dependencies
 /node_modules
