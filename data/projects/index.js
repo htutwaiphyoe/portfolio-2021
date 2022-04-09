@@ -7,16 +7,22 @@ export const projects = [
     types: ["landing-page", "responsive", "design-to-code"],
   },
   {
+    image: "/images/site/projects/natours.png",
+    title: "Natours",
+    description: "Travel agency website built with HTML, CSS, SCSS, JavaScript",
+    types: ["landing-page", "responsive", "design-to-code"],
+  },
+  {
     image: "/images/site/projects/venus.png",
     title: "Venus Travel",
-    description: "Travel agency website built with HTML, CSS, SASS, JavaScript",
+    description: "Travel agency website built with HTML, CSS, SCSS, JavaScript",
     types: ["landing-page", "responsive", "design-to-code"],
   },
   {
     image: "/images/site/projects/beatly.png",
     title: "Beatly",
     description:
-      "Earphone company website built with HTML, CSS, SASS, JavaScript",
+      "Earphone company website built with HTML, CSS, SCSS, JavaScript",
     types: ["landing-page", "responsive", "design-to-code"],
   },
   {
@@ -42,7 +48,7 @@ export const projects = [
   {
     image: "/images/site/projects/tictactoe.png",
     title: "TicTacToe",
-    description: "DOM game built with HTML, CSS, SASS, JavaScript",
+    description: "DOM game built with HTML, CSS, SCSS, JavaScript",
     types: ["game"],
   },
   {
@@ -62,7 +68,7 @@ export const projects = [
   {
     image: "/images/site/projects/portfolio.png",
     title: "Portfolio",
-    description: "Personal website built with NextJS, ReactJS, SASS",
+    description: "Personal website built with NextJS, ReactJS, SCSS",
     types: ["portfolio", "fullstack"],
   },
   {
