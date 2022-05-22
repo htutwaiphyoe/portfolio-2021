@@ -43,7 +43,7 @@ function Qualification(props) {
         },
         {
           title: "Frontend Developer",
-          subtitle: "Codigo.co - Singapore",
+          subtitle: "Codigo.co (Rezeve) - Singapore",
           year: "Oct 2021 - Present",
         },
       ],
@@ -66,7 +66,6 @@ function Qualification(props) {
             />
           ))}
         </div>
-
         <div
           className={`${classes.qualification__lists}`}
           id="qualification-list"
