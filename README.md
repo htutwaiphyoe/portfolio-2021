@@ -1,6 +1,6 @@
 # Portfolio of Htut Wai Phyoe
 
-Website: [htutwaiphyoe.me](https://www.htutwaiphyoe.me/)
+Website: [https://www.htutwaiphyoe.dev/](https://www.htutwaiphyoe.dev/)
 
 ## Table of contents
 
