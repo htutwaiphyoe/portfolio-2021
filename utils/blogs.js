@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const dirPath = path.join("blogs");
+const dirPath = path.join(process.cwd(), "data", "blogs");
 
 export function getAllFiles() {
   return fs.readdirSync(dirPath);
