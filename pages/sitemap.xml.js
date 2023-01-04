@@ -26,10 +26,7 @@ const createSitemap = (blogs) => `<?xml version="1.0" encoding="UTF-8"?>
 function SiteMap() {}
 
 export async function getServerSideProps({ res }) {
-  const blogs =
-    process.env.NODE_ENV === "production"
-      ? getAllBlogs("blogs")
-      : getAllBlogs();
+  const blogs = getAllBlogs();
 
   res.setHeader("Content-Type", "text/xml");
   res.write(createSitemap(blogs));
