@@ -2,10 +2,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const dirPath = path.join("data", "blogs");
+const dirPath = path.join(process.cwd(), "data", "blogs");
 
-export function getAllFiles() {
-  return fs.readdirSync(dirPath);
+export function getAllFiles(path = dirPath) {
+  return fs.readdirSync(path);
 }
 
 export function getFileData(filename) {
@@ -19,8 +19,8 @@ export function getFileData(filename) {
 export function sortBlogs(blogs) {
   return blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
-export function getAllBlogs() {
-  const fileNames = getAllFiles();
+export function getAllBlogs(path) {
+  const fileNames = getAllFiles(path);
   const blogs = sortBlogs(fileNames.map((f) => getFileData(f)));
   return blogs;
 }
