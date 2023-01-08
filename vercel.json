@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "pages/sitemap.xml.js": {
+      "includeFiles": "data/blogs/**"
+    }
+  }
+}
