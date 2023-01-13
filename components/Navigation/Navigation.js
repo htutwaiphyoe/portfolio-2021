@@ -56,7 +56,7 @@ function Navigation(props) {
     <header className={classes.header} ref={headerRef}>
       <nav className={`${classes.nav} container`}>
         <Link href="/">
-          <a className={classes.nav__logo}>Htut Wai Phyoe</a>
+          <a className={classes.nav__logo}>HWP.DEV</a>
         </Link>
 
         <div className={classes.nav__menu} ref={navMenuRef}>

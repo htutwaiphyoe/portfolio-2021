@@ -1,12 +1,5 @@
 export const projects = [
   {
-    image: "/images/site/projects/omnifood.png",
-    title: "Omnifood",
-    description:
-      "Food service website built with HTML, CSS, JavaScript, JQuery",
-    types: ["landing-page", "responsive", "design-to-code"],
-  },
-  {
     image: "/images/site/projects/natours.png",
     title: "Natours",
     description: "Travel agency website built with HTML, CSS, SCSS, JavaScript",
@@ -26,19 +19,6 @@ export const projects = [
     types: ["landing-page", "responsive", "design-to-code"],
   },
   {
-    image: "/images/site/projects/huddle.png",
-    title: "Huddle",
-    description: "Huddle website built with ReactJS and Styled-Components",
-    types: ["landing-page", "responsive", "design-to-code"],
-  },
-  {
-    image: "/images/site/projects/bookmarky.png",
-    title: "Bookmark Manager",
-    description:
-      "Bookmark manager website built with NextJS, TypeScript and Tailwind",
-    types: ["landing-page", "responsive", "design-to-code"],
-  },
-  {
     image: "/images/site/projects/foodify.png",
     title: "Foodify - Best Place for your food",
     description:
@@ -50,13 +30,6 @@ export const projects = [
     title: "TicTacToe",
     description: "DOM game built with HTML, CSS, SCSS, JavaScript",
     types: ["game"],
-  },
-  {
-    image: "/images/site/projects/financy.png",
-    title: "Financy",
-    description:
-      "Budget tracking application built with ReactJS, Firebase and Google OAuth",
-    types: ["WEBAPP"],
   },
   {
     image: "/images/site/projects/photify.png",
