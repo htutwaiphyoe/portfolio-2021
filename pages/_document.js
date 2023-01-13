@@ -16,7 +16,6 @@ class Doc extends Document {
             content="2021-08-11T14:20:40.000Z"
           />
           <meta name="robots" content="index, follow" />
-          <link rel="canonical" href="https://www.htutwaiphyoe.dev/" />
           <link rel="apple-touch-icon" href="/logo192.png" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
