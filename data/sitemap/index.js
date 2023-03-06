@@ -29,6 +29,11 @@ export const SITEMAP_PAGES = `
         <priority>${SITEMAP_VERSION}</priority>
     </url>
     <url>
+        <loc>${SITEMAP_DOMAIN_URL}/blogs/the-boyscout-rule</loc>
+        <lastmod>${new Date("2023-03-06").toISOString()}</lastmod>
+        <priority>${SITEMAP_VERSION}</priority>
+    </url>
+    <url>
         <loc>${SITEMAP_DOMAIN_URL}/blogs/half-year-after-working-as-a-developer</loc>
         <lastmod>${new Date("2022-04-11").toISOString()}</lastmod>
         <priority>${SITEMAP_VERSION}</priority>
@@ -53,4 +58,5 @@ export const SITEMAP_PAGES = `
         <lastmod>${new Date("2021-07-03").toISOString()}</lastmod>
         <priority>${SITEMAP_VERSION}</priority>
     </url>
+    
 `;
