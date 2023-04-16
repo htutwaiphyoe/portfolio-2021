@@ -80,26 +80,23 @@ function Navigation(props) {
               </li>
             ))}
           </ul>
-
           <i
             className={`ri-close-line ${classes.nav__close}`}
             onClick={toggleChangeHandler}
           ></i>
         </div>
-
         {/* <div className={classes.nav__btns}>
           <i
             className={`ri-moon-line ${classes.nav__icon}`}
             onClick={themeChangeHandler}
             ref={themeIconRef}
           ></i>
-
-          <i
-            className={`ri-menu-line ${classes.nav__icon} ${classes.nav__toggle}`}
-            ref={toggleIconRef}
-            onClick={toggleChangeHandler}
-          ></i>
         </div> */}
+        <i
+          className={`ri-menu-line ${classes.nav__icon} ${classes.nav__toggle}`}
+          ref={toggleIconRef}
+          onClick={toggleChangeHandler}
+        ></i>
       </nav>
     </header>
   );

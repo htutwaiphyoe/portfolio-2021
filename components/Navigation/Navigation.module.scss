@@ -2,137 +2,137 @@
 @use "abstracts/mixins" as m;
 
 %mouse-action {
-    &:hover {
-        color: var(--first-color);
-    }
-    &:active {
-        color: var(--first-color-lighter);
-    }
+  &:hover {
+    color: var(--first-color);
+  }
+  &:active {
+    color: var(--first-color-lighter);
+  }
 }
 
 .header {
-    width: 100%;
-    position: fixed;
-    z-index: v.$z-fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--body-color);
+  width: 100%;
+  position: fixed;
+  z-index: v.$z-fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
 
-    @include m.responsive(575, 1) {
-        top: initial;
-        bottom: 0;
-    }
+  @include m.responsive(575, 1) {
+    top: initial;
+    bottom: 0;
+  }
 }
 
 .nav {
-    height: 7.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 7.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    &__logo {
-        font-size: 2.4rem;
-        color: var(--title-color);
-        font-weight: v.$font-weight-medium;
-        font-family: v.$heading-font;
+  &__logo {
+    font-size: 2.4rem;
+    color: var(--title-color);
+    font-weight: v.$font-weight-medium;
+    font-family: v.$heading-font;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.8rem;
+    justify-items: center;
+    font-family: v.$heading-font;
+  }
+
+  &__link {
+    font-size: 1.7rem;
+    color: var(--title-color);
+    @extend %mouse-action;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_active {
+      color: var(--first-color);
+    }
+
+    &__icon {
+      line-height: 1.3;
+      font-size: 2.5rem;
+      display: none;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    bottom: 0.7rem;
+    right: 2rem;
+    font-size: 3.2rem;
+    color: var(--first-color);
+    @extend %mouse-action;
+    display: none;
+    cursor: pointer;
+  }
+  &__btns {
+    display: flex;
+    column-gap: 1.6em;
+  }
+  &__icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+    @extend %mouse-action;
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  @include m.responsive(1199, 1) {
+    padding: 0 2rem;
+  }
+
+  @include m.responsive(767, 1) {
+  }
+  @include m.responsive(575, 1) {
+    &__menu {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      background-color: var(--body-color);
+      bottom: -100%;
+      //margin: 0 -2rem;
+      padding: 3rem 0 5rem;
+      border-radius: 2.5rem 2.5rem 0 0;
+      -webkit-border-radius: 2.5rem 2.5rem 0 0;
+      -moz-border-radius: 2.5rem 2.5rem 0 0;
+      -ms-border-radius: 2.5rem 2.5rem 0 0;
+      -o-border-radius: 2.5rem 2.5rem 0 0;
+      box-shadow: v.$header-shadow;
+      transition: 0.2s;
+      -webkit-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -ms-transition: 0.2s;
+      -o-transition: 0.2s;
+      &_active {
+        bottom: 0 !important;
+      }
     }
 
     &__list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 1.8rem;
-        justify-items: center;
-        font-family: v.$heading-font;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem 0;
     }
-
-    &__link {
-        font-size: 1.7rem;
-        color: var(--title-color);
-        @extend %mouse-action;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &_active {
-            color: var(--first-color);
-        }
-
-        &__icon {
-            line-height: 1.3;
-            font-size: 2.5rem;
-            display: none;
-        }
+    &__toggle {
+      display: inline;
     }
 
     &__close {
-        position: absolute;
-        bottom: 0.7rem;
-        right: 2rem;
-        font-size: 3.2rem;
-        color: var(--first-color);
-        @extend %mouse-action;
-        display: none;
-        cursor: pointer;
+      display: inline;
     }
-    &__btns {
-        display: flex;
-        column-gap: 1.6em;
+    &__link {
+      &__icon {
+        display: inline;
+      }
     }
-    &__icon {
-        font-size: 2.5rem;
-        cursor: pointer;
-        @extend %mouse-action;
-    }
-
-    &__toggle {
-        display: none;
-    }
-
-    @include m.responsive(1199, 1) {
-        padding: 0 2rem;
-    }
-
-    @include m.responsive(767, 1) {
-    }
-    @include m.responsive(575, 1) {
-        &__menu {
-            position: fixed;
-            width: 100%;
-            left: 0;
-            background-color: var(--body-color);
-            bottom: -100%;
-            //margin: 0 -2rem;
-            padding: 3rem 0 5rem;
-            border-radius: 2.5rem 2.5rem 0 0;
-            -webkit-border-radius: 2.5rem 2.5rem 0 0;
-            -moz-border-radius: 2.5rem 2.5rem 0 0;
-            -ms-border-radius: 2.5rem 2.5rem 0 0;
-            -o-border-radius: 2.5rem 2.5rem 0 0;
-            box-shadow: v.$header-shadow;
-            transition: 0.2s;
-            -webkit-transition: 0.2s;
-            -moz-transition: 0.2s;
-            -ms-transition: 0.2s;
-            -o-transition: 0.2s;
-            &_active {
-                bottom: 0 !important;
-            }
-        }
-
-        &__list {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem 0;
-        }
-        &__toggle {
-            display: inline;
-        }
-
-        &__close {
-            display: inline;
-        }
-        &__link {
-            &__icon {
-                display: inline;
-            }
-        }
-    }
+  }
 }
