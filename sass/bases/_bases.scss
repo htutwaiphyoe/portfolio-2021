@@ -1,194 +1,193 @@
 :root {
-    // Colors
-    --hue-color: 250;
-    --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-    --container-color: #fff;
+  --hue-color: 250;
+  --first-color: hsl(250, 67%, 59%);
+  --first-color-second: hsl(250, 66%, 60%);
+  --first-color-alt: hsl(250, 54%, 53%);
+  --first-color-lighter: hsl(250, 92%, 85%);
+  --title-color: #111111;
+  --text-color: #222222;
+  --text-color-light: #444444;
+  --input-color: hsl(250, 70%, 96%);
+  --body-color: hsl(250, 60%, 99%);
+  --scroll-bar-color: hsl(250, 12%, 90%);
+  --scroll-thumb-color: hsl(250, 12%, 80%);
+  --container-color: #fff;
 }
 
 body.dark-theme {
-    // Colors
-    --first-color-second: hsl(var(--hue-color), 30%, 8%);
-    --title-color: hsl(var(--hue-color), 8%, 95%);
-    --text-color: hsl(var(--hue-color), 8%, 75%);
-    --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: hsl(var(--hue-color), 28%, 12%);
-    // --body-color: hsl(var(--hue-color), 30%, 8%);
-    --container-color: #231f38;
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  //   --first-color-second: hsl(250, 30%, 8%);
+  //   --title-color: hsl(250, 8%, 95%);
+  //   --text-color: hsl(250, 9%, 86%);
+  //   --text-color-light: hsl(249, 6%, 79%);
+  //   --input-color: hsl(250, 29%, 16%);
+  //   --body-color: hsl(250, 28%, 12%);
+  //   --container-color: #231f38;
+  //   --scroll-bar-color: hsl(250, 12%, 48%);
+  //   --scroll-thumb-color: hsl(250, 12%, 36%);
 }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    @include responsive(319, 1) {
-        font-size: 56%;
-    }
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  @include responsive(319, 1) {
+    font-size: 56%;
+  }
 }
 
 body {
-    background-color: var(--body-color);
-    font-family: $body-font;
-    font-weight: $font-weight-normal;
-    line-height: 1.6;
-    color: var(--text-color);
-    font-size: $font-size-normal;
-    -webkit-tap-highlight-color: transparent;
+  background-color: var(--body-color);
+  font-family: $body-font;
+  font-weight: $font-weight-normal;
+  line-height: 1.6;
+  color: var(--text-color);
+  font-size: $font-size-normal;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .main {
-    padding: 7.2rem 0 0 0;
-    overflow: hidden;
-    @include responsive(575, 1) {
-        padding: 0 0 7.2rem 0;
-    }
+  padding: 7.2rem 0 0 0;
+  overflow: hidden;
+  @include responsive(575, 1) {
+    padding: 0 0 7.2rem 0;
+  }
 }
 
 h1,
 h2,
 h3,
 h4 {
-    color: var(--title-color);
-    font-weight: $font-weight-semi-bold;
+  color: var(--title-color);
+  font-weight: $font-weight-semi-bold;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    outline: none;
+  text-decoration: none;
+  outline: none;
 
-    &:active {
-        outline: none;
-    }
+  &:active {
+    outline: none;
+  }
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 html.sr .load-hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 button,
 input,
 textarea {
-    border: none;
-    outline: none;
-    font-size: 1.6rem;
-    font-family: inherit;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  font-family: inherit;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 .section {
-    padding: 9rem 0 4rem;
-    @include responsive(575, 1) {
-        padding: 4rem 0;
-    }
-    %center {
-        text-align: center;
-    }
-    &__title {
-        font-size: 4rem;
-        font-family: $heading-font;
-        @extend %center;
-    }
+  padding: 9rem 0 4rem;
+  @include responsive(575, 1) {
+    padding: 4rem 0;
+  }
+  %center {
+    text-align: center;
+  }
+  &__title {
+    font-size: 4rem;
+    font-family: $heading-font;
+    @extend %center;
+  }
 
-    &__subtitle {
-        display: block;
-        font-size: 1.6rem;
-        @extend %center;
-        margin-bottom: 6rem;
-        @include responsive(575, 1) {
-            margin-bottom: 4rem;
-        }
+  &__subtitle {
+    display: block;
+    font-size: 1.6rem;
+    @extend %center;
+    margin-bottom: 6rem;
+    @include responsive(575, 1) {
+      margin-bottom: 4rem;
     }
+  }
 }
 .container {
-    max-width: 1024px;
-    margin: 0 auto;
+  max-width: 1024px;
+  margin: 0 auto;
 
-    @include responsive(1199, 1) {
-        max-width: 768px;
-    }
+  @include responsive(1199, 1) {
+    max-width: 768px;
+  }
 }
 .grid {
-    display: grid;
+  display: grid;
 }
 .active-link {
-    color: var(--first-color);
+  color: var(--first-color);
 }
 
 .scroll-active {
-    box-shadow: $header-shadow;
+  box-shadow: $header-shadow;
 }
 .CircularProgressbar-path {
-    stroke: var(--first-color) !important;
+  stroke: var(--first-color) !important;
 }
 .CircularProgressbar-trail {
-    stroke: var(--container-color) !important;
+  stroke: var(--container-color) !important;
 }
 .CircularProgressbar-text {
-    fill: var(--first-color) !important;
+  fill: var(--first-color) !important;
 }
-.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-    bottom: -1rem !important;
-    z-index: 100;
-    width: 100px !important;
-    height: 30px !important;
+.swiper-container-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  bottom: -1rem !important;
+  z-index: 100;
+  width: 100px !important;
+  height: 30px !important;
 }
 .swiper-pagination-bullet-active {
-    background-color: var(--first-color) !important;
+  background-color: var(--first-color) !important;
 }
 .swiper-pagination-bullet {
-    width: 1.5rem !important;
-    height: 1.5rem !important;
-    background-color: var(--first-color) !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  background-color: var(--first-color) !important;
 }
 
 ::-webkit-scrollbar {
-    width: 1rem;
-    background-color: var(--body-color);
-    border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
-    height: 1rem;
+  width: 1rem;
+  background-color: var(--body-color);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  height: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--first-color);
-    border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
+  background-color: var(--first-color);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 
-    &:hover {
-        background-color: var(--first-color-alt);
-    }
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
 }

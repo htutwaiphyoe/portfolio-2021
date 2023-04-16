@@ -15,28 +15,28 @@ function Navigation(props) {
     { path: "/blogs", name: "Blogs", icon: "article" },
   ];
 
-  useEffect(() => {
-    const localTheme = localStorage.getItem("hwp-theme");
-    if (localTheme) {
-      window.document.body.classList[localTheme === "dark" ? "add" : "remove"](
-        "dark-theme"
-      );
-      themeIconRef.current.classList[localTheme === "dark" ? "add" : "remove"](
-        "ri-sun-line"
-      );
-    } else {
-      window.document.body.classList["add"]("dark-theme");
-      themeIconRef.current.classList["add"]("ri-sun-line");
-    }
-    function scrollHandler() {
-      if (this.scrollY >= 30) headerRef.current.classList.add("scroll-active");
-      else headerRef.current.classList.remove("scroll-active");
-    }
-    window.addEventListener("scroll", scrollHandler);
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const localTheme = localStorage.getItem("hwp-theme");
+  //   if (localTheme) {
+  //     window.document.body.classList[localTheme === "dark" ? "add" : "remove"](
+  //       "dark-theme"
+  //     );
+  //     themeIconRef.current.classList[localTheme === "dark" ? "add" : "remove"](
+  //       "ri-sun-line"
+  //     );
+  //   } else {
+  //     window.document.body.classList["add"]("dark-theme");
+  //     themeIconRef.current.classList["add"]("ri-sun-line");
+  //   }
+  //   function scrollHandler() {
+  //     if (this.scrollY >= 30) headerRef.current.classList.add("scroll-active");
+  //     else headerRef.current.classList.remove("scroll-active");
+  //   }
+  //   window.addEventListener("scroll", scrollHandler);
+  //   return () => {
+  //     window.removeEventListener("scroll", scrollHandler);
+  //   };
+  // }, []);
 
   function themeChangeHandler() {
     window.document.body.classList.toggle("dark-theme");
@@ -87,7 +87,7 @@ function Navigation(props) {
           ></i>
         </div>
 
-        <div className={classes.nav__btns}>
+        {/* <div className={classes.nav__btns}>
           <i
             className={`ri-moon-line ${classes.nav__icon}`}
             onClick={themeChangeHandler}
@@ -99,7 +99,7 @@ function Navigation(props) {
             ref={toggleIconRef}
             onClick={toggleChangeHandler}
           ></i>
-        </div>
+        </div> */}
       </nav>
     </header>
   );
