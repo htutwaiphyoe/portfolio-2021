@@ -21,6 +21,9 @@
 
   &__topics {
     margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   &__title {
