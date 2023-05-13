@@ -1,6 +1,6 @@
 ---
 title: "Comments in clean code"
-date: "2023-05-18"
+date: "2023-05-17"
 image: "cover.png"
 description: "Clean code မှာ ရှင်းပြထားတဲ့ comment အကြောင်း"
 topics: ["code quality", "clean code"]
@@ -27,7 +27,7 @@ Organzation အရပဲဖြစ်ဖြစ် open-source ကြောင်�
 
 3. Explanation of intent
 
-business ရဲ့ logic ကိုက complex algorithm ဖြစ်နေရင်လည်း documentation မရှိခဲ့ရင် intent ကိုဖော်ပြတဲ့ summary comment ရေးလိုက်တာက ပိုကောင်းသွားစေမှာပါ။
+Business ရဲ့ logic ကိုက complex algorithm ဖြစ်နေရင်လည်း documentation မရှိခဲ့ရင် intent ကိုဖော်ပြတဲ့ summary comment ရေးလိုက်တာက ပိုကောင်းသွားစေမှာပါ။
 
 4. Clarification comments
 
@@ -35,7 +35,7 @@ business ရဲ့ logic ကိုက complex algorithm ဖြစ်နေရင
 
 5. Warning & Todo comments
 
-program ကို run လိုက်ရင် ဘာဖြစ်နိုင်ပါတယ်ဆိုတဲ့ consequence အရ warning comment တွေထည့်ရတဲ့မျိုးလည်းရှိနိုင်တယ်။ real world မှာ business flow အရ feature ရေးရတဲ့ အပိုင်းတစ်ပိုင်းကိုပဲ အရင် release ချင်တဲ့အခါ နောက်ရေးရမယ့်အပိုင်းအတွက် Todo comment လေးရေးထားလိုက်ရင် teamထဲက အခြားသူတွေက လုပ်ရမယ့် process ကို အလွယ်တကူသိသွားစေနိုင်ပါတယ်။
+Program ကို run လိုက်ရင် ဘာဖြစ်နိုင်ပါတယ်ဆိုတဲ့ consequence အရ warning comment တွေထည့်ရတဲ့မျိုးလည်းရှိနိုင်တယ်။ real world မှာ business flow အရ feature ရေးရတဲ့ အပိုင်းတစ်ပိုင်းကိုပဲ အရင် release ချင်တဲ့အခါ နောက်ရေးရမယ့်အပိုင်းအတွက် Todo comment လေးရေးထားလိုက်ရင် teamထဲက အခြားသူတွေက လုပ်ရမယ့် process ကို အလွယ်တကူသိသွားစေနိုင်ပါတယ်။
 
 6. Amplication & Documentation comments
 
@@ -45,15 +45,15 @@ program ကို run လိုက်ရင် ဘာဖြစ်နိုင်
 
 1. Redundant and Misleading comments
 
-code မှာ for loop ပတ်ထားတာကို // loop the array ဆိုပြီးရှင်းပြထားသလိုမျိုး code နဲ့ comment ထပ်နေတာတွေမရေးသင့်ဘူး။ နောက်တစ်ခုက အခြားသူကိုအမြင်မှားစေနိုင်တဲ့ တလွဲcomment မျိုးတွေလည်းမရေးသင့်ပါဘူး။
+Code မှာ for loop ပတ်ထားတာကို // loop the array ဆိုပြီးရှင်းပြထားသလိုမျိုး code နဲ့ comment ထပ်နေတာတွေမရေးသင့်ဘူး။ နောက်တစ်ခုက အခြားသူကိုအမြင်မှားစေနိုင်တဲ့ တလွဲcomment မျိုးတွေလည်းမရေးသင့်ပါဘူး။
 
 2. Mandated and Journal comments
 
-function တိုင်းမှာ docs comment မဖြစ်မနေရေးရမယ်ဆိုပြီး မလိုအပ်တဲ့ rule တွေပြဌာန်းထားတာမျိုးကို ရှောင်သင့်ပါတယ်။ အရင်တုန်းက code မှာ changes တိုင်းအတွက် log လိုမျိုး comment တွေရေးခဲ့ကြတာရှိတယ်။ ဒါပေမယ့် အခုချိန်မှာတော့ git လို version control system တွေရှိလာပြီမလို့ journal comment တွေကလည်း မလိုအပ်တော့ပါဘူး။ git commit message တွေကိုတော့ သေချာလေးရေးရပါလိမ့်မယ်။
+Function တိုင်းမှာ docs comment မဖြစ်မနေရေးရမယ်ဆိုပြီး မလိုအပ်တဲ့ rule တွေပြဌာန်းထားတာမျိုးကို ရှောင်သင့်ပါတယ်။ အရင်တုန်းက code မှာ changes တိုင်းအတွက် log လိုမျိုး comment တွေရေးခဲ့ကြတာရှိတယ်။ ဒါပေမယ့် အခုချိန်မှာတော့ git လို version control system တွေရှိလာပြီမလို့ journal comment တွေကလည်း မလိုအပ်တော့ပါဘူး။ git commit message တွေကိုတော့ သေချာလေးရေးရပါလိမ့်မယ်။
 
 3. Noise and Scary noise comments
 
-noise and scary noise comment ဆိုတာက ရေးလည်းမထူးတဲ့ comment မျိုးတွေကို ဆိုလိုတာပါ။ ​ဥပမာ variable ကြေညာထားတာကို // define variable ဆိုပြီးရေးတာမျိုးပေါ့။ redundant နဲ့နည်းနည်းဆင်ပါတယ်။ 
+Noise and scary noise comment ဆိုတာက ရေးလည်းမထူးတဲ့ comment မျိုးတွေကို ဆိုလိုတာပါ။ ​ဥပမာ variable ကြေညာထားတာကို // define variable ဆိုပြီးရေးတာမျိုးပေါ့။ redundant နဲ့နည်းနည်းဆင်ပါတယ်။ 
 
 4. Position marker and closing brace comments
 

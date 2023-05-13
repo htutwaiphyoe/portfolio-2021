@@ -3,7 +3,7 @@ title: "The Boy Scout Rule"
 date: "2023-03-6"
 image: "cover.png"
 description: "The Boy scout rule for paying technical debt"
-topics: ["knowledge"]
+topics: ["refactoring", "code quality", "clean code"]
 readTime: 3
 ---
 

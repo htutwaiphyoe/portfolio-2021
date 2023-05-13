@@ -3,7 +3,7 @@ title: "Good Quality Code"
 date: "2023-04-11"
 image: "cover.jpeg"
 description: "Three basic qualities for good code: Readability, Understandability and Maintainability"
-topics: ["knowledge", "code quality"]
+topics: ["code quality", 'clean code']
 readTime: 3
 ---
 
