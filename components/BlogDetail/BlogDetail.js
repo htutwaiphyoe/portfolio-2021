@@ -15,104 +15,106 @@ import BlogTopic from "../Blogs/BlogTopic/BlogTopic";
 import { formatDate } from "@/utils/helpers";
 
 function BlogDetail({ blog }) {
-    const router = useRouter();
-    function onClickHandler() {
-        router.back();
-    }
-    const components = {
-        p(p) {
-            const { node } = p;
-            if (node.children[0].tagName === "img") {
-                const image = node.children[0].properties;
-                return (
-                    <Image
-                        src={`/images/blogs/${blog.slug}/${image.src}`}
-                        alt={image.alt}
-                        width={500}
-                        height={300}
-                        layout="responsive"
-                        className={classes.blogdetail__image}
-                        priority={true}
-                    />
-                );
-            }
-            return <p className={`${classes.blogdetail__p}`}>{p.children}</p>;
-        },
+  const router = useRouter();
+  function onClickHandler() {
+    router.back();
+  }
+  const components = {
+    p(p) {
+      const { node } = p;
+      if (node.children[0].tagName === "img") {
+        const image = node.children[0].properties;
+        return (
+          <Image
+            src={`/images/blogs/${blog.slug}/${image.src}`}
+            alt={image.alt}
+            width={500}
+            height={300}
+            layout="responsive"
+            className={classes.blogdetail__image}
+            priority={true}
+          />
+        );
+      }
+      return <p className={`${classes.blogdetail__p}`}>{p.children}</p>;
+    },
 
-        h1(h1) {
-            return <h2 className={`${classes.blogdetail__h1}`}>{h1.children}</h2>;
-        },
+    h1(h1) {
+      return <h2 className={`${classes.blogdetail__h1}`}>{h1.children}</h2>;
+    },
 
-        h2(h2) {
-            return <h2 className={`${classes.blogdetail__h2}`}>{h2.children}</h2>;
-        },
-        h3(h3) {
-            return <h3 className={`${classes.blogdetail__h3}`}>{h3.children}</h3>;
-        },
+    h2(h2) {
+      return <h2 className={`${classes.blogdetail__h2}`}>{h2.children}</h2>;
+    },
+    h3(h3) {
+      return <h3 className={`${classes.blogdetail__h3}`}>{h3.children}</h3>;
+    },
 
-        a(a) {
-            return (
-                <Link href={a.href}>
-                    <a>{a.children}</a>
-                </Link>
-            );
-        },
+    a(a) {
+      return (
+        <Link href={a.href}>
+          <a>{a.children}</a>
+        </Link>
+      );
+    },
 
-        code({ node, inline, className, children, ...props }) {
-            const match = /language-(\w+)/.exec(className || "");
+    code({ node, inline, className, children, ...props }) {
+      const match = /language-(\w+)/.exec(className || "");
 
-            return !inline && match ? (
-                <SyntaxHighlighter
-                    style={theme}
-                    language={match[1]}
-                    PreTag="div"
-                    children={String(children).replace(/\n$/, "")}
-                    {...props}
-                />
-            ) : (
-                <code className={className} {...props}>
-                    {children}
-                </code>
-            );
-        },
-    };
-    return (
-        <section className={`${classes.blogdetail}`}>
-            <h1 className={`${classes.blogdetail__title}`}>{blog.title}</h1>
-            <div className={`${classes.blogdetail__info}`}>
-                <div>
-                    <span className={`${classes.blogdetail__date}`}>{formatDate(blog.date)}</span>
-                    <span>{blog.readTime} MIN READ</span>
-                </div>
+      return !inline && match ? (
+        <SyntaxHighlighter
+          style={theme}
+          language={match[1]}
+          PreTag="div"
+          children={String(children).replace(/\n$/, "")}
+          {...props}
+        />
+      ) : (
+        <code className={className} {...props}>
+          {children}
+        </code>
+      );
+    },
+  };
+  return (
+    <section className={`${classes.blogdetail}`}>
+      <h1 className={`${classes.blogdetail__title}`}>{blog.title}</h1>
+      <div className={`${classes.blogdetail__info}`}>
+        <div>
+          <span className={`${classes.blogdetail__date}`}>
+            {formatDate(blog.date)}
+          </span>
+          <span>{blog.readTime} MIN READ</span>
+        </div>
 
-                <div>
-                    {blog.topics.map((topic) => (
-                        <BlogTopic topic={topic} key={topic} />
-                    ))}
-                </div>
-            </div>
+        <div className={`${classes.blogdetail__topics}`}>
+          {blog.topics.map((topic) => (
+            <BlogTopic topic={topic} key={topic} />
+          ))}
+        </div>
+      </div>
 
-            <Image
-                src={`/images/blogs/${blog.slug}/${blog.image}`}
-                alt={blog.title}
-                width={500}
-                height={300}
-                layout="responsive"
-                className={classes.blogdetail__image}
-                priority={true}
-            />
-            <article className={`${classes.blogdetail__content}`}>
-                <ReactMarkdown components={components}>{blog.content}</ReactMarkdown>
-            </article>
+      <Image
+        src={`/images/blogs/${blog.slug}/${blog.image}`}
+        alt={blog.title}
+        width={500}
+        height={300}
+        layout="responsive"
+        className={classes.blogdetail__image}
+        priority={true}
+      />
+      <article className={`${classes.blogdetail__content}`}>
+        <ReactMarkdown components={components}>{blog.content}</ReactMarkdown>
+      </article>
 
-            <Button
-                text="Back"
-                icon="ri-arrow-left-line"
-                type="reverse"
-                onClickHandler={onClickHandler}
-            />
-        </section>
-    );
+      <Button
+        text="Back"
+        icon="ri-arrow-left-line"
+        type="reverse"
+        onClickHandler={onClickHandler}
+      />
+    </section>
+  );
 }
 
 export default BlogDetail;

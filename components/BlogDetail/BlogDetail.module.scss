@@ -2,79 +2,87 @@
 @use "abstracts/mixins" as m;
 
 .blogdetail {
-    max-width: 700px;
-    padding: 2rem 0;
-    margin: 0 auto;
+  max-width: 700px;
+  padding: 2rem 0;
+  margin: 0 auto;
 
+  &__title {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.55rem;
+    color: var(--text-color-light);
+    margin: 1rem 0 2rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    align-items: center;
+  }
+  &__topics {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__date {
+    margin-right: 1.5rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    padding-top: 3rem;
+    font-size: 2rem;
+    line-height: 1.7;
+  }
+
+  &__h1 {
+    font-size: 3rem;
+  }
+  &__h2 {
+    font-size: 2.7rem;
+  }
+  &__h3 {
+    font-size: 2.5rem;
+  }
+  &__p {
+    margin: 1rem 0;
+  }
+  & h2,
+  & h3 {
+    font-weight: 500;
+  }
+  @include m.responsive(1199, 1) {
+    padding: 2rem;
+  }
+
+  @include m.responsive(767, 1) {
     &__title {
-        font-size: 4rem;
-        line-height: 1.2;
+      font-size: 3.5rem;
     }
-
-    &__info {
-        display: flex;
-        justify-content: space-between;
-        font-size: 1.55rem;
-        color: var(--text-color-light);
-        margin: 1rem 0 2rem;
-    }
-    &__date {
-        margin-right: 1.5rem;
-    }
-
-    &__image {
-        width: 100%;
-    }
-
+    padding: 2rem 1.5rem;
+  }
+  @include m.responsive(575, 1) {
+    padding: 1rem;
     &__content {
-        padding-top: 3rem;
-        font-size: 2rem;
-        line-height: 1.7;
+      font-size: 1.8rem;
+    }
+    &__title {
+      font-size: 2.7rem;
+    }
+    &__h1 {
+      font-size: 2.5rem;
     }
 
-    &__h1 {
-        font-size: 3rem;
-    }
     &__h2 {
-        font-size: 2.7rem;
+      font-size: 2.3rem;
     }
     &__h3 {
-        font-size: 2.5rem;
+      font-size: 2rem;
     }
-    &__p {
-        margin: 1rem 0;
-    }
-    & h2,
-    & h3 {
-        font-weight: 500;
-    }
-    @include m.responsive(1199, 1) {
-        padding: 2rem;
-    }
-
-    @include m.responsive(767, 1) {
-        &__title {
-            font-size: 3.5rem;
-        }
-        padding: 2rem 1.5rem;
-    }
-    @include m.responsive(575, 1) {
-        padding: 1rem;
-        &__content {
-            font-size: 1.8rem;
-        }
-        &__title {
-            font-size: 2.7rem;
-        }
-        &__h1 {
-            font-size: 2.5rem;
-        }
-
-        &__h2 {
-            font-size: 2.3rem;
-        }
-        &__h3 {
-            font-size: 2rem;
-        }
-    }
+  }
 }
