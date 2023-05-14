@@ -6,7 +6,7 @@ function ProjectsPage() {
     <>
       <Meta
         title="Projects - Htut Wai Phyoe"
-        description="The personal practice projects I have done so far in my current software development career."
+        description="Htut Wai Phyoe - The personal practice projects I have done so far in my current software development career."
       />
       <Projects />
     </>
