@@ -1,19 +1,19 @@
 ---
-title: "JavaScript သိုင်းကျမ်း အပိုင်း (၃) - Optional semicolons"
+title: "JavaScript သိုင်းကျမ်း အပိုင်း (၃) - Automatic semicolon insertion"
 date: "2021-07-03"
 image: "js.png"
-description: "JavaScript မှာရှိတဲ့ semicolon နဲ့ သူရဲ့ ထူးခြားမှု"
+description: "JavaScript မှာရှိတဲ့ optional semicolon အကြောင်း"
 topics: ["javascript"]
 readTime: 5
 ---
 
 # Semicolons
 
-Semicolon ကတော့ programmer တွေကိုတော်တော်ဒုက္ခပေးခဲ့တဲ့အရာလို့ဆိုလို့ရပါတယ်။ programming ကိုစလေ့လာကာစအချိန်တုန်းက semicolon ကျန်ခဲ့လို့ compile error တက်တာကိုအဖြေရှာရင်း အချိန်ကုန်ခဲ့တာကို တော်တော်များများခံစားခဲ့ဖူးမှာပါ။ အဲ့ဒီ experience တွေကပဲ Semicolon ကို အမြဲထည့်တဲ့အကျင့်ရသွားကြတာများပါတယ်။
+Semicolon ကတော့ programmer တွေကိုတော်တော်ဒုက္ခပေးခဲ့တဲ့အရာလို့ဆိုလို့ရပါတယ်။ programming ကိုလေ့လာကာစအချိန်တုန်းက semicolon ကျန်ခဲ့လို့ compile error တက်တာကိုအဖြေရှာရင်း အချိန်ကုန်ခဲ့တာကို computer science ကျောင်းသား တွေ တော်တော်များများခံစားခဲ့ဖူးမှာပါ။ အဲ့ဒီ experience တွေကပဲ Semicolon ကို အမြဲထည့်တဲ့အကျင့်ရသွားကြတာများပါတယ်။
 
 ## Why semicolon is needed
 
-semicolon ကို program ရဲ့ statement တွေမှာ terminator or separator အဖြစ်အသုံးပြုပါတယ်။ အဲ့လိုသုံးခြင်းအားဖြင့် code ဟာ ပိုရှင်းသွားပြီး သူ့ရဲ့ readability တိုးလာပါတယ်။ မဟုတ်ရင် statement တစ်ခုနဲ့ တစ်ခုက ဆက်နေနိုင်တဲ့အတွက် ဘယ်တစ်ခုက ဘယ်မှာဆုံးလဲ အလွယ်တကူ မသိနိုင်တော့ပါဘူး။ ဘာသာစကားတွေမှာ စာရေးတဲ့အခါ ဖတ်ရလွယ်အောင် ပုဒ်ဖြတ်ပုဒ်ရပ်သင်္ကေတတွေကို သုံးရသလိုပါပဲ။ ဥပမာ မြန်မာမှာဆို ပုဒ်ကလေး (၊) ပုဒ်မ (။) လိုဟာတွေပေါ့။
+semicolon ကို program ရဲ့ statement တွေမှာ terminator or separator အဖြစ်အသုံးပြုပါတယ်။ ဒီလိုသုံးခြင်းအားဖြင့် compiler or interpreter ကို ဘယ် statement က ဘယ်မှာဆုံးတယ် နောက်တစ်ကြောင်းကဘယ်မှာစတယ် စတာတွေကို အလွယ်တကူ နားလည်စေပါတယ်။ ဒါ့အပြင် code ရဲ့ structure နဲ့ readibility ကိုလည်းတိုးသွားစေပါတယ်။​ ဘာသာစကားတွေမှာ စာရေးတဲ့အခါ ပုဒ်ဖြတ်ပုဒ်ရပ်သင်္ကေတတွေကို သုံးရသလိုပါပဲ။ ဥပမာ မြန်မာမှာဆို ပုဒ်ကလေး (၊) ပုဒ်မ (။) လိုဟာတွေပေါ့။
 
 C-like language တွေဖြစ်တဲ့C,C++, Java, PHP တို့မှာsemicolon ကို မဖြစ်မနေ ထည့်ပေးရပေမယ့် python လို language မှာတော့ semicolon ထည့်ပေးစရာမလိုပါဘူး။ JavaScript မှာတော့ semicolon က optional ပါ။ ထည့်လည်းရသလို JavaScript ကနေ auto insertion လုပ်ပေးတဲ့အတွက် omit လုပ်လို့လည်းရပါတယ်။ ဒါပေမယ့် manually မဖြစ်မနေထည့်ပေးဖို့လိုတဲ့ နေရာတွေရှိပါတယ်။
 
@@ -138,4 +138,4 @@ let fn = ();
 }
 ```
 
-အကောင်းဆုံးကတော့ semicolon ကိုနေရာတိုင်းထည့်တာပါပဲ။ အဲ့ဒါဆို သူနဲ့ပတ်သတ်တဲ့ error တွေ bug တွေမရှိတော့ဘူး။ ဒါပေမယ့် semicolon မထည့်ချင်တဲ့သူတွေ အထူးသဖြင့် python ကလာတဲ့သူတွေအတွက်တော့ အပေါ်က နည်းလမ်းတွေသိထားရင် အဆင်ပြေသွားပါလိမ့်မယ်။
+အခုနောက်ပိုင်း vscode မှာ prettier လို formatter ပေါ်လာတဲ့အတွက် semicolon ကနေ ပြဿနာပေးတာမျိုးမရှိတော့ပါဘူး။ ဒါပေမယ့် အပေါ်က နည်းလမ်းတွေသိထားရင်တော့ အထူးသဖြင့် python ကလာတဲ့သူတွေအတွက် JavaScript မှာ semicolon နဲ့ပတ်သတ်တဲ့ error တွေ bug တွေရှောင်ရှားပြီးသားဖြစ်သွားမှာပါလိမ့်မယ်။
