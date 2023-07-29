@@ -1,7 +1,7 @@
 ---
 title: "JavaScript သိုင်းကျမ်း အပိုင်း (၃) - Automatic semicolon insertion"
 date: "2021-07-03"
-image: "js.png"
+image: "cover.png"
 description: "JavaScript မှာရှိတဲ့ optional semicolon အကြောင်း"
 topics: ["javascript"]
 readTime: 5
