@@ -1,5 +1,5 @@
 ---
-title: "JavaScript သိုင်းကျမ်း အပိုင်း (၃) - Automatic semicolon insertion"
+title: "JavaScript သိုင်းကျမ်း - Optional Semicolon (ASI)"
 date: "2021-07-03"
 image: "cover.png"
 description: "JavaScript မှာရှိတဲ့ optional semicolon အကြောင်း"
